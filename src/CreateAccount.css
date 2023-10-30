@@ -1,0 +1,20 @@
+
+.createAccountHeader {
+    text-align: left; 
+    margin-top: 30px; 
+    /* margin-left: -27px; */
+    margin-right: 28px;
+  }
+  
+  .createAccountHeader h1 {
+    margin: 0; 
+    color: #333333;
+    font-weight: 700;
+    font-size: 30px;
+  }
+  
+  .createAccountHeader p {
+    margin: 15px 0; 
+    /* letter-spacing: 1px; */
+    color: #737373;
+  }
