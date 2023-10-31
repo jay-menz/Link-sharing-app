@@ -13,6 +13,8 @@ root.render(
     {/* <AuthProvider> */}
     <Routes>
     <Route path="/*" element={<App />} />
+    <Route path="/src/CreateAccount.jsx" element={<App />} />
+    <Route path="/src/Empty.jsx" element={<App />} />
     </Routes>
     {/* </AuthProvider> */}
     </BrowserRouter>

@@ -56,14 +56,28 @@ form {
 }
 
 .input-container {
-  margin: 20px 0; /* Add margin between input elements */
+  margin: 10px 0; 
+  position: relative;
 }
 
 .label-input {
   margin-bottom: 15px; 
   align-items: flex-start;
   flex-direction: column;
+  position: relative;
 }
+
+.label-input img {
+  position: absolute;
+  left: 15px; 
+  top: 67%; 
+  transform: translateY(-50%); 
+}
+
+.input-container .label-input input {
+  padding-left: 40px; 
+}
+
 
 label {
   display: block; /* Display labels as block elements */

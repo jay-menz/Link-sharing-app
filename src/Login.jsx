@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import devLinkLogo from './assets/images/logo-devlinks-large.svg';
+import emailIcon from './assets/images/icon-email.svg';
+import passwordIcon from './assets/images/icon-password.svg';
 import './Login.css';
 
 const Login = (props) => {
@@ -20,16 +22,18 @@ const Login = (props) => {
         <div className="form-container">
     <form onSubmit={handleSubmit}>
         <div className="input-container">
-            <div class="label-input">
-                <label htmlFor="email">Email address</label>
-                <input
+              <div class="label-input">
+                 <label htmlFor="email">Email address</label>
+                 <input
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     type="email"
                     name=""
                     id="email"
-                    placeholder='e.g. alex@email.com' />
-            </div>
+                    placeholder='e.g. alex@email.com'
+                     />
+                <img src={emailIcon} alt="" className='email icon'/>
+          </div>
             <div class="label-input">
                 <label htmlFor="password">Password</label>
                 <input
@@ -39,6 +43,7 @@ const Login = (props) => {
                     name=""
                     id="password"
                     placeholder='Enter your password' />
+                    <img src={passwordIcon} alt="password icon" />
             </div>
             <button type="submit">Login</button>
             <div class="container">

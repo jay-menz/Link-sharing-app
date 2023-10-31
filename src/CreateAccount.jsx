@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import devLinkLogo from './assets/images/logo-devlinks-large.svg';
+import emailIcon from './assets/images/icon-email.svg';
+import passwordIcon from './assets/images/icon-password.svg';
 import './CreateAccount.css';
 
 const CreateAccount = (props) => {
@@ -31,19 +33,10 @@ const CreateAccount = (props) => {
                         name=""
                         id="email"
                         placeholder='e.g. alex@email.com' />
+                        <img src={emailIcon} alt="" className='email icon'/>
                 </div>
-                <div class="label-input">
-                    <label htmlFor="email">Create password</label>
-                    <input
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        type="email"
-                        name=""
-                        id="email"
-                        placeholder='At least 8 characters' />
-                </div>
-                <div class="label-input">
-                    <label htmlFor="password">Password</label>
+                 <div class="label-input">
+                    <label htmlFor="password">Create password</label>
                     <input
                         // value={password}
                         // onChange={(e) => setPassword(e.target.value)}
@@ -51,7 +44,20 @@ const CreateAccount = (props) => {
                         name=""
                         id="password"
                         placeholder='At least 8 characters' />
+                        <img src={passwordIcon} alt="password icon" />
                 </div>
+                <div class="label-input">
+                    <label htmlFor="password">Confirm password</label>
+                    <input
+                        // value={password}
+                        // onChange={(e) => setPassword(e.target.value)}
+                        type="password"
+                        name=""
+                        id="password"
+                        placeholder='At least 8 characters' />
+                        <img src={passwordIcon} alt="password icon" />
+                </div>
+                <p className='reminder'>Password must contain at least 8 characters</p>
                 <button type="submit">Create new account</button>
                 <div class="container">
                      <p>Already have an account? <a href="/CreateAccount">Login</a></p>

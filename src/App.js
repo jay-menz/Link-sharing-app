@@ -1,9 +1,10 @@
 
 import './App.css';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
-import Login from './Login';
-import CreateAccount from './CreateAccount';
+// import Login from './Login';
+// import CreateAccount from './CreateAccount';
 import React, {useState} from 'react';
+import Empty from './Empty';
 
 function App() {
 
@@ -20,7 +21,8 @@ function App() {
         <CreateAccount onFormSwitch={toggleForm}/>
       } */}
       {/* <Login /> */}
-      <CreateAccount/>
+      {/* <CreateAccount/> */}
+      <Empty />
     </main>
   );
 }
