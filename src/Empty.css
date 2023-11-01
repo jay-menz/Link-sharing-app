@@ -5,22 +5,22 @@
   justify-content: center;
 }
 
-/* html, body {
+html, body {
   overflow: hidden;
-} */
+}
 
 .nav-container {
-  /* background-color: #333;  */
   color: #fff; 
   padding: 15px;
   margin-top: 10px; 
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .innerNav-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: center; 
+  color: #beadff;
 }
 
 
@@ -30,33 +30,210 @@
 
 .linksDetails {
   display: flex;
-  padding-right: 100px;
+  padding-right: 5px;
+  justify-content: center; 
 }
 
 .linksDetails button {
-  margin-right: 10px;
-  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  margin-right: 25px;
+  padding: 10px 20px;
   border: none;
   border-radius: 5px;
   color: #beadff; 
-  border: solid 2px red;
+  /* border: solid 2px red; */
 }
 
 .linksDetails button img {
   margin-right: 5px;
   margin-left: -10px; 
-  margin-top: 5px; 
+  /* margin-top: 30px;  */
 }
 
 .linksDetails button:first-child {
   background-color: #beadff;
   color: #633cff;
-  font-weight: bolder;
+  font-weight: 900;
+  width: 110px; 
+  height: 50px;
+  /* border: solid 2px red; */
 }
 
 .linksDetails button:last-child {
   background-color: white; 
   color: #737373; 
-  font-weight: bolder;
+  font-weight: 800;
+  width: 160px; 
+  height: 50px;
+  /* border: solid 2px red; */
 }
+
+.linksDetails button:last-child span {
+  white-space: nowrap; 
+}
+
+/* .linksDetails button:hover img,
+.linksDetails button:hover span {
+  color: blue !important;
+} */
+
+button:hover img,
+button:hover span {
+  color: #633cff;
+}
+
+button {
+  background-color: white;
+  border: 1px solid blue;
+  width: 120px; 
+  height: 50px;
+  color: #633cff;
+  font-weight: 900;
+  border-radius: 5px;
+  margin-right: 17px;
+}
+
+button:hover {
+  background-color: #beadff;
+  color: #633cff;
+}
+
+.main-container {
+  width: 94%; 
+  max-width: 1300px;
+  margin: 0 auto; 
+  padding: 25px; 
+  margin-left: 18px;
+}
+
+.phoneIcon {
+  width: 250px; 
+  height: 130px; 
+}
+/* 
+.phoneIcon img {
+  width: 500px; 
+  height: 500px;
+  margin-left: -15px;
+  margin-top: 20px;
+  border: 2px solid blue;
+} */
+
+.phone {
+  position: relative;
+  /* border: 2px solid pink; */
+  top: 1px; 
+  right: 2px;
+}
+
+.phone img {
+  width: 500px; /* Adjust this value to your desired width */
+  height: 500px; /* Adjust this value to your desired height */
+  position: relative;
+  top: 1px; /* To move to the top, or use 'bottom: 0' to move to the bottom */
+  right: 2px; /* To move to the right, or use 'left: 0' to move to the left */
+  /* border: 2px solid yellow; */
+}
+
+
+
+/* .iphoneIcon {
+  width: 60px; 
+  height: 120px; 
+  margin-right: 50px; 
+}
+
+.iphoneIcon img {
+  margin-right: 750px; 
+  margin-top: 20px;
+} */
+
+.customisation {
+  width: 61%;
+  height: 450px; 
+  margin-left: auto; 
+  margin-right: 0; 
+  position: relative; 
+  top: -110px;
+}
+
+.customisationHeaderParagraph {
+  margin-left: 74px; 
+}
+
+.customisationHeaderParagraph h1 {
+  text-align: left;
+  color: #333333;
+}
+
+.customisationHeaderParagraph p {
+  text-align: left;
+  color: #737373;
+}
+
+.newLink-section {
+  margin-top: 30px; 
+}
+
+.addLinkBtn {
+  width: 710px; 
+  margin-left: 75px; 
+}
+
+.getStarted {
+  margin-top: 20px; 
+  margin-left: 40px; 
+}
+
+.getStartedHeaderParagraph {
+  margin-top: 10px; 
+}
+
+.getStartedHeaderParagraph h1 {
+   color: #333333;
+   margin-top: 20px; 
+}
+
+.getStartedHeaderParagraph p {
+  color: #737373;
+  margin-top: 15px; 
+}
+
+.saveBtn {
+  position: absolute;
+  top: 585px; 
+  right: 30px; 
+  width: 790px; 
+  height: 50px; 
+  /* border: 2px solid red; */
+}
+
+/* .saveBtn .save {
+  width: 70px; 
+  height: 40px; 
+  margin-left: auto; 
+  margin-left: 700px; 
+  border: none;
+  background-color: #d9d9d9;
+  color: white;
+} */
+
+.saveBtn .save {
+  width: 70px;
+  height: 40px;
+  margin-left: 700px;
+  /* margin-right: 700px;  */
+  border: none;
+  background-color: #d9d9d9;
+  color: white;
+  text-align: center; 
+  line-height: 40px; 
+}
+
+.saveBtn .save:hover {
+  background-color: #beadff; 
+}
+
+
 

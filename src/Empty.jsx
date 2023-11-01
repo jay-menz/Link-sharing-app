@@ -14,14 +14,16 @@ const Empty = () => {
         <img src={devLinkLogo} alt="dev link logo" />
         <div class="linksDetails">
             <button><img src={links} alt="links" />Links</button>
-            <button><img src={profie} alt="profile" />Profile Details</button>
+            <button><img src={profie} alt="profile" /><span>Profile Details</span></button>
         </div>
         <button>Preview</button>
     </div>
 </div>
         <div className="main-container">
             <div className="phoneIcon">
-            <img src={iphoneIcon} alt="phone icon" />
+               <div className="phone">
+                 <img src={iphoneIcon} alt="phone icon"/>
+               </div>
             </div>
             <div className="customisation">
                 <div className="customisationHeaderParagraph">
@@ -30,22 +32,27 @@ const Empty = () => {
                         with the world!
                     </p>
                 </div>
-                <div className="newLink">
-                    <button>+Add new link</button>
-                </div>
+                <div className="newLink-section">
+                  <div className="newLink">
+                    <button className='addLinkBtn'>+Add new link</button>
+                  </div>
                 <div className="getStarted">
                     <div className="phoneSwipe">
                         <img src={fingerSwipe} alt="swiping phone" />
                     </div>
+                   <div className="getStartedHeaderParagraph">
+                      <h1>Let's get you started</h1>
+                      <p>Use the "Add new link" button to get started. Once you have more <br />
+                      than one link, you can reorder and edit them. We're here to help <br />
+                      you share your profiles with everyone!  
+                      </p>
+                   </div>
                 </div>
-                <div className="getStartedHeaderParagraph">
-                    <h1>Let's get you started</h1>
-                    <p>Use the "Add new link" button to get started. Once you have more <br />
-                    than one link, you can reorder and edit them. We're here to help <br />
-                    you share your profiles with everyone!  
-                    </p>
                 </div>
             </div>
+        </div>
+        <div className="saveBtn">
+            <button className='save'>save</button>
         </div>
     </section>
   )
