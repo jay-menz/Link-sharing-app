@@ -4,7 +4,8 @@ import { BrowserRouter, Routes, Route} from 'react-router-dom';
 // import Login from './Login';
 // import CreateAccount from './CreateAccount';
 import React, {useState} from 'react';
-import Empty from './Empty';
+import AddedOneLink from './AddedOneLink';
+// import Empty from './Empty';
 
 function App() {
 
@@ -22,7 +23,8 @@ function App() {
       } */}
       {/* <Login /> */}
       {/* <CreateAccount/> */}
-      <Empty />
+      <AddedOneLink />
+      {/* <Empty /> */}
     </main>
   );
 }
