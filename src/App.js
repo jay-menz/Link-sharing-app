@@ -6,7 +6,8 @@ import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import React, {useState} from 'react';
 // import AddedOneLink from './AddedOneLink';
 // import AddedLinks from './AddedLinks';
-import Profile from './Profile';
+// import Profile from './Profile';
+import Preview from './Preview';
 // import Empty from './Empty';
 
 function App() {
@@ -26,9 +27,10 @@ function App() {
       {/* <Login /> */}
       {/* <CreateAccount/> */}
       {/* <AddedOneLink /> */}
-      <Profile />
+      {/* <Profile /> */}
       {/* <AddedLinks /> */}
       {/* <Empty /> */}
+      <Preview />
     </main>
   );
 }
