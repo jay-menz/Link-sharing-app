@@ -62,9 +62,6 @@
   .mauve-cover img {
     position: absolute;
     top: 45%; 
-    /* transform: translateY(-50%); */
     left: 40%;
     transform: translateX(-10%);
-    /* transform: translate(-10%, -1%); */
-    /* transform: translateX(-50%);     */
   }

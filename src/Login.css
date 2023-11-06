@@ -1,144 +1,112 @@
 *{
     padding: 0;
     margin: 0;
-    align-items: center;
-    justify-content: center;
+    box-sizing:border-box;
 }
 
-html, body {
+.body {
   overflow: hidden;
+  margin: 0;
+  background-color: #fafafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.whiteBoxSpace {
+  width: 430px; 
+  height: 390px; 
+  background:#fff;
+  border-radius:10px;
+ 
+ 
+  /* border: 2px solid blue; */
+}
+
+.devLinkLogo {
+  margin-bottom: 40px;
+}
+
+.login {
+  width: 390px;
+  /* border: 2px solid blue; */
+  margin-top: 30px;
+  margin-left: 20px;
+  position: relative;
+}
+
+.login-title {
+  font-size:22px;
+  color: #333333;
 }
 
 
-.centered-section {
+
+.login-info{
+  color: #737373;
+  font-size:16px;
+  margin-top: 10px;
+}
+
+.emailPassword {
+  width: 390px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 80vh; 
-  width: 100%;
-  margin-top: 13vh;
-  margin-bottom: 15vh;
+  gap: 6px;
+  height: 280px;
+  margin-left: 20px;
+  margin-top: 18px;
+}
+
+.emailRequest {
+    display:flex;
+    flex-direction: column;
 }
 
 
+  .emailRequest label, .passwordRequest label {
+      font-size:13px;
+      margin-bottom:10px;
+  }
 
-
-.loginHeader {
-  text-align: left; 
-  margin-top: 30px; 
-  margin-left: 30px;
-}
-
-.loginHeader h1 {
-  margin: 0; 
-  color: #333333;
-  font-weight: 700;
-  font-size: 30px;
-}
-
-.loginHeader p {
-  margin: 15px 0; 
-  /* letter-spacing: 1px; */
-  color: #737373;
-}
-
-.form-container {
-  width: 300px; 
-  height: 400px; 
-  margin: 0 auto; 
-  padding: 20px; 
-  margin-left: auto;
-}
-
-form {
-  margin-top: -20px;
-}
-
-.input-container {
-  margin: 10px 0; 
-  position: relative;
-}
-
-.label-input {
-  margin-bottom: 15px; 
-  align-items: flex-start;
+.passwordRequest {
+  display:flex;
   flex-direction: column;
-  position: relative;
 }
 
-.label-input img {
-  position: absolute;
-  left: 15px; 
-  top: 67%; 
-  transform: translateY(-50%); 
+.input-container{
+     display:flex;
+     border:1px solid #ccc;
+     padding:10px;
+     border-radius:8px;
 }
+ 
 
-.input-container .label-input input {
-  padding-left: 40px; 
-}
-
-
-label {
-  display: block; /* Display labels as block elements */
-  font-weight: 400; /* Make labels bold for emphasis */
-  color: #737373;
-}
-
-.label-input label {
-  text-align: left;
-  width: 100%;
-}
-
-input {
-  width: 122%; /* Expand the input fields to the full width of the container */
-  padding: 15px; /* Add padding for better input field spacing */
-  margin-top: 5px; /* Add a small margin on top of input fields */
-  border: 1px solid #d9d9d9; /* Add a border to input fields */
-  border-radius: 5px; /* Add rounded corners to input fields */
-  outline: none; /* Remove the default input field outline */
-}
-
-input:focus {
-  border-color: #633cff;
-  box-shadow: 0 0 15px #633cff;
+input{
+  border:none;
+  padding:2px;
+  outline:none;
+  margin-left: 15px;
 }
 
 button {
-  width: 130%; /* Expand the button to the full width of the container */
-  padding: 15px; /* Add padding for better button spacing */
-  background-color: #633cff; /* Background color for the button */
-  color: #fff; /* Text color for the button */
-  border: none; /* Remove the button border */
-  border-radius: 5px; /* Add rounded corners to the button */
-  cursor: pointer; /* Change cursor on hover */
-  margin-top: 10px; /* Add a margin on top of the button */
-  font-weight: 750;
+  width: 100%;
+  height: 45px;
+  margin-top: 12px;
+  border-radius: 5px;
+  background-color: #633cff;
+  border: none;
+  color: white;
 }
 
-button:hover {
-  background-color: #beadff;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-  pointer: cursor;
+.createAccount {
+  margin-top: 20px;
+  text-align: center;
 }
 
-p {
-  text-align: center; /* Center-align the paragraph text */
+.createAccount a {
+  text-decoration: none;
+  color: #633cff;
 }
-
-a {
-  text-decoration: none; /* Remove underline from the anchor link */
-  color: #633cff; /* Set link color */
-}
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 15px;
-  margin-left: 24px; 
-}
-
-
-
-

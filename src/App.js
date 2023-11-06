@@ -1,37 +1,46 @@
 
 import './App.css';
-import { BrowserRouter, Routes, Route} from 'react-router-dom';
-// import Login from './Login';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import Login from './Login';
+
 // import CreateAccount from './CreateAccount';
-import React, {useState} from 'react';
+
 // import AddedOneLink from './AddedOneLink';
 // import AddedLinks from './AddedLinks';
 // import Profile from './Profile';
-import Preview from './Preview';
+// import Preview from './Preview';
 // import Empty from './Empty';
 
 function App() {
 
-  const [currentForm, setCurrentForm] = useState('login');
+  // const [currentForm, setCurrentForm] = useState('login');
   
-  const toggleForm = (formName) => {
-    setCurrentForm(formName);
-  }
+  // const toggleForm = (formName) => {
+  //   setCurrentForm(formName);
+  // }
 
   return (
-    <main className="App">
-      {/* {
-        currentForm === "Login" ? <Login onFormSwitch={toggleForm} /> : 
-        <CreateAccount onFormSwitch={toggleForm}/>
-      } */}
-      {/* <Login /> */}
-      {/* <CreateAccount/> */}
-      {/* <AddedOneLink /> */}
-      {/* <Profile /> */}
-      {/* <AddedLinks /> */}
-      {/* <Empty /> */}
-      <Preview />
-    </main>
+    // <main className="App">
+    //   {/* {
+    //     currentForm === "Login" ? <Login onFormSwitch={toggleForm} /> : 
+    //     <CreateAccount onFormSwitch={toggleForm}/>
+    //   } */}
+    //   <Login />
+    //   {/* <CreateAccount/> */}
+    //   {/* <AddedOneLink /> */}
+    //   {/* <Profile /> */}
+    //   {/* <AddedLinks /> */}
+    //   {/* <Empty /> */}
+    //   {/* <Preview /> */}
+    // </main>
+
+    <div>
+      <Router>
+<Routes>
+  <Route  path='/'   element={<Login />} />
+</Routes>
+      </Router>
+    </div>
   );
 }
 
