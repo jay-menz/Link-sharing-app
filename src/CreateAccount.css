@@ -1,141 +1,132 @@
 *{
-    padding: 0;
-    margin: 0;
-    align-items: center;
-    justify-content: center;
+  padding: 0;
+  margin: 0;
+  box-sizing:border-box;
 }
 
-.centered-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 80vh; 
-    width: 100%;
-    margin-top: 11vh;
-    margin-bottom: 1vh;
-  }
+.body {
+overflow: hidden;
+margin: 0;
+background-color: #fafafa;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+flex-direction: column;
+}
+
+.whiteBoxSpace {
+width: 430px; 
+height: 485px; 
+background:#fff;
+border-radius:10px;
+margin-top: -30px;
+}
+
+.devLinkLogo {
+margin-bottom: 55px;
+}
+
+.login {
+width: 390px;
+/* border: 2px solid blue; */
+margin-top: 25px;
+margin-left: 20px;
+position: relative;
+}
+
+.login-title {
+font-size:22px;
+color: #333333;
+}
 
 
-.createAccountHeader {
-    text-align: left; 
-    margin-top: 30px; 
-    /* margin-left: -27px; */
-    margin-right: 28px;
-  }
-  
-  .createAccountHeader h1 {
-    margin: 0; 
-    color: #333333;
-    font-weight: 700;
-    font-size: 30px;
-  }
-  
-  .createAccountHeader p {
-    margin: 15px 0; 
-    /* letter-spacing: 1px; */
-    color: #737373;
-  }
 
-  .reminder {
-    color: #737373;
-    font-size: 14px;
-    margin-right: 30px;
-  }
+.login-info{
+color: #737373;
+font-size:16px;
+margin-top: 8px;
+}
 
-  
-.form-container {
-    width: 300px; 
-    height: 400px; 
-    margin: 0 auto; 
-    padding: 20px; 
-    margin-left: auto;
-  }
-  
-  form {
-    margin-top: -20px;
-  }
-  
-  .input-container {
-    margin: 10px 0; 
-    position: relative;
-  }
-  
-  .label-input {
-    margin-bottom: 15px; 
-    align-items: flex-start;
-    flex-direction: column;
-    position: relative;
-  }
-  
-  .label-input img {
-    position: absolute;
-    left: 15px; 
-    top: 67%; 
-    transform: translateY(-50%); 
-  }
-  
-  .input-container .label-input input {
-    padding-left: 40px; 
-  }
-  
-  label {
-    display: block; /* Display labels as block elements */
-    font-weight: 400; /* Make labels bold for emphasis */
-    color: #737373;
-  }
-  
-  .label-input label {
-    text-align: left;
-    width: 100%;
-  }
-  
-  input {
-    width: 122%; /* Expand the input fields to the full width of the container */
-    padding: 15px; /* Add padding for better input field spacing */
-    margin-top: 5px; /* Add a small margin on top of input fields */
-    border: 1px solid #d9d9d9; /* Add a border to input fields */
-    border-radius: 5px; /* Add rounded corners to input fields */
-    outline: none; /* Remove the default input field outline */
-  }
-  
-  input:focus {
-    border-color: #633cff;
-    box-shadow: 0 0 15px #633cff;
-  }
-  
-  button {
-    width: 130%; /* Expand the button to the full width of the container */
-    padding: 15px; /* Add padding for better button spacing */
-    background-color: #633cff; /* Background color for the button */
-    color: #fff; /* Text color for the button */
-    border: none; /* Remove the button border */
-    border-radius: 5px; /* Add rounded corners to the button */
-    cursor: pointer; /* Change cursor on hover */
-    margin-top: 10px; /* Add a margin on top of the button */
-    font-weight: 750;
-  }
-  
-  button:hover {
-    background-color: #beadff;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-    pointer: cursor;
-  }
-  
-  p {
-    text-align: center; /* Center-align the paragraph text */
-  }
-  
-  a {
-    text-decoration: none; /* Remove underline from the anchor link */
-    color: #633cff; /* Set link color */
-  }
-  .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 15px;
-    margin-left: 24px; 
-  }
-  
+.emailPassword {
+width: 390px;
+display: flex;
+flex-direction: column;
+gap: 10px;
+height: 280px;
+margin-left: 20px;
+margin-top: 17px;
+}
+
+.emailRequest {
+  display:flex;
+  flex-direction: column;
+}
+
+
+.emailRequest label, .passwordRequest label {
+    font-size:13px;
+    margin-bottom:10px;
+}
+
+.passwordRequest {
+display:flex;
+flex-direction: column;
+}
+
+.input-container{
+   display:flex;
+   border:1px solid #ccc;
+   padding:10px;
+   border-radius:8px;
+}
+
+input{
+border:none;
+padding:2px;
+outline:none;
+margin-left: 15px;
+}
+
+input[type="email"],
+input[type="password"] {
+padding: 6px;
+border-radius: 5px;
+width: 100%;
+outline: none;
+}
+
+.password-info {
+  color: #737373;
+  font-size:13px;
+  margin-top: 4px;
+}
+
+button {
+width: 100%;
+/* height: 150px; */
+margin-top: 20px;
+border-radius: 5px;
+background-color: #633cff;
+border: none;
+color: white;
+font-weight: 600;
+}
+
+button:hover {
+background-color: #beadff;
+color: #fff;
+}
+
+
+
+.createAccount {
+color: #737373;  
+margin-top: 20px;
+text-align: center;
+}
+
+.createAccount a {
+text-decoration: none;
+color: #633cff;
+}

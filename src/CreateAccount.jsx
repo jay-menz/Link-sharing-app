@@ -1,72 +1,48 @@
-import React, {useState} from 'react';
+
 import devLinkLogo from './assets/images/logo-devlinks-large.svg';
 import emailIcon from './assets/images/icon-email.svg';
 import passwordIcon from './assets/images/icon-password.svg';
 import './CreateAccount.css';
 
-const CreateAccount = (props) => {
-    const [email, setEmail] = useState('');
-    // const [createPassword, setCreatePassword] = useState('');
-    // const [confirmPassword, setConfirmPassword] = useState('');
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log(email);
-    }
-
-    return (
-        <section className='centered-section'>
-                <img src={devLinkLogo} alt="dev link logo" />
-            <div className="createAccountHeader">
-                <h1>Create account</h1>
-                <p>Let's get you started sharing your links!</p>
+const CreateAccount = () => {
+  return (
+    <div className="body">
+      <img src={devLinkLogo} alt="dev link logo" className='devLinkLogo'/>
+       <div className="whiteBoxSpace">
+          <div className="login">
+            <h1 className='login-title'>Create account</h1>
+            <p className='login-info'>Let's get you started sharing your links!</p>
+          </div>
+          <div className="emailPassword">
+            <div className="emailRequest">
+              <label htmlFor="email">Email address</label>
+              <div className="input-container">
+                 <img src={emailIcon} alt="email icon" />
+                 <input type="email" placeholder='e.g.alex@email.com'/> 
+              </div>
             </div>
-            <div className="form-container">
-        <form onSubmit={handleSubmit}>
-            <div className="input-container">
-                <div class="label-input">
-                    <label htmlFor="email">Email address</label>
-                    <input
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        type="email"
-                        name=""
-                        id="email"
-                        placeholder='e.g. alex@email.com' />
-                        <img src={emailIcon} alt="" className='email icon'/>
-                </div>
-                 <div class="label-input">
-                    <label htmlFor="password">Create password</label>
-                    <input
-                        // value={password}
-                        // onChange={(e) => setPassword(e.target.value)}
-                        type="password"
-                        name=""
-                        id="password"
-                        placeholder='At least 8 characters' />
-                        <img src={passwordIcon} alt="password icon" />
-                </div>
-                <div class="label-input">
-                    <label htmlFor="password">Confirm password</label>
-                    <input
-                        // value={password}
-                        // onChange={(e) => setPassword(e.target.value)}
-                        type="password"
-                        name=""
-                        id="password"
-                        placeholder='At least 8 characters' />
-                        <img src={passwordIcon} alt="password icon" />
-                </div>
-                <p className='reminder'>Password must contain at least 8 characters</p>
-                <button type="submit">Create new account</button>
-                <div class="container">
-                     <p>Already have an account? <a href="/CreateAccount">Login</a></p>
-                </div>
+            <div className="passwordRequest">
+              <label htmlFor="password">Create password</label>
+              <div className="input-container">
+                 <img src={passwordIcon} alt="password icon" />
+                 <input type="password" placeholder='At least 8 characters'/>
+              </div>
             </div>
-        </form>
+            <div className="passwordRequest">
+              <label htmlFor="password">Confirm password</label>
+              <div className="input-container">
+                 <img src={passwordIcon} alt="password icon" />
+                 <input type="password" placeholder='At least 8 characters'/>
+              </div>
+            </div>
+            <p className='password-info'>Password must contain at least 8 characters</p>
+            <button className='btn'>Create new password</button>
+            <p className='createAccount'>Already have an account? <a href="#">Login</a></p>
+          </div>
+       </div>
     </div>
-        </section>
-      );
-    }
-    
-    export default CreateAccount;
+ 
+  )
+}
+
+export default CreateAccount

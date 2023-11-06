@@ -17,14 +17,14 @@ const Login = () => {
             <div className="emailRequest">
               <label htmlFor="email">Email address</label>
               <div className="input-container">
-              <img src={emailIcon} alt="email icon" />
+                 <img src={emailIcon} alt="email icon" />
                  <input type="email" placeholder='e.g.alex@email.com'/> 
               </div>
             </div>
             <div className="passwordRequest">
               <label htmlFor="password">Password</label>
               <div className="input-container">
-              <img src={passwordIcon} alt="password icon" />
+                 <img src={passwordIcon} alt="password icon" />
                  <input type="password" placeholder='Password'/>
               </div>
             </div>

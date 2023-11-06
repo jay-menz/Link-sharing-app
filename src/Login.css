@@ -82,13 +82,20 @@
      padding:10px;
      border-radius:8px;
 }
- 
 
 input{
   border:none;
   padding:2px;
   outline:none;
   margin-left: 15px;
+}
+
+input[type="email"],
+input[type="password"] {
+  padding: 6px;
+  border-radius: 5px;
+  width: 100%;
+  outline: none;
 }
 
 button {
@@ -99,7 +106,15 @@ button {
   background-color: #633cff;
   border: none;
   color: white;
+  font-weight: 600;
 }
+
+button:hover {
+  background-color: #beadff;
+  color: #fff;
+}
+
+
 
 .createAccount {
   margin-top: 20px;
