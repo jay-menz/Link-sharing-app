@@ -44,10 +44,11 @@ const Login = () => {
                  type="email" 
                  placeholder='e.g.alex@email.com' 
                  id='emailInput'
-                 value={email}
-                 onChange={(e) => setEmail(e.target.value)}
+                //  value={email}
+                //  onChange={(e) => setEmail(e.target.value)}
+                 className='custom-input'
                  /> 
-                 <span class="error-message" id="passwordError">Can't be empty</span>
+                 {/* <span class="email-error-message" id="passwordError">Can't be empty</span> */}
               </div>
             </div>
             <div className="passwordRequest">
@@ -59,8 +60,9 @@ const Login = () => {
                  placeholder='Password'
                  value={password}
                  onChange={(e) => setPassword(e.target.value)}
+                 className='custom-input'
                  />
-                 <span class="error-message" id="passwordError">Please check again</span> 
+                 {/* <span class="password-error-message" id="passwordError">Please check again</span>  */}
               </div>
             </div>
             <button className='btn' onClick={handleLoginButton}>Login</button>

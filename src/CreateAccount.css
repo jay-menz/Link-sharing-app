@@ -17,21 +17,26 @@ flex-direction: column;
 
 .whiteBoxSpace {
 width: 430px; 
-height: 485px; 
+height: 495px; 
 background:#fff;
 border-radius:10px;
-margin-top: -30px;
+display: flex;
+flex-direction: column;
+justify-content: flex-start; 
+align-items: center;
+/* margin-button: 10vh; */
+/* border: 2px solid red; */
 }
 
 .devLinkLogo {
-margin-bottom: 55px;
+margin-bottom: 35px;
 }
 
 .login {
 width: 390px;
 /* border: 2px solid blue; */
-margin-top: 25px;
-margin-left: 20px;
+margin-top: 20px;
+margin-left: 5px;
 position: relative;
 }
 
@@ -40,22 +45,20 @@ font-size:22px;
 color: #333333;
 }
 
-
-
 .login-info{
 color: #737373;
 font-size:16px;
-margin-top: 8px;
+margin-top: 10px;
 }
 
 .emailPassword {
 width: 390px;
 display: flex;
 flex-direction: column;
-gap: 10px;
-height: 280px;
-margin-left: 20px;
-margin-top: 17px;
+gap: 6px;
+height: 365px;
+margin-left: 3px;
+margin-top: 18px;
 }
 
 .emailRequest {
@@ -67,6 +70,10 @@ margin-top: 17px;
 .emailRequest label, .passwordRequest label {
     font-size:13px;
     margin-bottom:10px;
+    margin: 10px;
+    /* color: red; */
+    margin-left: 1px;
+    color: #333333;
 }
 
 .passwordRequest {
@@ -77,56 +84,111 @@ flex-direction: column;
 .input-container{
    display:flex;
    border:1px solid #ccc;
-   padding:10px;
+   /* border:1px solid red; */
+   padding:6px;
    border-radius:8px;
+   transition: border 0.3s, box-shadow 0.3s;
 }
+
+.input-container:hover {
+border: 1px solid #633cff;
+box-shadow: 0 0 20px #633cff;
+}
+
+/* .input-container:focus {
+border: 1px solid blue; 
+box-shadow: 0 0 5px blue; 
+} */
 
 input{
 border:none;
+/* width: 40px; */
 padding:2px;
 outline:none;
 margin-left: 15px;
+font-size: 15px;
+/* border: 2px solid red; */
+}
+
+
+
+.custom-input {
+/* border: 2px solid green; */
+padding: 2px;
+outline: none;
+margin-left: 15px;
+width: 100%;
+max-width: 400px; 
 }
 
 input[type="email"],
 input[type="password"] {
 padding: 6px;
 border-radius: 5px;
-width: 100%;
+width: 120%;
 outline: none;
+/* border: 2px solid yellow; */
+width: 200px;
 }
 
-.password-info {
-  color: #737373;
-  font-size:13px;
-  margin-top: 4px;
+.email-error-message {
+color: red;
+font-size: 12px;
+display: inline;
+margin-left: 50px;
+text-align: right;
+margin-top: 5px;
+position: relative;
+/* margin-right: -45px; */
+bottom: 0;
+/* border: 2px solid yellow; */
+}
+
+.password-error-message {
+color: red;
+font-size: 12px;
+display: inline;
+margin-left: 35px;
+text-align: right;
+margin-top: 5px;
+position: relative;
+margin-right: -45px;
+bottom: 0;
+/* border: 2px solid yellow; */
 }
 
 button {
 width: 100%;
-/* height: 150px; */
-margin-top: 20px;
+height: 50px;
+margin-top: 10px;
+/* margin-button: 10px; */
 border-radius: 5px;
 background-color: #633cff;
 border: none;
-color: white;
+color: #fafafa;
 font-weight: 600;
+transition: background-color 0.1s, color 0.3s;
+
+&:hover {
+  background-color: #beadff;
+  color: #fafafa;
+}
 }
 
-button:hover {
-background-color: #beadff;
-color: #fff;
+.pwdReminder {
+  font-size: 14px;
+  margin-top: 7px;
+  color: #737373;
 }
-
-
 
 .createAccount {
-color: #737373;  
-margin-top: 20px;
+/* margin-top: 40px; */
 text-align: center;
+/* margin-button: 35px; */
+margin-top: -5px;
 }
 
 .createAccount a {
 text-decoration: none;
 color: #633cff;
-}
+} 
