@@ -42,8 +42,6 @@
   color: #333333;
 }
 
-
-
 .login-info{
   color: #737373;
   font-size:16px;
@@ -94,8 +92,20 @@ input[type="email"],
 input[type="password"] {
   padding: 6px;
   border-radius: 5px;
-  width: 100%;
+  width: 120%;
   outline: none;
+  /* border: 2px solid yellow; */
+  width: 200px;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  display: inline;
+  margin-left: 30px;
+  text-align: center;
+  margin-top: 5px;
+  /* border: 2px solid blue; */
 }
 
 button {
@@ -113,8 +123,6 @@ button:hover {
   background-color: #beadff;
   color: #fff;
 }
-
-
 
 .createAccount {
   margin-top: 20px;
