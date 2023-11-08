@@ -1,9 +1,9 @@
 
 import './App.css';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-// import Login from './Login';
+import Login from './Login';
 // import CreateAccount from './CreateAccount';
-import AddedOneLink from './AddedOneLink';
+// import AddedOneLink from './AddedOneLink';
 // import AddedLinks from './AddedLinks';
 // import Profile from './Profile';
 // import Preview from './Preview';
@@ -35,7 +35,7 @@ function App() {
     <div>
       <Router>
 <Routes>
-  <Route path='/' element={<AddedOneLink />  } />
+  <Route path='/' element={<Login /> } />
 </Routes>
       </Router>
     </div>
