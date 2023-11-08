@@ -2,8 +2,8 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 // import Login from './Login';
-import CreateAccount from './CreateAccount';
-// import AddedOneLink from './AddedOneLink';
+// import CreateAccount from './CreateAccount';
+import AddedOneLink from './AddedOneLink';
 // import AddedLinks from './AddedLinks';
 // import Profile from './Profile';
 // import Preview from './Preview';
@@ -24,8 +24,8 @@ function App() {
     //     <CreateAccount onFormSwitch={toggleForm}/>
     //   } */}
     //   <Login />
-    //   {/* <CreateAccount/> */}
-    //   {/* <AddedOneLink /> */}
+      // {/* <CreateAccount/> */}
+      // {/* <AddedOneLink /> */}
     //   {/* <Profile /> */}
     //   {/* <AddedLinks /> */}
     //   {/* <Empty /> */}
@@ -35,7 +35,7 @@ function App() {
     <div>
       <Router>
 <Routes>
-  <Route path='/' element={<CreateAccount/>} />
+  <Route path='/' element={<AddedOneLink />  } />
 </Routes>
       </Router>
     </div>

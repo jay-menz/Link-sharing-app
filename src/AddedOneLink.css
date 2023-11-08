@@ -12,8 +12,9 @@
   .nav-container {
     color: #fff; 
     padding: 15px;
-    margin-top: 10px; 
-    /* border: 1px solid red; */
+    margin-top: 1px; 
+    background-color: #fafafa;
+    /* border: 1px solid green; */
   }
   
   .innerNav-container {
@@ -21,6 +22,10 @@
     justify-content: space-between;
     align-items: center; 
     color: #beadff;
+    /* border: 1px solid red; */
+    background-color: #fff;
+    border-radius: 5px;
+    height: 60px;
   }
   
   
@@ -86,7 +91,7 @@
     color: #633cff;
     font-weight: 900;
     border-radius: 5px;
-    margin-right: 17px;
+    margin-right: 40px;
   }
   
   button:hover {
@@ -127,17 +132,18 @@
   
   .customisation {
     width: 61%;
-    height: 450px; 
-    margin-left: auto; 
-    margin-right: 0; 
+    height: 538px; 
+    margin-left: 520px; 
+    /* margin-right: 0;  */
     position: relative; 
-    top: -135px;
+    top: -155px;
+    border: 2px solid yellow;
     /* margin-top: 15px; */
   }
   
   .customisationHeaderParagraph {
-    margin-left: 74px; 
-    /* margin-top: 15px; */
+    margin-left: 30px; 
+    margin-top: 15px;
   }
   
   .customisationHeaderParagraph h1 {
@@ -153,11 +159,13 @@
   
   .newLink-section {
     margin-top: 30px; 
+    /* background-color: #fafafa; */
   }
   
   .addLinkBtn {
-    width: 710px; 
-    margin-left: 75px; 
+    width: 690px; 
+    height: 45px;
+    margin-left: 30px; 
     margin-top: -5px; 
   }
 
@@ -169,37 +177,38 @@
     color: white;
     text-align: center;
     line-height: 40px;
+    border: 2px solid violet;
   }
 
   .save {
     position: absolute;
-    top: 600px; /* Adjust this value to move it down */
-    right: 30px; /* Adjust this value to move it to the left */
+    top: 600px; 
+    right: 30px; 
   }
     
         .link-container {
             width: 660px;
             height: 200px; 
-            /* border: 1px solid #ccc; */
             padding: 20px; 
             margin-top: 20px;
             margin-left: 75px;
-            border: 2px solid red;
             background-color: #fafafa;
             border-radius: 5px;
         }
 
         .linkNum1Sec {
           /* border: 1px solid red; */
-          width: 90%;
-          height: 215px;
-          margin-left: auto;
+          width: 88%;
+          height: 190px;
+          /* margin-left: auto; */
+          margin-left: 30px;
           margin-top: 15px;
-          background-color: #efebff;
+          background-color: #fafafa;
           border-radius: 5px;
         }
+
         .linkNum2Sec {
-          border: 1px solid red;
+          /* border: 1px solid red; */
           margin-top: 10px;
           width: 90%;
           height: 159px;
@@ -217,9 +226,9 @@
         }
 
         .linkRemove {
-          display: flex; /* Use flex to create a horizontal layout */
-          align-items: center; /* Vertically center the content */
-          justify-content: space-between; /* Push the children to the far left and far right */
+          display: flex; 
+          align-items: center; 
+          justify-content: space-between; 
         }
 
         .linkRemove p {

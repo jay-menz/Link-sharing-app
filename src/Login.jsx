@@ -1,30 +1,43 @@
 import React, {useState, useEffect} from 'react';
-import { Outlet } from 'react-router-dom';
+// import { Outlet } from 'react-router-dom';
 import devLinkLogo from './assets/images/logo-devlinks-large.svg';
 import emailIcon from './assets/images/icon-email.svg';
 import passwordIcon from './assets/images/icon-password.svg';
-import { useAuth0 } from '@auth0/auth0-react';
+// import { useAuth0 } from '@auth0/auth0-react';
+// import {createUserWithEmailAndPassword} from "firebase/auth";
+// import { Auth } from 'firebase/auth';
+import { onAuthStateChanged } from 'firebase/auth';
 import './Login.css';
 
 const Login = () => {
+  //  const [authuser, setAuthUser] = useState(null);
+  // const [password, setPassword] = useState('');
+  // const [emailError, setEmailError] = useState('');
+  // const [passwordError, setPasswordError] = useState('');
+  // const [email, setEmail] = useState('');
 
-  const [password, setPassword] = useState('');
-  const [emailError, setEmailError] = useState('');
-  const [passwordError, setPasswordError] = useState('');
-  const [email, setEmail] = useState('');
+  // useEffect(() => {
+  //    const listen = onAuthStateChanged(auth, (user) => {
+  //     if (user) {
+  //       setAuthUser(user)
+  //     } else {
+  //       setAuthUser(null);
+  //     }
+  //    })
+  // }, [])
 
   const handleLoginButton = () => {
-        if(email.trim() === '') {
-          setEmailError("Can't be empty");
-        } else {
-          setEmailError('');
-        }
+        // if(email.trim() === '') {
+        //   setEmailError("Can't be empty");
+        // } else {
+        //   setEmailError('');
+        // }
 
-        if(password.trim() === '') {
-          setPasswordError('Please check again');
-        } else {
-          setPasswordError('')
-        }
+        // if(password.trim() === '') {
+        //   setPasswordError('Please check again');
+        // } else {
+        //   setPasswordError('')
+        // }
   }
 
   return (
@@ -58,8 +71,8 @@ const Login = () => {
                  <input 
                  type="password" 
                  placeholder='Password'
-                 value={password}
-                 onChange={(e) => setPassword(e.target.value)}
+                //  value={password}
+                //  onChange={(e) => setPassword(e.target.value)}
                  className='custom-input'
                  />
                  {/* <span class="password-error-message" id="passwordError">Please check again</span>  */}

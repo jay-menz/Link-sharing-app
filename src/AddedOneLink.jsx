@@ -30,13 +30,13 @@ const AddedOneLink = () => {
                </div>
             </div>
             <div className="customisation">
-                <div className="customisationHeaderParagraph">
-                    <h1>Customize your links</h1>
+              <div className='customisationHeaderParagraph'>
+                <h1>Customize your links</h1>
                     <p>Add/edit/remove links below and then share all your profiles 
                         with the world!
                     </p>
-                </div>
-                <div className="newLink-section">
+              </div> 
+              <div className="newLink-section">
                   <div className="newLink">
                     <button className='addLinkBtn'>+Add new link</button>
                   </div>
@@ -59,35 +59,13 @@ const AddedOneLink = () => {
                         </div>
                     </div>
                   </div>
-                  {/* <div className="linkNum2Sec">
-                  <div className="linkRemove">
-                        <div className="img-p">
-                        <img src={dragDrop} alt="" />
-                        <p>Link #2</p>
-                        </div>
-                        <p>Remove</p>
-                    </div>
-                    <div className="platform">
-                        <p>Platform</p>
-                    </div>
-                    <div className="link">
-                        <p>Link</p>
-                        <div className="input-container">
-                        <input type="text" name="" id="" placeholder='e.g.https://www.github.com/johnappleseed'/>
-                        <img src={iconLink} alt="" className='icon-link'/>
-                        </div>
-                    </div>
-                  </div>
-                 */}
-
-                         
-                
+                <div className="save">
+                  <button className="saveBtn">save</button>
                 </div>
+                </div>            
             </div>
         </div>
-        <div className="saveBtn">
-            <button className='save'>save</button>
-        </div>
+        
     </section>
   )
 }
