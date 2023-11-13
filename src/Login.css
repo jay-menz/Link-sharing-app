@@ -109,7 +109,7 @@ input{
 
 
 .custom-input {
-  /* border: 2px solid green; */
+  border: 2px solid green;
   padding: 2px;
   outline: none;
   margin-left: 15px;

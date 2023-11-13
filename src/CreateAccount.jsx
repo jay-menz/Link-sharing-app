@@ -1,9 +1,7 @@
-import React, {useState, useEffect} from 'react';
-import { Outlet } from 'react-router-dom';
+import React, {useRef} from 'react';
 import devLinkLogo from './assets/images/logo-devlinks-large.svg';
 import emailIcon from './assets/images/icon-email.svg';
 import passwordIcon from './assets/images/icon-password.svg';
-// import { useAuth0 } from '@auth0/auth0-react';
 import './CreateAccount.css';
 
 const createAccount = () => {
@@ -43,7 +41,10 @@ const createAccount = () => {
                  <input 
                  type="email" 
                  placeholder='e.g.alex@email.com' 
-                 id='emailInput'
+                //  id='email'
+                //  ref={useRef}
+                //  autoComplete='off'
+                 required
                 //  value={email}
                 //  onChange={(e) => setEmail(e.target.value)}
                  className='custom-input'
@@ -58,9 +59,13 @@ const createAccount = () => {
                  <input 
                  type="password" 
                  placeholder='At least 8 characters'
+                 id="password"
+                //  ref={useRef}
+                //  autoComplete='off'
+                 required
                 //  value={password}
                 //  onChange={(e) => setPassword(e.target.value)}
-                //  className='custom-input'
+                 className='custom-input'
                  />
                  {/* <span class="password-error-message" id="passwordError">Please check again</span>  */}
               </div>
@@ -72,6 +77,10 @@ const createAccount = () => {
                  <input 
                  type="password" 
                  placeholder='At least 8 characters'
+                 id="password"
+                //  ref={useRef}
+                //  autoComplete='off'
+                 required
                 //  value={password}
                 //  onChange={(e) => setPassword(e.target.value)}
                 //  className='custom-input'
