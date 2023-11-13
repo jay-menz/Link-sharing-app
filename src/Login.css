@@ -78,10 +78,17 @@
   flex-direction: column;
 }
 
+#passwordError {
+  /* border: 2px solid red; */
+  display: inline;
+  font-size: smaller;
+  margin: 0;
+  margin-left: auto;
+}
+
 .input-container{
      display:flex;
      border:1px solid #ccc;
-     /* border:1px solid red; */
      padding:10px;
      border-radius:8px;
      transition: border 0.3s, box-shadow 0.3s;
@@ -106,15 +113,13 @@ input{
   /* border: 2px solid red; */
 }
 
-
-
 .custom-input {
-  border: 2px solid green;
+  /* border: 2px solid green; */
   padding: 2px;
-  outline: none;
-  margin-left: 15px;
-  width: 100%;
-  max-width: 400px; 
+  /* outline: none; */
+  /* margin-left: 10px; */
+  /* width: 100%; */
+  /* max-width: 1000px;  */
 }
 
 input[type="email"],
@@ -139,6 +144,7 @@ input[type="password"] {
   bottom: 0;
   /* border: 2px solid yellow; */
 }
+
 
 .password-error-message {
   color: red;

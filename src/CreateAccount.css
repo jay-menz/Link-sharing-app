@@ -17,19 +17,19 @@ flex-direction: column;
 
 .whiteBoxSpace {
 width: 430px; 
-height: 495px; 
+height: 500px; 
 background:#fff;
 border-radius:10px;
 display: flex;
 flex-direction: column;
 justify-content: flex-start; 
 align-items: center;
-/* margin-button: 10vh; */
+margin-bottom: 10px;
 /* border: 2px solid red; */
 }
 
 .devLinkLogo {
-margin-bottom: 35px;
+margin-bottom: 25px;
 }
 
 .login {
@@ -159,8 +159,8 @@ bottom: 0;
 
 button {
 width: 100%;
-height: 50px;
-margin-top: 10px;
+height: 80px;
+margin-top: 5px;
 /* margin-button: 10px; */
 border-radius: 5px;
 background-color: #633cff;
@@ -175,9 +175,17 @@ transition: background-color 0.1s, color 0.3s;
 }
 }
 
+#passwordError {
+  /* border: 2px solid red; */
+  display: inline;
+  font-size: smaller;
+  margin: 0;
+  margin-left: auto;
+}
+
 .pwdReminder {
   font-size: 14px;
-  margin-top: 7px;
+  margin-top: 5px;
   color: #737373;
 }
 
@@ -185,7 +193,8 @@ transition: background-color 0.1s, color 0.3s;
 /* margin-top: 40px; */
 text-align: center;
 /* margin-button: 35px; */
-margin-top: -5px;
+margin-top: -3px;
+color: #737373;
 }
 
 .createAccount a {

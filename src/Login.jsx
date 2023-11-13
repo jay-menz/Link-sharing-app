@@ -27,6 +27,9 @@ import './Login.css';
   const [showLoginButton, setShowLoginButton] = React.useState(true); //show login button on load
   const [showLoading, setShowLoading] = React.useState(false); //show loading state when button is clicked
 
+  const [borderError, setBorderError] = React.useState(false); //set border error to the color red
+  const [labelError, setLabelError] = React.useState(false); //set label error to the color red
+
 
   //this function handles the login button when clicked.
   //this is where all your validation & authentication goes
@@ -107,7 +110,7 @@ import './Login.css';
             <label htmlFor="email">Email address</label>
             <div className="input-container">
                 <img src={emailIcon} alt="email icon" />
-                <input type="email" placeholder='e.g.alex@email.com' id='emailInput' value={email} onChange={handleOnChangeEmail} className='custom-input'/> 
+                <input type="email" placeholder='e.g.alex@email.com' id='emailPwdInput' value={email} onChange={handleOnChangeEmail} className='custom-input'/> 
                 {emailError &&(
                   <span className="email-error-message" id="passwordError">{emailErrorMessage}</span>
                 )}
@@ -118,7 +121,7 @@ import './Login.css';
             <label htmlFor="password">Password</label>
             <div className="input-container">
                 <img src={passwordIcon} alt="password icon" />
-                <input  type="password" placeholder='Password' value={password} onChange={handleOnChangePassword}
+                <input  type="password" placeholder='Password' id='emailPwdInput' value={password} onChange={handleOnChangePassword}
                 className='custom-input'/>
                 {passwordError &&(
                   <span className="email-error-message" id="passwordError">{passwordErrorMessage}</span>
