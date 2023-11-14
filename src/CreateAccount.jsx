@@ -30,6 +30,25 @@ import './CreateAccount.css';
   const [borderError, setBorderError] = React.useState(false); //set border error to the color red
   const [labelError, setLabelError] = React.useState(false); //set label error to the color red
 
+  const [createPassword, setCreatePassword] = React.useState('');
+  const [createPasswordError, setCreatePasswordError] = React.useState(false);
+  const [createPasswordErrorMessage, setCreatePasswordErrorMessage] = React.useState('');
+  // const [confirmPassword, setConfirmPassword] = React.useState('');
+
+
+
+  
+  const handleOnChangeCreatePassword = (event) => {
+    setCreatePassword(event.target.value);
+    // Your password validation logic goes here
+  };
+
+  // const handleOnChangeConfirmPassword = (event) => {
+  //   setConfirmPassword(event.target.value);
+  //   // Your password validation logic goes here
+  // };
+
+
 
   //this function handles the login button when clicked.
   //this is where all your validation & authentication goes
@@ -121,7 +140,12 @@ import './CreateAccount.css';
             <label htmlFor="password">Create password</label>
             <div className="input-container">
                 <img src={passwordIcon} alt="password icon" />
-                <input  type="password" placeholder='Password' id='emailPwdInput' value={password} onChange={handleOnChangePassword}
+                <input 
+                type="password" 
+                placeholder='At least 8 characters' 
+                id="createPasswordInput" 
+                value={createPassword} 
+                onChange={handleOnChangeCreatePassword}
                 className='custom-input'/>
                 {passwordError &&(
                   <span className="email-error-message" id="passwordError">{passwordErrorMessage}</span>
@@ -134,7 +158,12 @@ import './CreateAccount.css';
             <label htmlFor="password">Confirm password</label>
             <div className="input-container">
                 <img src={passwordIcon} alt="password icon" />
-                <input type="password" placeholder='Password' id='emailPwdInput' value={password} onChange={handleOnChangePassword}
+                <input 
+                type="password" 
+                placeholder='At least 8 characters' 
+                id="confirmPasswordInput" 
+                // value={confirmPassword} 
+                // onChange={handleOnChangeConfirmPassword}
                 className='custom-input'/>
                 {/* {passwordError &&(
                   <span className="email-error-message" id="passwordError">{passwordErrorMessage}</span>

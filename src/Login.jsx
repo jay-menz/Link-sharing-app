@@ -30,6 +30,10 @@ import './Login.css';
   const [borderError, setBorderError] = React.useState(false); //set border error to the color red
   const [labelError, setLabelError] = React.useState(false); //set label error to the color red
 
+  const [emailLabelError, setEmailLabelError] = React.useState(false);
+  const [passwordLabelError, setPasswordLabelError] = React.useState(false);
+
+
 
   //this function handles the login button when clicked.
   //this is where all your validation & authentication goes
@@ -41,12 +45,14 @@ import './Login.css';
       //if email field is empty or null then show error message
       setEmailError(true)
       setEmailErrorMessage("Can't be empty")
+      setEmailLabelError(true);
 
       //remove the error message after 3seconds. You can play with the time yourself by changing it in the setTimout function
       setTimeout(() => {
         
         setEmailError(false) //set message to false to hide it
         setEmailErrorMessage("") //remove the error message
+        setEmailLabelError(false);
       }, 3000);
 
       return false;
@@ -54,13 +60,15 @@ import './Login.css';
     else if(password == '' || password == null){
       //if email field is empty or null then show error message
       setPasswordError(true)
-      setPasswordErrorMessage("Please check again")
+      setPasswordErrorMessage("Please check again");
+      setPasswordLabelError(true);
 
       //remove the error message after 3seconds. You can play with the time yourself by changing it in the setTimout function
       setTimeout(() => {
         
         setPasswordError(false) //set message to false to hide it
         setPasswordErrorMessage("") //remove the error message
+        setPasswordLabelError(false);
       }, 3000);
 
       return false;
@@ -107,10 +115,17 @@ import './Login.css';
         <div className="emailPassword">
 
           <div className="emailRequest">
-            <label htmlFor="email">Email address</label>
-            <div className="input-container">
+            <label htmlFor="email" className={emailLabelError ? 'error' : ''}>Email address</label>
+            <div className={`input-container ${emailError ? 'error' : ''}`}>
                 <img src={emailIcon} alt="email icon" />
-                <input type="email" placeholder='e.g.alex@email.com' id='emailPwdInput' value={email} onChange={handleOnChangeEmail} className='custom-input'/> 
+                <input 
+                type="email" 
+                placeholder='e.g.alex@email.com' 
+                id='emailPwdInput' 
+                value={email} 
+                onChange={handleOnChangeEmail} 
+                className={`input-container ${emailError ? 'error' : ''}`}
+                /> 
                 {emailError &&(
                   <span className="email-error-message" id="passwordError">{emailErrorMessage}</span>
                 )}
@@ -118,11 +133,17 @@ import './Login.css';
           </div>
 
           <div className="passwordRequest">
-            <label htmlFor="password">Password</label>
-            <div className="input-container">
+            <label htmlFor="password" className={passwordLabelError ? 'error' : ''}>Password</label>
+            <div className={`input-container ${passwordError ? 'error' : ''}`}> 
                 <img src={passwordIcon} alt="password icon" />
-                <input  type="password" placeholder='Password' id='emailPwdInput' value={password} onChange={handleOnChangePassword}
-                className='custom-input'/>
+                <input  
+                type="password" 
+                placeholder='Password' 
+                id='emailPwdInput' 
+                value={password} 
+                onChange={handleOnChangePassword}
+                className={`input-container ${passwordError ? 'error' : ''}`}
+                />
                 {passwordError &&(
                   <span className="email-error-message" id="passwordError">{passwordErrorMessage}</span>
                 )}
