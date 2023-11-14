@@ -99,15 +99,6 @@
   border:1px solid #ff3939;
 }
 
-.input-container:hover {
-  border: 1px solid #633cff;
-  box-shadow: 0 0 20px #633cff;
-}
-
-.input-container:focus {
-  border: 1px solid blue; 
-  box-shadow: 0 0 5px blue; 
-}
 
 input{
   border:none;

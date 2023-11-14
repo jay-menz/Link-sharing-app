@@ -12,8 +12,9 @@ html, body {
 .nav-container {
   color: #fff; 
   padding: 15px;
-  margin-top: 10px; 
-  /* border: 1px solid red; */
+  margin-top: 1px; 
+  background-color: #fafafa;
+  /* border: 1px solid green; */
 }
 
 .innerNav-container {
@@ -21,6 +22,10 @@ html, body {
   justify-content: space-between;
   align-items: center; 
   color: #beadff;
+  /* border: 1px solid red; */
+  background-color: #fff;
+  border-radius: 5px;
+  height: 60px;
 }
 
 
@@ -73,11 +78,6 @@ html, body {
   white-space: nowrap; 
 }
 
-/* .linksDetails button:hover img,
-.linksDetails button:hover span {
-  color: blue !important;
-} */
-
 button:hover img,
 button:hover span {
   color: #633cff;
@@ -91,7 +91,7 @@ button {
   color: #633cff;
   font-weight: 900;
   border-radius: 5px;
-  margin-right: 17px;
+  margin-right: 40px;
 }
 
 button:hover {
@@ -139,16 +139,18 @@ button:hover {
 
 
 .customisation {
-  width: 61%;
-  height: 450px; 
+  width: 59%;
+  height: 535px; 
   margin-left: auto; 
   margin-right: 0; 
   position: relative; 
-  top: -110px;
+  top: -155px;
+  /* border: 2px solid red; */
 }
 
 .customisationHeaderParagraph {
-  margin-left: 74px; 
+  margin-left: 25px;
+  margin-top: 10px; 
 }
 
 .customisationHeaderParagraph h1 {
@@ -159,6 +161,7 @@ button:hover {
 .customisationHeaderParagraph p {
   text-align: left;
   color: #737373;
+  margin-top: 5px;
 }
 
 .newLink-section {
@@ -166,17 +169,32 @@ button:hover {
 }
 
 .addLinkBtn {
-  width: 710px; 
-  margin-left: 75px; 
+  width: 680px; 
+  height: 40px;
+  margin-left: 30px; 
 }
 
 .getStarted {
-  margin-top: 20px; 
-  margin-left: 40px; 
+  margin-top: 10px; 
+  margin-left: 30px; 
+  background-color: #fafafa;
+  width: 89%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 310px;
+  /* border: 2px solid red;  */
+}
+
+.phoneSwipe {
+  order: -1; /* This will move the phoneSwipe div to the top */
 }
 
 .getStartedHeaderParagraph {
-  margin-top: 10px; 
+  margin-top: -15px; 
+  text-align: center;
 }
 
 .getStartedHeaderParagraph h1 {
@@ -211,7 +229,7 @@ button:hover {
 .saveBtn .save {
   width: 70px;
   height: 40px;
-  margin-left: 700px;
+  margin-left: 650px;
   /* margin-right: 700px;  */
   border: none;
   background-color: #d9d9d9;
