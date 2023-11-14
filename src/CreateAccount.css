@@ -76,6 +76,10 @@ margin-top: 18px;
     color: #333333;
 }
 
+.emailRequest label.error-label, .passwordRequest label.error-label {
+  color: #ff3939;
+}
+
 .passwordRequest {
 display:flex;
 flex-direction: column;
@@ -88,6 +92,10 @@ flex-direction: column;
    padding:6px;
    border-radius:8px;
    transition: border 0.3s, box-shadow 0.3s;
+}
+
+.input-container.error-border {
+  border:1px solid #ff3939;
 }
 
 .input-container:hover {

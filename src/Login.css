@@ -111,20 +111,11 @@
 
 input{
   border:none;
-  /* width: 40px; */
   padding:2px;
   outline:none;
   margin-left: 15px;
-  /* border: 2px solid red; */
 }
 
-/* .custom-input {
-  padding: 2px;
-} */
-
-/* .custom-input.error {
-  border: 1px solid red; 
-} */
 
 input[type="email"],
 input[type="password"] {
@@ -132,7 +123,6 @@ input[type="password"] {
   border-radius: 5px;
   width: 120%;
   outline: none;
-  /* border: 2px solid yellow; */
   width: 200px;
 }
 

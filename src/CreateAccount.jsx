@@ -30,24 +30,8 @@ import './CreateAccount.css';
   const [borderError, setBorderError] = React.useState(false); //set border error to the color red
   const [labelError, setLabelError] = React.useState(false); //set label error to the color red
 
-  const [createPassword, setCreatePassword] = React.useState('');
-  const [createPasswordError, setCreatePasswordError] = React.useState(false);
-  const [createPasswordErrorMessage, setCreatePasswordErrorMessage] = React.useState('');
-  // const [confirmPassword, setConfirmPassword] = React.useState('');
-
-
-
-  
-  const handleOnChangeCreatePassword = (event) => {
-    setCreatePassword(event.target.value);
-    // Your password validation logic goes here
-  };
-
-  // const handleOnChangeConfirmPassword = (event) => {
-  //   setConfirmPassword(event.target.value);
-  //   // Your password validation logic goes here
-  // };
-
+  const [emailLabelError, setEmailLabelError] = React.useState(false);
+  const [passwordLabelError, setPasswordLabelError] = React.useState(false);
 
 
   //this function handles the login button when clicked.
@@ -60,12 +44,14 @@ import './CreateAccount.css';
       //if email field is empty or null then show error message
       setEmailError(true)
       setEmailErrorMessage("Can't be empty")
+      setEmailLabelError(true);
 
       //remove the error message after 3seconds. You can play with the time yourself by changing it in the setTimout function
       setTimeout(() => {
         
         setEmailError(false) //set message to false to hide it
         setEmailErrorMessage("") //remove the error message
+        setEmailLabelError(false);
       }, 3000);
 
       return false;
@@ -73,13 +59,15 @@ import './CreateAccount.css';
     else if(password == '' || password == null){
       //if email field is empty or null then show error message
       setPasswordError(true)
-      setPasswordErrorMessage("Please check again")
+      setPasswordErrorMessage("Please check again");
+      setPasswordLabelError(true);
 
       //remove the error message after 3seconds. You can play with the time yourself by changing it in the setTimout function
       setTimeout(() => {
         
         setPasswordError(false) //set message to false to hide it
         setPasswordErrorMessage("") //remove the error message
+        setPasswordLabelError(false);
       }, 3000);
 
       return false;
@@ -126,10 +114,17 @@ import './CreateAccount.css';
         <div className="emailPassword">
 
           <div className="emailRequest">
-            <label htmlFor="email">Email address</label>
-            <div className="input-container">
+            <label htmlFor="email" className={emailLabelError ? 'error-label' : ''}>Email address</label>
+            <div className={`input-container ${emailError ? 'error-border' : ''}`}>
                 <img src={emailIcon} alt="email icon" />
-                <input type="email" placeholder='e.g.alex@email.com' id='emailPwdInput' value={email} onChange={handleOnChangeEmail} className='custom-input'/> 
+                <input 
+                type="email" 
+                placeholder='e.g.alex@email.com' 
+                id='emailPwdInput' 
+                value={email} 
+                onChange={handleOnChangeEmail} 
+                className='custom-input'
+                /> 
                 {emailError &&(
                   <span className="email-error-message" id="passwordError">{emailErrorMessage}</span>
                 )}
@@ -137,16 +132,15 @@ import './CreateAccount.css';
           </div>
 
           <div className="passwordRequest">
-            <label htmlFor="password">Create password</label>
-            <div className="input-container">
+            <label htmlFor="password" className={passwordLabelError ? 'error-label' : ''}>Create password</label>
+            <div className={`input-container ${passwordError ? 'error-border' : ''}`}>
                 <img src={passwordIcon} alt="password icon" />
                 <input 
                 type="password" 
                 placeholder='At least 8 characters' 
                 id="createPasswordInput" 
-                value={createPassword} 
-                onChange={handleOnChangeCreatePassword}
-                className='custom-input'/>
+                className='custom-input'
+                />
                 {passwordError &&(
                   <span className="email-error-message" id="passwordError">{passwordErrorMessage}</span>
                 )}
