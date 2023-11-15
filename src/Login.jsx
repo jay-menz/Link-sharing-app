@@ -3,12 +3,15 @@ import React from 'react';
 import devLinkLogo from './assets/images/logo-devlinks-large.svg';
 import emailIcon from './assets/images/icon-email.svg';
 import passwordIcon from './assets/images/icon-password.svg';
+import {useNavigate} from 'react-router-dom';
 
 
 import './Login.css';
 
  const Login = () => {
 
+  const navigate = useNavigate();
+  
   //set states to track changes in app
   const [email, setEmail] = React.useState(''); //set state for user email
   const [password, setPassword] = React.useState(''); //set state for user password
@@ -86,10 +89,11 @@ import './Login.css';
         //====================================================================================================//
 
           //handle your backend database validaiton here if email and password is not empty
-          alert('Success i just logged in') //remove and add your own backend logic
+          // alert('Success i just logged in') 
+          navigate('/Empty')
 
         //====================================================================================================//
-
+          // history.push('/CreateAccount')
         //after response from server backend make sure to hide the loading and then show the login button again
         setShowLoginButton(true) 
         setShowLoading(false)
@@ -161,7 +165,7 @@ import './Login.css';
             <button className='btn' style={{backgroundColor:'gray'}} >Logging in... Please wait</button>
           )}
 
-          <p className='createAccount'>Don't have an account? <a href="#!">Create account</a></p>
+          <p className='createAccount'>Don't have an account? <a href="/CreateAccount">Create account</a></p>
             
 
         </div>

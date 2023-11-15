@@ -164,7 +164,7 @@
   
   .addLinkBtn {
     width: 690px; 
-    height: 45px;
+    height: 40px;
     margin-left: 30px; 
     margin-top: -5px; 
   }
@@ -210,7 +210,7 @@
         .linkNum1Sec {
           /* border: 1px solid red; */
           width: 88%;
-          height: 160px;
+          height: 180px;
           /* margin-left: auto; */
           margin-left: 30px;
           margin-top: 15px;
@@ -264,69 +264,30 @@
           color: #737373;
           font-weight: 500;
          }
-         .link {
-          border: 2px solid green;
-          width: 90%;
-          height: 65px;
-          margin-left: 35px;
-          margin-top: 10px;
-          position: relative;
-          display: flex;
-          align-items: center;
-        }
-        
-        .link p {
-          position: absolute;
-          top: 0;
-          left: 0;
-          margin: 0;
-          color: #737373;
-          font-size: 13px;
-          font-weight: 600;
-        }
-        
-        .link .input-container {
-          display: flex;
-          align-items: center;
-          width: 100%;
-        }
-        
-        .link .input-container input {
-          flex: 1;
-          height: 3em;
-          padding-left: 30px; 
-          border: 1px solid #d9d9d9;
-          margin-top: 18px;
-          border-radius: 5px;
-        }
-        
-        .link .icon-link {
-          position: absolute;
-          left: 5px; /* Adjust this value to position the icon at the left corner of the input */
-          top: 65%; /* Vertically center the icon within the input */
-          transform: translateY(-50%); /* Adjust the vertical position */
-        }
-      
-         .platform {
-          position: relative;
-          flex-direction: column;
-          display: flex;
+
+        .link, .platform {
+          width: 92%;
+          height: 60px;
+          margin-left: 25px;
           /* border: 2px solid red; */
-          width: 90%;
-          height: 10px;
-          margin-top: 15px;
-          margin-left: 34px;
+          margin-top: 10px;
         }
         
-        .platform p {
-          position: absolute;
-          top: 0;
-          left: 0;
-          margin: 0;
-          color: #737373;
+        .link p, .platform p {
           font-size: 13px;
-          font-weight: 600;
+          color: #333333;
         }
+
+        .link input, .platform input {
+          width: 99%; 
+          height: 36px; 
+          margin-top: 5px; 
+          border-radius: 5px;
+          border: 1px solid #ccc;
+        }
+
+        
+       
         
        
         

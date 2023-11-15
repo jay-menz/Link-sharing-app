@@ -1,8 +1,8 @@
 
 import './App.css';
-import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
-// import Login from './Login';
-// import CreateAccount from './CreateAccount'; 
+import { BrowserRouter as Router, Routes, Route, Switch, Link} from 'react-router-dom';
+import Login from './Login';
+import CreateAccount from './CreateAccount'; 
 // import AddedOneLink from './AddedOneLink';
 // import AddedLinks from './AddedLinks';
 // import Profile from './Profile';
@@ -35,8 +35,9 @@ function App() {
     <div>
       <Router>
           <Routes>
-            <Route path='/' element={<Empty />  } />
-              {/* <Route path='/create-account' element={<CreateAccount />} /> */}
+            <Route path='/' element={<Login />  } />
+            <Route path='/CreateAccount' element={<CreateAccount/> } />
+            <Route path='/Empty' element={<Empty />} />
             </Routes>
       </Router>
     </div>

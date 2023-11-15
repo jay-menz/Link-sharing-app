@@ -15,12 +15,28 @@
   flex-direction: column;
 }
 
-.whiteBoxSpace {
+/* .whiteBoxSpace {
   width: 430px; 
-  height: 420px; 
+  height: 380px; 
   background:#fff;
   border-radius:10px;
+} */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Adjust as needed */
 }
+
+.whiteBoxSpace {
+  width: 510px;
+  max-height: 400px; /* Adjust the maximum height as needed */
+  overflow-y: auto; /* Add scroll if content overflows */
+  background: #fff;
+  border-radius: 10px;
+}
+
 
 .devLinkLogo {
   margin-bottom: 50px;
@@ -37,6 +53,7 @@
 .login-title {
   font-size:22px;
   color: #333333;
+  /* border: 2px solid red; */
 }
 
 .login-info{

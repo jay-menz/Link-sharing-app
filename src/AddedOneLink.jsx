@@ -8,6 +8,8 @@ import dragDrop from './assets/images/icon-drag-and-drop.svg';
 import githubImg from './assets/images/icon-github.svg'
 import chevronDown from './assets/images/icon-chevron-down.svg';
 import iconLink from './assets/images/icon-link-copied-to-clipboard.svg';
+
+
 import './AddedOneLink.css';
 
 const AddedOneLink = () => {
@@ -49,42 +51,15 @@ const AddedOneLink = () => {
                         <p>Remove</p>
                     </div>
                     <div className="platform">
-                        {/* <p>Platform</p> */}
-                        {/* <div className="input-container">
-                        <img src={githubImg} alt="" />
-                        <input type="text" name="" id="" />
-                        </div> */}
+                        <p>Platform</p>
+                        <input type="text" />
                     </div>
                     <div className="link">
                         <p>Link</p>
-                        {/* <div className="input-container">
-                        <img src={iconLink} alt="" className='icon-link'/>
-                        <input type="text" name="" id="" placeholder='e.g.https://www.github.com/johnappleseed'/>
-                        </div> */}
+                        <input type="text" placeholder='e.g.https://www.github.com/johnappleseed'/>
                     </div>
                   </div>
-                  <div className="linkNum1Sec">
-                    <div className="linkRemove">
-                        <div className="img-p">
-                        <img src={dragDrop} alt="" />
-                        <p>Link #1</p>
-                        </div>
-                        <p>Remove</p>
-                    </div>
-                    <div className="platform">
-                        {/* <p>Platform</p> */}
-                        {/* <div className="input-container">
-                        <img src={githubImg} alt="" />
-                        <input type="text" name="" id="" />
-                        </div> */}
-                    </div>
-                    <div className="link">
-                        <p>Link</p>
-                        {/* <div className="input-container">
-                        <img src={iconLink} alt="" className='icon-link'/>
-                        <input type="text" name="" id="" placeholder='e.g.https://www.github.com/johnappleseed'/>
-                        </div> */}
-                    </div>
+                  
                   </div>
                  
                   <div className="saveBtn">
@@ -92,8 +67,6 @@ const AddedOneLink = () => {
                    </div>
                 </div>            
             </div>
-        </div>
-        
     </section>
   )
 }
