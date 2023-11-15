@@ -14,11 +14,14 @@ import './CreateAccount.css';
   //set states to track changes in app
   const [email, setEmail] = React.useState(''); //set state for user email
   const [password, setPassword] = React.useState(''); //set state for user password
+  const [passwordConfirm, setPasswordConfirm] = React.useState('');
 
 
   //handle Onchange when user enters any character in inputs
   const handleOnChangeEmail = (event)=>{setEmail(event.target.value);}
   const handleOnChangePassword = (event)=>{setPassword(event.target.value);}
+  const handleOnChangeConfirmPassword = (event)=>{setPasswordConfirm(event.target.value);}
+  
 
   //show errors and success messages
   const [emailError, setEmailError] = React.useState(false); //set this to false on initial load. when field is empty set it to true to show error message
@@ -26,6 +29,9 @@ import './CreateAccount.css';
   
   const [passwordError, setPasswordError] = React.useState(false); //set this to false on initial load. when field is empty set it to true to show error message
   const [passwordErrorMessage, setPasswordErrorMessage] = React.useState(''); //show error meesage in password
+
+  const [passwordConfirmError, setPasswordConfirmError] = React.useState(false); //set this to false on initial load. when field is empty set it to true to show error message
+  const [passwordConfirmErrorMessage, setPasswordConfirmErrorMessage] = React.useState(''); //show error meesage in password
 
   const [showLoginButton, setShowLoginButton] = React.useState(true); //show login button on load
   const [showLoading, setShowLoading] = React.useState(false); //show loading state when button is clicked
@@ -35,6 +41,8 @@ import './CreateAccount.css';
 
   const [emailLabelError, setEmailLabelError] = React.useState(false);
   const [passwordLabelError, setPasswordLabelError] = React.useState(false);
+  const [passwordConfirmLabelError, setPasswordConfirmLabelError] = React.useState(false);
+
 
 
   //this function handles the login button when clicked.
@@ -75,7 +83,24 @@ import './CreateAccount.css';
 
       return false;
     }
-    else{
+
+    else if(passwordConfirm == '' || passwordConfirm == null) {
+      setPasswordConfirmError(true)
+      setPasswordConfirmErrorMessage("Please check again");
+      setPasswordConfirmLabelError(true);
+      
+
+      //remove the error message after 3seconds. You can play with the time yourself by changing it in the setTimout function
+      setTimeout(() => {
+        
+        setPasswordError(false) //set message to false to hide it
+        setPasswordErrorMessage("") //remove the error message
+        setPasswordLabelError(false);
+      }, 3000); 
+      return false;
+    } else {
+
+    
 
       //use trycatch block to handle errors if any should arise
       try {
@@ -88,7 +113,7 @@ import './CreateAccount.css';
 
           //handle your backend database validaiton here if email and password is not empty
           // alert('Success i just logged in') 
-          navigate('/Empty')
+          navigate('/Empty');
         //====================================================================================================//
 
         //after response from server backend make sure to hide the loading and then show the login button again
@@ -143,6 +168,7 @@ import './CreateAccount.css';
                 placeholder='At least 8 characters' 
                 id="createPasswordInput" 
                 className='custom-input'
+                onChange={handleOnChangePassword}
                 />
                 {passwordError &&(
                   <span className="email-error-message" id="passwordError">{passwordErrorMessage}</span>
@@ -152,7 +178,7 @@ import './CreateAccount.css';
 
 
           <div className="passwordRequest">
-            <label htmlFor="password">Confirm password</label>
+          <label htmlFor="password" className={passwordConfirmLabelError ? 'error-label' : ''}>Confirm password</label>
             <div className="input-container">
                 <img src={passwordIcon} alt="password icon" />
                 <input 
@@ -160,11 +186,11 @@ import './CreateAccount.css';
                 placeholder='At least 8 characters' 
                 id="confirmPasswordInput" 
                 // value={confirmPassword} 
-                // onChange={handleOnChangeConfirmPassword}
+                onChange={handleOnChangeConfirmPassword}
                 className='custom-input'/>
-                {/* {passwordError &&(
-                  <span className="email-error-message" id="passwordError">{passwordErrorMessage}</span>
-                )} */}
+                {passwordConfirmError &&(
+                  <span className="email-error-message" id="passwordConfirmError">{passwordConfirmErrorMessage}</span>
+                )}
             </div>
           </div>
 

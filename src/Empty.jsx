@@ -3,20 +3,25 @@ import devLinkLogo from './assets/images/logo-devlinks-large.svg';
 import iphoneIcon from './assets/images/illustration-phone-mockup.svg';
 import fingerSwipe from './assets/images/illustration-empty.svg';
 import links from './assets/images/icon-link.svg';
-import profie from './assets/images/icon-profile-details-header.svg'; 
+import profile from './assets/images/icon-profile-details-header.svg'; 
+import { useNavigate } from 'react-router-dom'
+
 import './Empty.css';
 
 const Empty = () => {
+
+    const navigate=useNavigate() 
+
   return (
     <section>
 <div class="nav-container">
     <div class="innerNav-container">
         <img src={devLinkLogo} alt="dev link logo" />
         <div class="linksDetails">
-            <button><img src={links} alt="links" />Links</button>
-            <button><img src={profie} alt="profile" /><span>Profile Details</span></button>
+            <button onClick={() => navigate("/AddedLinks") }><img src={links} alt="links" />Links</button>
+            <button onClick={() => navigate("/Profile")}><img src={profile} alt="profile" /><span>Profile Details</span></button>
         </div>
-        <button>Preview</button>
+        <button onClick={() => navigate("/preview") }>Preview</button>
     </div>
 </div>
         <div className="main-container">
@@ -34,7 +39,7 @@ const Empty = () => {
                 </div>
                 <div className="newLink-section">
                   <div className="newLink">
-                    <button className='addLinkBtn'>+Add new link</button>
+                    <button className='addLinkBtn' onClick={() => navigate("/AddedOneLinks") }>+Add new link</button>
                   </div>
                 <div className="getStarted">
                     <div className="phoneSwipe">

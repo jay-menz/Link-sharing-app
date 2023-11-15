@@ -106,10 +106,10 @@
 
 .input-container{
      display:flex;
-     border:1px solid #ccc;
+     /* border:1px solid #ccc; */
      padding:10px;
      border-radius:8px;
-     transition: border 0.3s, box-shadow 0.3s;
+     /* transition: border 0.3s, box-shadow 0.3s; */
 }
 
 .input-container.error {

@@ -9,19 +9,25 @@ import githubImg from './assets/images/icon-github.svg'
 import chevronDown from './assets/images/icon-chevron-down.svg';
 import iconLink from './assets/images/icon-link-copied-to-clipboard.svg';
 import uploadimageIcon from './assets/images/icon-upload-image.svg';
+import { useNavigate } from 'react-router-dom'
+
+
 import './Profile.css';
 
 const Profile = () => {
+
+    const navigate=useNavigate() 
+
   return (
     <section>
 <div class="nav-container">
     <div class="innerNav-container">
         <img src={devLinkLogo} alt="dev link logo" />
         <div class="linksDetails">
-            <button><img src={links} alt="links" />Links</button>
+            <button onClick={() => navigate("/AddedLinks") }><img src={links} alt="links" />Links</button>
             <button><img src={profie} alt="profile" /><span>Profile Details</span></button>
         </div>
-        <button>Preview</button>
+        <button onClick={() => navigate("/preview") }>Preview</button>
     </div>
 </div>
         <div className="main-container">
