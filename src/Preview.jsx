@@ -12,7 +12,7 @@ const Preview = () => {
     <div className="mauve-cover">
       <div className="navbar">
         <div className="inner-navbar">
-          <button>Back to Editor</button>
+          <button onClick={() => navigate("/AddedLinks") }>Back to Editor</button>
           <button>Share Link</button>
         </div>
       </div>

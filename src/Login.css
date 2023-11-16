@@ -9,92 +9,101 @@
   margin: 0;
   background-color: #fafafa;
   display: flex;
-  justify-content: center;
+  /* justify-content: flex-start; */
   align-items: center;
   height: 100vh;
   flex-direction: column;
 }
 
-/* .whiteBoxSpace {
-  width: 430px; 
-  height: 380px; 
-  background:#fff;
-  border-radius:10px;
-} */
-
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Adjust as needed */
+  height: 100vh;
+}
+
+.devLinkLogo {
+  margin-top: -20px;
 }
 
 .whiteBoxSpace {
-  width: 510px;
-  max-height: 400px; /* Adjust the maximum height as needed */
-  overflow-y: auto; /* Add scroll if content overflows */
+  max-width: 375px;
+  max-height: 370px; 
+  overflow-y: auto; 
   background: #fff;
   border-radius: 10px;
+  margin: 20px auto;
+  justify-content: center;
+  align-items: center; 
 }
 
-
-.devLinkLogo {
-  margin-bottom: 50px;
-}
 
 .login {
-  width: 390px;
-  /* border: 2px solid blue; */
+  max-width: 340px;
   margin-top: 30px;
   margin-left: 20px;
-  position: relative;
 }
 
 .login-title {
   font-size:22px;
   color: #333333;
-  /* border: 2px solid red; */
 }
 
 .login-info{
   color: #737373;
-  font-size:16px;
+  font-size:10px;
   margin-top: 10px;
+  max-height: 50px;
+
 }
 
 .emailPassword {
-  width: 390px;
+  max-width: 340px;
+  max-height: 240px;
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  height: 280px;
-  margin-left: 20px;
-  margin-top: 18px;
+  gap: 10px;
+  justify-content: flex-start; 
 }
 
-.emailRequest {
-    display:flex;
-    flex-direction: column;
+.emailRequest, 
+.passwordRequest {
+  width: 335px;
+  height: 75px;
+  position: relative;
+  margin-bottom: 4px;
+  /* border: 2px solid red; */
 }
 
+.emailRequest label,
+.passwordRequest label {
+  position: absolute;
+  top: 5px;
+  left: -5px;
+  transform: translateY(-100%);
+  /* background-color: white; */
+  padding: 0 5px;
+  color: #737373;
+}
 
-  .emailRequest label, .passwordRequest label {
-      font-size:13px;
-      margin-bottom:10px;
-      margin: 10px;
-      /* color: red; */
-      margin-left: 1px;
-      color: #333333;
-  }
+.emailRequest img,
+.passwordRequest img {
+  margin-right: 60px; /* Adjust this value to move the image to the left */
+}
+
+.emailRequest .input-container,
+.passwordRequest .input-container {
+  margin-top: 19px;
+  width: 100%;
+  display: flex;
+  padding: 7px;
+
+}
 
   .emailRequest label.error, .passwordRequest label.error {
    color: #ff3939;
 }
 
-.passwordRequest {
-  display:flex;
-  flex-direction: column;
-}
 
 #passwordError {
   /* border: 2px solid red; */
@@ -129,7 +138,7 @@ input[type="email"],
 input[type="password"] {
   padding: 6px;
   border-radius: 5px;
-  width: 120%;
+  /* width: 120%; */
   outline: none;
   width: 200px;
 }
@@ -156,14 +165,13 @@ input[type="password"] {
   position: relative;
   margin-right: -45px;
   bottom: 0;
-  /* border: 2px solid yellow; */
 }
 
-button {
+
+/* button {
   width: 100%;
   height: 100px;
   margin-top: 13px;
-  /* margin-button: 20px; */
   border-radius: 5px;
   background-color: #633cff;
   border: none;
@@ -175,7 +183,7 @@ button {
     background-color: #beadff;
     color: #fafafa;
   }
-}
+} */
 
 
 .createAccount {

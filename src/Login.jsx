@@ -112,50 +112,47 @@ import './Login.css';
 
       <div className="whiteBoxSpace">
 
-        <div className="login">
+      <div className="login">
           <h1 className='login-title'>Login</h1>
           <p className='login-info'>Add your details below to get back into the app</p>
         </div>
 
         <div className="emailPassword">
 
-          <div className="emailRequest">
-            <label htmlFor="email" className={emailLabelError ? 'error' : ''}>Email address</label>
-            <div className={`input-container ${emailError ? 'error' : ''}`}>
-                <img src={emailIcon} alt="email icon" />
-                <input 
-                type="email" 
-                placeholder='e.g.alex@email.com' 
-                id='emailPwdInput' 
-                value={email} 
-                onChange={handleOnChangeEmail} 
-                className={`input-container ${emailError ? 'error' : ''}`}
-                /> 
-                {emailError &&(
-                  <span className="email-error-message" id="passwordError">{emailErrorMessage}</span>
-                )}
+           <div className="emailRequest">
+              <label htmlFor="email" className={emailLabelError ? 'error-label' : ''}>Email address</label>
+                 <div className={`input-container ${emailError ? 'error-border' : ''}`}>
+                    <img src={emailIcon} alt="email icon" />
+                      <input 
+                      type="email" 
+                      placeholder='e.g.alex@email.com' 
+                      id='emailPwdInput' 
+                      value={email} 
+                      onChange={handleOnChangeEmail} 
+                      className='custom-input'
+                      /> 
+                     {emailError &&(
+                       <span className="email-error-message" id="passwordError">{emailErrorMessage}</span>
+                     )}
+                  </div>
             </div>
-          </div>
 
-          <div className="passwordRequest">
-            <label htmlFor="password" className={passwordLabelError ? 'error' : ''}>Password</label>
-            <div className={`input-container ${passwordError ? 'error' : ''}`}> 
+            <div className="passwordRequest">
+            <label htmlFor="password" className={passwordLabelError ? 'error-label' : ''}>Password</label>
+            <div className={`input-container ${passwordError ? 'error-border' : ''}`}>
                 <img src={passwordIcon} alt="password icon" />
-                <input  
+                <input 
                 type="password" 
-                placeholder='Password' 
-                id='emailPwdInput' 
-                value={password} 
+                placeholder='Enter your password' 
+                id="createPasswordInput" 
+                className='custom-input'
                 onChange={handleOnChangePassword}
-                className={`input-container ${passwordError ? 'error' : ''}`}
                 />
                 {passwordError &&(
                   <span className="email-error-message" id="passwordError">{passwordErrorMessage}</span>
                 )}
             </div>
           </div>
-
-          
 
           {showLoginButton &&(
             <button className='btn' onClick={() => handleLogin()}>Login</button>
@@ -168,8 +165,10 @@ import './Login.css';
           <p className='createAccount'>Don't have an account? <a href="/CreateAccount">Create account</a></p>
             
 
-        </div>
+        {/* </div> */}
 
+        </div>
+        
       </div>
 
     </div>
