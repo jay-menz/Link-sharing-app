@@ -119,7 +119,7 @@ import './Login.css';
 
       <div className="emailPwd">
         <div className="email">
-        <label htmlFor="email" className={emailLabelError ? 'error-label' : ''}>Email address</label>
+          <label htmlFor="email" className={emailLabelError ? 'error-label' : ''}>Email address</label>
                  <div className={`input-container ${emailError ? 'error-border' : ''}`}>
                     <img src={emailIcon} alt="email icon" />
                       <input 

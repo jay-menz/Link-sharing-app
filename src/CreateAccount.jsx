@@ -130,38 +130,36 @@ import './CreateAccount.css';
   return(
     <div className="body">
 
-      <img src={devLinkLogo} alt="dev link logo" className='devLinkLogo'/>  
+      <img src={devLinkLogo} alt="dev link logo" className='devvLinkLogo'/>  
 
-      <div className="whiteBoxSpace">
+      <div className="whiteBoxX">
 
-      <div className="login">
-          <h1 className='login-title'>Create account</h1>
-          <p className='login-info'>Let's get you started sharing your links!</p>
-        </div>
+      <div className="createAccount">
+          <h1 className='createAccount-title'>Create account</h1>
+          <p className='createAccount-info'>Let's get you started sharing your links!</p>
+      </div>
 
-        <div className="emailPassword">
-
-          <div className="emailRequest">
-            <label htmlFor="email" className={emailLabelError ? 'error-label' : ''}>Email address</label>
-            <div className={`input-container ${emailError ? 'error-border' : ''}`}>
-                <img src={emailIcon} alt="email icon" />
-                <input 
-                type="email" 
-                placeholder='e.g.alex@email.com' 
-                id='emailPwdInput' 
-                value={email} 
-                onChange={handleOnChangeEmail} 
-                className='custom-input'
-                /> 
-                {emailError &&(
-                  <span className="email-error-message" id="passwordError">{emailErrorMessage}</span>
-                )}
-            </div>
+        <div className="emailccPwd">
+          <div className="emaill">
+          <label htmlFor="email" className={emailLabelError ? 'error-label' : ''}>Email address</label>
+                 <div className={`inputt-container ${emailError ? 'error-border' : ''}`}>
+                    <img src={emailIcon} alt="email icon" />
+                      <input 
+                      type="email" 
+                      placeholder='e.g.alex@email.com' 
+                      id='emailPwdInput' 
+                      value={email} 
+                      onChange={handleOnChangeEmail} 
+                      className='custom-input'
+                      /> 
+                     {emailError &&(
+                       <span id="passwordError">{emailErrorMessage}</span>
+                     )}
+                  </div>
           </div>
-
-          <div className="passwordRequest">
-            <label htmlFor="password" className={passwordLabelError ? 'error-label' : ''}>Create password</label>
-            <div className={`input-container ${passwordError ? 'error-border' : ''}`}>
+          <div className="createPassword">
+          <label htmlFor="password" className={passwordLabelError ? 'error-label' : ''}>Create Password</label>
+            <div className={`inputt-container ${passwordError ? 'error-border' : ''}`}>
                 <img src={passwordIcon} alt="password icon" />
                 <input 
                 type="password" 
@@ -171,45 +169,39 @@ import './CreateAccount.css';
                 onChange={handleOnChangePassword}
                 />
                 {passwordError &&(
-                  <span className="email-error-message" id="passwordError">{passwordErrorMessage}</span>
+                  <span id="passwordError">{passwordErrorMessage}</span>
                 )}
             </div>
           </div>
-
-
-          <div className="passwordRequest">
-          <label htmlFor="password" className={passwordConfirmLabelError ? 'error-label' : ''}>Confirm password</label>
-            <div className="input-container">
+          <div className="confirmPassword">
+          <label htmlFor="password" className={passwordLabelError ? 'error-label' : ''}>Confirm Password</label>
+            <div className={`inputt-container ${passwordError ? 'error-border' : ''}`}>
                 <img src={passwordIcon} alt="password icon" />
                 <input 
                 type="password" 
                 placeholder='At least 8 characters' 
-                id="confirmPasswordInput" 
-                // value={confirmPassword} 
-                onChange={handleOnChangeConfirmPassword}
-                className='custom-input'/>
-                {passwordConfirmError &&(
-                  <span className="email-error-message" id="passwordConfirmError">{passwordConfirmErrorMessage}</span>
+                id="createPasswordInput" 
+                className='custom-input'
+                onChange={handleOnChangePassword}
+                />
+                {passwordError &&(
+                  <span id="passwordError">{passwordErrorMessage}</span>
                 )}
             </div>
           </div>
 
           <p className="pwdReminder">Password must contain at least 8 characters </p>
 
-
-          
-
-          {showLoginButton &&(
-            <button className='btn' onClick={() => handleLogin()}>Create new account</button>
+{showLoginButton &&(
+            <button className='createAccount-btn' onClick={() => handleLogin()}>Create new account</button>
           )}
 
           {showLoading &&(
-            <button className='btn' style={{backgroundColor:'gray'}} >Logging in... Please wait</button>
+            <button className='createAccount-btn' style={{backgroundColor:'gray'}} >Logging in... Please wait</button>
           )}
 
-          <p className='createAccount'>Already have an account? <a href="/">Login</a></p>
+          <p className='loginAcc'>Already have an account? <a href="/">Login</a></p>
             
-
         </div>
 
       </div>
