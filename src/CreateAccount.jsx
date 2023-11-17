@@ -134,7 +134,7 @@ import './CreateAccount.css';
 
       <div className="whiteBoxSpace">
 
-        <div className="login">
+      <div className="login">
           <h1 className='login-title'>Create account</h1>
           <p className='login-info'>Let's get you started sharing your links!</p>
         </div>
@@ -213,6 +213,7 @@ import './CreateAccount.css';
         </div>
 
       </div>
+
 
     </div>
   )

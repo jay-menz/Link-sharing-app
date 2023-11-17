@@ -110,17 +110,16 @@ import './Login.css';
 
       <img src={devLinkLogo} alt="dev link logo" className='devLinkLogo'/>  
 
-      <div className="whiteBoxSpace">
+      <div className="whiteBox">
 
-      <div className="login">
-          <h1 className='login-title'>Login</h1>
-          <p className='login-info'>Add your details below to get back into the app</p>
-        </div>
+      <div className="log">
+          <h1 className='log-title'>Login</h1>
+          <p className='log-info'>Add your details below to get back into the app</p>
+      </div>
 
-        <div className="emailPassword">
-
-           <div className="emailRequest">
-              <label htmlFor="email" className={emailLabelError ? 'error-label' : ''}>Email address</label>
+      <div className="emailPwd">
+        <div className="email">
+        <label htmlFor="email" className={emailLabelError ? 'error-label' : ''}>Email address</label>
                  <div className={`input-container ${emailError ? 'error-border' : ''}`}>
                     <img src={emailIcon} alt="email icon" />
                       <input 
@@ -132,13 +131,13 @@ import './Login.css';
                       className='custom-input'
                       /> 
                      {emailError &&(
-                       <span className="email-error-message" id="passwordError">{emailErrorMessage}</span>
+                       <span id="passwordError">{emailErrorMessage}</span>
                      )}
                   </div>
-            </div>
+        </div> 
 
-            <div className="passwordRequest">
-            <label htmlFor="password" className={passwordLabelError ? 'error-label' : ''}>Password</label>
+        <div className="password">
+        <label htmlFor="password" className={passwordLabelError ? 'error-label' : ''}>Password</label>
             <div className={`input-container ${passwordError ? 'error-border' : ''}`}>
                 <img src={passwordIcon} alt="password icon" />
                 <input 
@@ -149,28 +148,22 @@ import './Login.css';
                 onChange={handleOnChangePassword}
                 />
                 {passwordError &&(
-                  <span className="email-error-message" id="passwordError">{passwordErrorMessage}</span>
+                  <span id="passwordError">{passwordErrorMessage}</span>
                 )}
             </div>
-          </div>
-
-          {showLoginButton &&(
-            <button className='btn' onClick={() => handleLogin()}>Login</button>
-          )}
-
-          {showLoading &&(
-            <button className='btn' style={{backgroundColor:'gray'}} >Logging in... Please wait</button>
-          )}
-
-          <p className='createAccount'>Don't have an account? <a href="/CreateAccount">Create account</a></p>
-            
-
-        {/* </div> */}
-
         </div>
-        
+
+        {showLoginButton &&(
+            <button className='log-btn' onClick={() => handleLogin()}>Login</button>
+          )}
       </div>
 
+      <p className='createAccLink'>Don't have an account? <a href="/CreateAccount">Create account</a></p>
+
+     
+      </div>
+
+      
     </div>
   )
 }
