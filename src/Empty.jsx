@@ -24,40 +24,40 @@ const Empty = () => {
         <button onClick={() => navigate("/preview") }>Preview</button>
     </div>
 </div>
-        <div className="main-container">
-            <div className="phoneIcon">
-               <div className="phone">
-                 <img src={iphoneIcon} alt="phone icon"/>
-               </div>
-            </div>
-            <div className="customisation">
-                <div className="customisationHeaderParagraph">
-                    <h1>Customize your links</h1>
-                    <p>Add/edit/remove links below and then share all your profiles 
-                        with the world!
-                    </p>
-                </div>
-                <div className="newLink-section">
-                  <div className="newLink">
-                    <button className='addLinkBtn' onClick={() => navigate("/AddedOneLinks") }>+Add new link</button>
+            <div className="main-container">
+                <div className="phoneIcon">
+                  <div className="phone">
+                    <img src={iphoneIcon} alt="phone icon"/>
                   </div>
-                <div className="getStarted">
-                    <div className="phoneSwipe">
-                        <img src={fingerSwipe} alt="swiping phone" />
+                </div>
+                    <div className="empty-customisation">
+                        <div className="customisationHeaderParagraph">
+                            <h1>Customize your links</h1>
+                            <p>Add/edit/remove links below and then share all your profiles 
+                                with the world!
+                            </p>
+                        </div>
+                    <div className="newLink-section">
+                    <div className="newLink">
+                        <button className='addLinkBtn' onClick={() => navigate("/AddedOneLinks") }>+Add new link</button>
                     </div>
-                   <div className="getStartedHeaderParagraph">
-                      <h1>Let's get you started</h1>
-                      <p>Use the "Add new link" button to get started. Once you have more <br />
-                      than one link, you can reorder and edit them. We're here to help <br />
-                      you share your profiles with everyone!  
-                      </p>
-                   </div>
+                    <div className="getStarted">
+                        <div className="phoneSwipe">
+                            <img src={fingerSwipe} alt="swiping phone" />
+                        </div>
+                    <div className="getStartedHeaderParagraph">
+                        <h1>Let's get you started</h1>
+                        <p>Use the "Add new link" button to get started. Once you have more <br />
+                        than one link, you can reorder and edit them. We're here to help <br />
+                        you share your profiles with everyone!  
+                        </p>
+                    </div>
+                    </div>
+                    </div>
                 </div>
-                </div>
-            </div>
         </div>
-        <div className="saveBtn">
-            <button className='save'>save</button>
+        <div className="save">
+            <button className='saveBtnn'>save</button>
         </div>
     </section>
   )

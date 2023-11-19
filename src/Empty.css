@@ -108,48 +108,55 @@ button:hover {
 }
 
 .phoneIcon {
-  width: 250px; 
-  height: 130px; 
-}
-/* 
-.phoneIcon img {
-  width: 500px; 
-  height: 500px;
-  margin-left: -15px;
-  margin-top: 20px;
-  border: 2px solid blue;
-} */
-
-.phone {
-  position: relative;
-  /* border: 2px solid pink; */
-  top: 1px; 
-  right: -15px;
-  width: 300px;
+  width: 540px; 
+  height: 535px;
+  margin-left: -25px;
+  margin-top: -23px;
+  /* border: 2px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .phone img {
-  width: 500px; /* Adjust this value to your desired width */
-  height: 500px; /* Adjust this value to your desired height */
+  max-width: 80%; 
+  max-height: 400px;
+  margin-top: -65px;
+  width: 190%;
+}
+
+
+
+/* .phone {
   position: relative;
-  top: 20px; /* To move to the top, or use 'bottom: 0' to move to the bottom */
-  right: 25px; /* To move to the right, or use 'left: 0' to move to the left */
-  /* border: 2px solid yellow; */
-}
+  border: 2px solid pink;
+  top: 1px; 
+  right: -15px;
+  width: 300px;
+} */
 
+/* .phone img {
+  width: 500px; 
+  height: 500px; 
+  position: relative;
+  top: 20px;
+  right: 25px;
+  border: 2px solid yellow;
+} */
 
-.customisation {
-  width: 59%;
-  height: 535px; 
-  margin-left: auto; 
-  margin-right: 0; 
-  position: relative; 
-  top: -155px;
-  /* border: 2px solid red; */
-}
+  .empty-customisation {
+    position: absolute;
+    top: 0;
+    margin-left: 530px;
+    margin-top: 93px;
+    width: 760px; 
+    height: 535px;
+    text-align: center; 
+    /* border: 2px solid blue; */
+  }
 
 .customisationHeaderParagraph {
-  margin-left: 25px;
+  margin-left: 30px; 
   margin-top: 10px; 
 }
 
@@ -189,7 +196,7 @@ button:hover {
 }
 
 .phoneSwipe {
-  order: -1; /* This will move the phoneSwipe div to the top */
+  order: -1; 
 }
 
 .getStartedHeaderParagraph {
@@ -207,30 +214,38 @@ button:hover {
   margin-top: 15px; 
 }
 
-.saveBtn {
+.save {
   position: absolute;
-  top: 585px; 
-  right: 30px; 
-  width: 790px; 
-  height: 50px; 
+  top: 570px; 
+  right: 32px; 
+  width: 760px; 
+  height: 58px; 
   /* border: 2px solid red; */
 }
 
-/* .saveBtn .save {
-  width: 70px; 
-  height: 40px; 
-  margin-left: auto; 
-  margin-left: 700px; 
+.saveBtnn {
+  width: 70px;
+  height: 40px;
+  /* border: 2px solid red; */
+  margin-left: 650px;
+  margin-top: 6px;
   border: none;
   background-color: #d9d9d9;
   color: white;
-} */
+  text-align: center; 
+  line-height: 40px; 
+}
 
+.saveBtnn:hover {
+  background-color: #beadff; 
+  color: white;
+}
+/* 
 .saveBtn .save {
   width: 70px;
   height: 40px;
   margin-left: 650px;
-  /* margin-right: 700px;  */
+  border: 2px solid red;
   border: none;
   background-color: #d9d9d9;
   color: white;
@@ -240,7 +255,7 @@ button:hover {
 
 .saveBtn .save:hover {
   background-color: #beadff; 
-}
+} */
 
 
 
