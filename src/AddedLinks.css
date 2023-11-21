@@ -7,6 +7,8 @@
   
   html, body {
     overflow: hidden;
+    margin: 0;
+    padding: 0;
   }
   
   .nav-container {
@@ -105,6 +107,7 @@
   .phoneIcon {
     width: 250px; 
     height: 130px; 
+    /* border: 2px solid red; */
   }
   
   .phone {
@@ -125,14 +128,16 @@
   }
   
   
-  .customisation {
-    width: 61%;
-    height: 450px; 
-    margin-left: auto; 
-    margin-right: 0; 
-    position: relative; 
-    top: -135px;
-    /* margin-top: 15px; */
+  .AddOneLink-customisation {
+    position: absolute;
+    top: 0;
+    margin-left: 530px;
+    margin-top: 93px;
+    width: 760px; 
+    height: 535px;
+    text-align: center; 
+    border: 2px solid blue;
+
   }
   
   .customisationHeaderParagraph {
@@ -161,7 +166,7 @@
     margin-top: -5px; 
   }
 
-  .saveBtn .save {
+  /* .saveBtn .save {
     width: 70px;
     height: 40px;
     border: none;
@@ -169,13 +174,13 @@
     color: white;
     text-align: center;
     line-height: 40px;
-  }
+  } */
 
-  .save {
+  /* .save {
     position: absolute;
-    top: 600px; /* Adjust this value to move it down */
-    right: 30px; /* Adjust this value to move it to the left */
-  }
+    top: 600px; 
+    right: 30px; 
+  } */
     
         .link-container {
             width: 660px;
@@ -189,16 +194,156 @@
             border-radius: 5px;
         }
 
-        .linkNum1Sec {
-          /* border: 1px solid red; */
+        .linkOne {
+          background-color: #efebff;
+          width: 90%;
+          height: 159px;
+          margin-left: 33px;
+          margin-top: 10px;
+          border-radius: 5px;
+          position: relative;
+        }
+        
+        .removeLink {
+          display: flex;
+          align-items: center;
+          justify-content: space-between; /* Add this to space items horizontally */
+          flex-direction: row; /* Add this to make items appear horizontally */
+          width: 92%;
+          height: 20px;
+          margin-left: 20px; /* Adjust this value to control spacing from the left */
+          /* border: 2px solid blue; */
+          top: 150px;
+        }
+        
+        .equalLink {
+          display: flex;
+          align-items: center;
+        }
+        
+        .equalLink img {
+          margin-right: 5px; 
+          filter: grayscale(100%);
+        }
+        
+        .equalLink p {
+          color: #737373; 
+          font-weight: 500;
+        }
+
+        .removeLink p {
+          color: #737373; /* Set the color to #737373 */
+        }
+
+        .platformSection {
+          width: 92%;
+          height: 60px;
+          margin-top: 5px;
+          margin-left: 20px;
+          border: 2px solid red;
+        }
+
+        .linkSection {
+          width: 92%;
+          height: 60px;
+          margin-top: 5px;
+          margin-left: 20px;
+          border: 2px solid red;
+        }
+
+        /* .platformSection p {
+          color: #737373;
+          font-size: 12px;
+          font-weight: 500;
+        } */
+
+        .platformSection {
+          position: relative;
+        }
+        
+        .platformSection p {
+          position: absolute;
+          top: 0;
+          left: 0;
+          color: #737373;
+          font-size: 12px;
+          font-weight: 500;
+        }
+  
+        .linkSection {
+          position: relative;
+        }
+
+        .linkSection p {
+          position: absolute;
+          top: 0;
+          left: 0;
+          color: #737373;
+          font-size: 12px;
+          font-weight: 500;
+        }
+
+        /* .linkInput {
+          display: flex;
+          align-items: center;
+        } */
+        
+        /* .iconWrapper {
+          width: 40px; 
+          height: 40px; 
+          margin-right: 10px; 
+        }
+        
+        .iconWrapper img {
+          width: 100%; 
+          height: 100%; 
+        } */
+        
+        
+        
+        
+        
+        
+        .linkTwo {
+          background-color: #efebff;
+          width: 90%;
+          height: 159px;
+          margin-left: 33px;
+          margin-top: 10px;
+          border-radius: 5px;
+        }
+
+        .linkOneSave {
+          position: absolute;
+          top: 570px; 
+          right: 32px; 
+          width: 760px; 
+          height: 58px; 
+        }
+
+        .linkSaveOneBtn {
+          width: 70px;
+          height: 40px;
+          margin-left: 650px;
+          margin-top: 6px;
+          border: none;
+          background-color: #633cff;
+          color: white;
+          text-align: center; 
+          line-height: 40px; 
+        }
+
+       
+
+        /* .linkNum1Sec {
           width: 90%;
           height: 215px;
-          margin-left: auto;
+          margin-right: 43px;
           margin-top: 15px;
           background-color: #efebff;
           border-radius: 5px;
-        }
-        .linkNum2Sec {
+        } */
+        /* .linkNum2Sec {
           border: 1px solid red;
           margin-top: 10px;
           width: 90%;
@@ -206,29 +351,28 @@
           margin-left: auto;
           background-color: #efebff;
           border-radius: 5px;
-        }
+        } */
 
-        .linkRemove {
-          /* border: 1px solid yellow; */
+        /* .linkRemove {
           width: 92%;
           height: 20px;
           margin-top: 15px;
           margin-left: 25px;
-        }
+        } */
 
-        .linkRemove {
-          display: flex; /* Use flex to create a horizontal layout */
-          align-items: center; /* Vertically center the content */
-          justify-content: space-between; /* Push the children to the far left and far right */
-        }
+        /* .linkRemove {
+          display: flex; 
+          align-items: center; 
+          justify-content: space-between; 
+        } */
 
-        .linkRemove p {
+        /* .linkRemove p {
           color: #737373;
           font-weight: 500;
 
-        }
+        } */
        
-        .img-p {
+        /* .img-p {
           display: flex; 
           align-items: center; 
           justify-content: space-between; 
@@ -242,7 +386,7 @@
          .img-p p {
           color: #737373;
           font-weight: 500;
-         }
+         } */
          .link {
           /* border: 2px solid green; */
           width: 90%;
@@ -286,7 +430,7 @@
           transform: translateY(-50%); /* Adjust the vertical position */
         }
       
-         .platform {
+         /* .platform {
           position: relative;
           flex-direction: column;
           display: flex;
@@ -295,7 +439,7 @@
           height: 65px;
           margin-top: 15px;
           margin-left: 34px;
-        }
+        } */
         
         .platform p {
           position: absolute;

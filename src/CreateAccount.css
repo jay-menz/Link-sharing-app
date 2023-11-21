@@ -25,11 +25,11 @@ flex-direction: column;
 }
 
 .whiteBoxX {
-  width: 410px;
-  height: 458px;
+  width: 400px;
+  height: 450px;
   background-color: #fff; 
   position: absolute;
-  top: 55%;
+  top: 53%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 5px;
@@ -39,13 +39,12 @@ flex-direction: column;
 .createAccount {
   /* border: 2px solid green; */
   width: 90%;
-  height: 17%;
-  /* display: flex; */
+  height: 14%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 25px;
-  margin-left: 25px;
+  margin-top: 10px;
+  margin-left: 22px;
 }
 
 .createAccount-title {
@@ -57,9 +56,8 @@ flex-direction: column;
 }
 
 .createAccount-info {
-  margin-top: 10px;
+  margin-top: 2px;
   margin-left: 3px; 
-  /* color: #d9d9d9;  */
   color: #737373;
   font-size: 14px;
   font-weight: 300;
@@ -67,7 +65,7 @@ flex-direction: column;
 
 .emailccPwd {
   width: 90%;
-  height: 65%;
+  height: 77%;
   display: flex;
   /* border: 2px solid red; */
   flex-direction: column;
@@ -78,20 +76,9 @@ flex-direction: column;
   align-items: flex-start; 
 }
 
-.emaill {
+.emaill, .createPassword, .confirmPassword {
   width: 100%;
-  margin-top: 10px;
-  /* border: 2px solid green; */
-}
-
-.createPassword {
-  /* border: 2px solid yellow; */
-  width: 100%;
-}
-
-.confirmPassword {
-  /* border: 2px solid orange; */
-  width: 100%;
+  margin-bottom: 23px; 
 }
 
 .inputt-container{
@@ -131,16 +118,18 @@ img {
 
 .pwdReminder {
   font-size: 13px;
-  margin-top: 12px;
+  /* margin-top: -5px; */
+  /* margin-button: 30px; */
   color: #737373;
   margin-right: 100px;
 }
 
 .createAccount-btn {
   width: 100%;
-  height: 50px;
-  margin-bottom: -45px;
-  margin-top: 10px;
+  height: 100px;
+  /* margin-bottom: -45px; */
+  /* margin-button: -50px; */
+  margin-top: -5px;
   color: #fff;
   background-color: #633cff;
   border: #633cff;
@@ -157,9 +146,11 @@ img {
   text-align: center;
   color: #737373;
   margin-top: 45px;
+  /* margin-button: 70px; */
   justify-content: center;
   font-size: 14px;
-  margin-bottom: 1px;
+  margin-left: 80px;
+  /* margin-bottom: 1px; */
 }
 
 .loginAcc a {

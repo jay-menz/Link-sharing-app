@@ -18,7 +18,7 @@ const Empty = () => {
     <div class="innerNav-container">
         <img src={devLinkLogo} alt="dev link logo" />
         <div class="linksDetails">
-            <button onClick={() => navigate("/AddedLinks") }><img src={links} alt="links" />Links</button>
+            <button onClick={() => navigate("/AddedOneLink") }><img src={links} alt="links" />Links</button>
             <button onClick={() => navigate("/Profile")}><img src={profile} alt="profile" /><span>Profile Details</span></button>
         </div>
         <button onClick={() => navigate("/preview") }>Preview</button>
@@ -38,8 +38,8 @@ const Empty = () => {
                             </p>
                         </div>
                     <div className="newLink-section">
-                    <div className="newLink">
-                        <button className='addLinkBtn' onClick={() => navigate("/AddedOneLinks") }>+Add new link</button>
+                    <div className="emptyNewLink">
+                        <button className='addLinkBtn' onClick={() => navigate("/AddedOneLink") }>+Add new link</button>
                     </div>
                     <div className="getStarted">
                         <div className="phoneSwipe">

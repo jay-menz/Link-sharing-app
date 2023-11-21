@@ -52,26 +52,26 @@ const Profile = () => {
                             <p className='image-requirements'>Image must be below 1024x1024px <br /> Use PNG or JPG format</p>
                         </div>
                     </div> 
-                <div class="info-section">
-                    <div class="input-pair">
-                        <p>First name*</p>
-                        <input type="text" name="" id="" placeholder='e.g. John' />
+                    <div className="info-section">
+                        <div className="firstNameInput">
+                           <p>First name*</p>
+                           <input type="text" name="" id="" placeholder='e.g. John' />
+                        </div>  
+                        <div className="lastNameInput">
+                           <p>Last name</p>
+                           <input type="text" name="" id="" placeholder='e.g. Appleseed' />
+                        </div>  
+                        <div className="emailInput">
+                           <p>Email</p>
+                           <input type="text" name="" id="" placeholder='e.g. email@example.com' />
+                        </div>    
                     </div>
-                    <div class="input-pair">
-                         <p>Last name*</p>
-                         <input type="text" name="" id="" placeholder='e.g. Appleseed' />
-                    </div>
-                    <div class="input-pair">
-                          <p>Email</p>
-                          <input type="text" name="" id="" placeholder='e.g. email@example.com' />
-                    </div>
-                </div>
 
                 </div>
             </div>
         </div>
-        <div className="saveBtn">
-            <button className='save'>save</button>
+        <div className="profileSave">
+            <button className='profileSaveBtn'>save</button>
         </div>
     </section>
   )

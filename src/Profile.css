@@ -48,8 +48,6 @@
   .linksDetails button img {
     margin-right: 5px;
     margin-left: -10px; 
-
-    /* margin-top: 30px;  */
   }
   
   .linksDetails button:first-child {
@@ -121,23 +119,23 @@
   }
   
   .phone img {
-    width: 500px; /* Adjust this value to your desired width */
-    height: 500px; /* Adjust this value to your desired height */
+    width: 500px; 
+    height: 500px;
     position: relative;
-    top: 20px; /* To move to the top, or use 'bottom: 0' to move to the bottom */
-    right: 25px; /* To move to the right, or use 'left: 0' to move to the left */
+    top: 20px; 
+    right: 25px; 
     /* border: 2px solid yellow; */
   }
   
   
   .profileDetails {
-    width: 57%;
-    height: 460px; 
+    width: 64%;
+    height: 530px; 
     margin-left: auto; 
-    margin-right: 0; 
+    margin-right: -55px; 
     position: relative; 
-    top: -145px;
-    /* border: 2px solid red; */
+    top: -535px;
+    border: 2px solid red;
     /* margin-top: 15px; */
   }
   
@@ -165,22 +163,6 @@
     width: 710px; 
     margin-left: 75px; 
     margin-top: -5px; 
-  }
-
-  .saveBtn .save {
-    width: 70px;
-    height: 40px;
-    border: none;
-    background-color: #633cff;
-    color: white;
-    text-align: center;
-    line-height: 40px;
-  }
-
-  .save {
-    position: absolute;
-    top: 600px; /* Adjust this value to move it down */
-    right: 30px; /* Adjust this value to move it to the left */
   }
     
         .link-container {
@@ -287,12 +269,12 @@
         
         .link .icon-link {
           position: absolute;
-          left: 5px; /* Adjust this value to position the icon at the left corner of the input */
-          top: 65%; /* Vertically center the icon within the input */
-          transform: translateY(-50%); /* Adjust the vertical position */
+          left: 5px; 
+          top: 65%; 
+          transform: translateY(-50%); 
         }
       
-         .platform {
+         /* .platform {
           position: relative;
           flex-direction: column;
           display: flex;
@@ -301,9 +283,9 @@
           height: 65px;
           margin-top: 15px;
           margin-left: 34px;
-        }
+        } */
         
-        .platform p {
+        /* .platform p {
           position: absolute;
           top: 0;
           left: 0;
@@ -311,22 +293,20 @@
           color: #737373;
           font-size: 13px;
           font-weight: 600;
-        }
+        } */
 
         .image-info-section {
-            /* border: 2px solid blue; */
-            height: 78%;
-            width: 85%;
-            margin-left: 75px;
+            height: 70%;
+            width: 93%;
+            margin-left: 30px;
             margin-top: 20px;
         }
+
 
         .image-section {
             height: 50%;
             width: 100%;
-            margin-left: -2px;
             margin-button: 5px;
-            /* border: 2px solid red; */
             background-color: #fafafa;
             justify-content: space-between;
             align-items: center;
@@ -368,9 +348,9 @@
           }
 
           .image-container img {
-            order: -1; /* Place the image on top of the text */
-            margin-left: 27px;
-            margin-top: 20px;
+            order: -1; 
+            margin-left: 10px;
+            margin-top: 2px;
           }
           
 
@@ -378,7 +358,7 @@
             color: blue;
             font-weight: 500;
             margin-top: 34px;
-            margin-right: 17px;
+            margin-right: 28px;
           }
 
           .pp {
@@ -413,13 +393,12 @@
             transform: translateX(-50%);
           }
 
-        .info-section {
+          .info-section {
             /* border: 2px solid yellow;    */
-            height: 50%;
+            height: 47%;
             width: 100%;
-            margin-left: -2px;
+            margin-left: -1px;
             margin-top: 10px;
-            margin-right: auto;
             flex-direction: column;
             display: flex;
             flex-direction: column;
@@ -428,55 +407,108 @@
             border-radius: 5px;
         } 
 
-        .input-pair {
+          .lastNameInput, .firstNameInput, .emailInput {
+            /* border: 2px solid red; */
+            width: 700px;
+            height: 45px;
+            margin-left: 15px;
+            margin-bottom: 5px; 
             display: flex;
-            /* align-items: center; */
-            /* border: 2px solid green;  */
-            margin: 3px 0;
-            width: 93%;
-            max-width: 600px;
-            padding: 10px; 
-            margin-left: 10px;
-            height: 15%;
-        }
+            align-items: center;
+          }
 
-        .input-pair p {
-            flex: 1;
-            margin-right: 30px;
-            text-align: left; 
-            padding-right: 80px;
+          .firstNameInput p {
+            margin-bottom: 1px;
+            display: block; 
             color: #737373;
             font-size: 15px;
+            width: 190px;
+          } 
+
+          .lastNameInput p {
+            margin-bottom: 1px;
+            display: block; 
+            color: #737373;
+            font-size: 15px;
+            width: 190px;
+          } 
+
+          .emailInput p {
+             margin-bottom: 1px;
+             display: block; 
+             color: #737373;
+             font-size: 15px;
+             width: 190px;
+          }
+
+
+        .firstNameInput input {
+          margin-left: 50px;
+          border: 1px solid #d9d9d9;
+          border-radius: 5px;
+          width: 500px;
+          height: 45px;
+          padding-left: 15px;
+          transition: border-color 0.3s, box-shadow 0.3s;
         }
-        
-        /* .input-pair input {
-            flex: 1;
-            border: 2px solid red;
-            margin-left: 180px;
-            padding: 20px;
-            box-sizing: border-box;
-            border-radius: 5px; 
-            height: 180%;
-          } */
 
-          .input-pair input {
-            flex: 1;
-            /* border: 2px solid red; */
-            margin-left: 100px; 
-            margin-right: -10px; 
-            padding: 15px;
-            box-sizing: border-box;
-            border-radius: 5px;
-            width: 1090px; 
-            border: 1px solid #d9d9d9;
-          }
+        .lastNameInput input {
+          margin-left: 50px;
+          border: 1px solid #d9d9d9;
+          border-radius: 5px;
+          width: 500px;
+          height: 45px;
+          padding-left: 15px;
+          transition: border-color 0.3s, box-shadow 0.3s;
+        }
 
-          .input-pair input:focus {
-            border-color: #633cff;
-            box-shadow: 0 0 15px #633cff;
-            border-width: 1px;
-          }
+        .emailInput input {
+          margin-left: 50px;
+          border: 1px solid #d9d9d9;
+          border-radius: 5px;
+          width: 500px;
+          height: 45px;
+          padding-left: 15px;
+          transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+.firstNameInput input:hover,
+.lastNameInput input:hover,
+.emailInput input:hover {
+  border: 1px solid #633cff;
+  box-shadow: 0 0 20px #633cff;
+}
+
+.firstNameInput input:focus,
+.lastNameInput input:focus,
+.emailInput input:focus {
+  border: 1px solid #633cff;
+  box-shadow: 0 0 20px #633cff;
+}
+
+
+
+.profileSave {
+  position: absolute;
+  top: 570px; 
+  right: 32px; 
+  width: 760px; 
+  height: 58px; 
+}
+
+.profileSaveBtn {
+  width: 70px;
+  height: 40px;
+  margin-left: 650px;
+  margin-top: 2px;
+  border: none;
+  background-color: #633cff;
+  color: white;
+  text-align: center; 
+  line-height: 40px; 
+}
+
           
-        
+          
           
           

@@ -34,7 +34,7 @@ const AddedLinks = () => {
                  <img src={iphoneIcon} alt="phone icon"/>
                </div>
             </div>
-            <div className="customisation">
+            <div className="AddOneLink-customisation">
                 <div className="customisationHeaderParagraph">
                     <h1>Customize your links</h1>
                     <p>Add/edit/remove links below and then share all your profiles 
@@ -45,53 +45,56 @@ const AddedLinks = () => {
                   <div className="newLink">
                     <button className='addLinkBtn'>+Add new link</button>
                   </div>
-                  <div className="linkNum1Sec">
-                    <div className="linkRemove">
-                        <div className="img-p">
-                        <img src={dragDrop} alt="" />
-                        <p>Link #1</p>
-                        </div>
-                        <p>Remove</p>
-                    </div>
-                    <div className="platform">
-                        <p>Platform</p>
-                    </div>
-                    <div className="link">
+                  <div className="linkOne">
+                       <div className="removeLink">
+                          <div className="equalLink">
+                              <img src={dragDrop} alt="" />
+                              <p>Link #1</p>
+                           </div>
+                             <p>Remove</p>
+                       </div>
+                       <div className="platformSection">
+                          <p>Platform</p>
+                          <div className="gitHubBtn">
+                            {/* <img src={githubImg} alt="" /> */}
+                          </div>
+                       </div>
+                       <div className="linkSection">
                         <p>Link</p>
-                        <div className="input-container">
-                        <input type="text" name="" id="" placeholder='e.g.https://www.github.com/johnappleseed'/>
-                        <img src={iconLink} alt="" className='icon-link'/>
-                        </div>
-                    </div>
-                  </div>
-                  {/* <div className="linkNum2Sec">
-                  <div className="linkRemove">
-                        <div className="img-p">
-                        <img src={dragDrop} alt="" />
-                        <p>Link #2</p>
-                        </div>
-                        <p>Remove</p>
-                    </div>
-                    <div className="platform">
-                        <p>Platform</p>
-                    </div>
-                    <div className="link">
-                        <p>Link</p>
-                        <div className="input-container">
-                        <input type="text" name="" id="" placeholder='e.g.https://www.github.com/johnappleseed'/>
-                        <img src={iconLink} alt="" className='icon-link'/>
-                        </div>
-                    </div>
-                  </div>
-                 */}
+                        <div className="linkInput">
+  <div className="iconWrapper">
+    <img src={iconLink} alt="icon link" />
+  </div>
+  <input 
+    type="text" 
+    name="" 
+    id=""
+    placeholder='https://www.github.com/benwright'
+  />
+</div>
 
-                         
-                
+                       </div>
+                  </div>
+                  <div className="linkTwo">
+                    <div className="removeLink">
+                          <div className="equalLink">
+                              <img src={dragDrop} alt="" />
+                              <p>Link #2</p>
+                           </div>
+                             <p>Remove</p>
+                       </div>
+                       <div className="platformSection">
+                        
+                       </div>
+                       <div className="linkSection">
+                        
+                       </div>
+                  </div>
                 </div>
             </div>
         </div>
-        <div className="saveBtn">
-            <button className='save'>save</button>
+        <div className="linkOneSave">
+            <button className='linkSaveOneBtn'>save</button>
         </div>
     </section>
   )

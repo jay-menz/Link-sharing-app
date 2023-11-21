@@ -8,11 +8,16 @@ import dragDrop from './assets/images/icon-drag-and-drop.svg';
 import githubImg from './assets/images/icon-github.svg'
 import chevronDown from './assets/images/icon-chevron-down.svg';
 import iconLink from './assets/images/icon-link-copied-to-clipboard.svg';
+import { useNavigate } from 'react-router-dom'
 
 
 import './AddedOneLink.css';
 
 const AddedOneLink = () => {
+
+  const navigate=useNavigate() 
+
+
   return (
     <section>
 <div class="nav-container">
@@ -20,7 +25,7 @@ const AddedOneLink = () => {
         <img src={devLinkLogo} alt="dev link logo" />
         <div class="linksDetails">
             <button><img src={links} alt="links" />Links</button>
-            <button><img src={profie} alt="profile" /><span>Profile Details</span></button>
+            <button onClick={() => navigate("/Profile")}><img src={profie} alt="profile" /><span>Profile Details</span></button>
         </div>
         <button>Preview</button>
     </div>
@@ -31,7 +36,7 @@ const AddedOneLink = () => {
                  <img src={iphoneIcon} alt="phone icon"/>
                </div>
             </div>
-            <div className="customisation">
+            <div className="AddedOneLink-customisation">
               <div className='customisationHeaderParagraph'>
                 <h1>Customize your links</h1>
                     <p>Add/edit/remove links below and then share all your profiles 
@@ -39,25 +44,27 @@ const AddedOneLink = () => {
                     </p>
               </div> 
               <div className="newLink-section">
-                  <div className="newLink">
-                    <button className='addLinkBtn'>+Add new link</button>
+                  <div className="AddedOneLink-newLink">
+                    <button className='AddedOneLink-addLinkBtn' onClick={() => navigate("/AddedLinks") }>+Add new link</button>
                   </div>
-                  <div className="linkNum1Sec">
-                    <div className="linkRemove">
-                        <div className="img-p">
-                        <img src={dragDrop} alt="" />
-                        <p>Link #1</p>
-                        </div>
-                        <p>Remove</p>
-                    </div>
-                    <div className="platform">
-                        <p>Platform</p>
-                        <input type="text" />
-                    </div>
-                    <div className="link">
-                        <p>Link</p>
-                        <input type="text" placeholder='e.g.https://www.github.com/johnappleseed'/>
-                    </div>
+
+                  <div className="linkOne">
+                       <div className="removeLink">
+                          <div className="equalLink">
+                              <img src={dragDrop} alt="" />
+                              <p>Link #1</p>
+                           </div>
+                             <p>Remove</p>
+                       </div>
+                       <div className="platformSection">
+                          <p>Platform</p>
+                          <div className="gitHubBtn">
+                            {/* <img src={githubImg} alt="" /> */}
+                          </div>
+                       </div>
+                       <div className="linkSection">
+                       <p>Link</p>
+                       </div>
                   </div>
                   
                   </div>

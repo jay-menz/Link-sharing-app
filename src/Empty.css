@@ -125,25 +125,6 @@ button:hover {
   width: 190%;
 }
 
-
-
-/* .phone {
-  position: relative;
-  border: 2px solid pink;
-  top: 1px; 
-  right: -15px;
-  width: 300px;
-} */
-
-/* .phone img {
-  width: 500px; 
-  height: 500px; 
-  position: relative;
-  top: 20px;
-  right: 25px;
-  border: 2px solid yellow;
-} */
-
   .empty-customisation {
     position: absolute;
     top: 0;
@@ -163,12 +144,14 @@ button:hover {
 .customisationHeaderParagraph h1 {
   text-align: left;
   color: #333333;
+  font-size: 20px;
 }
 
 .customisationHeaderParagraph p {
   text-align: left;
   color: #737373;
   margin-top: 5px;
+  font-size: 14px;
 }
 
 .newLink-section {
@@ -177,7 +160,7 @@ button:hover {
 
 .addLinkBtn {
   width: 680px; 
-  height: 40px;
+  height: 37px;
   margin-left: 30px; 
 }
 
@@ -240,22 +223,7 @@ button:hover {
   background-color: #beadff; 
   color: white;
 }
-/* 
-.saveBtn .save {
-  width: 70px;
-  height: 40px;
-  margin-left: 650px;
-  border: 2px solid red;
-  border: none;
-  background-color: #d9d9d9;
-  color: white;
-  text-align: center; 
-  line-height: 40px; 
-}
 
-.saveBtn .save:hover {
-  background-color: #beadff; 
-} */
 
 
 

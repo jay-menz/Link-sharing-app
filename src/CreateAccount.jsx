@@ -192,9 +192,9 @@ import './CreateAccount.css';
 
           <p className="pwdReminder">Password must contain at least 8 characters </p>
 
-{showLoginButton &&(
+{/* {showLoginButton &&(
             <button className='createAccount-btn' onClick={() => handleLogin()}>Create new account</button>
-          )}
+          )} */}
 
           {showLoading &&(
             <button className='createAccount-btn' style={{backgroundColor:'gray'}} >Logging in... Please wait</button>
