@@ -44,6 +44,7 @@ import './Login.css';
   const handleLogin = async () => {
 
     //validate email and password field before granting access
+    let chkErrSum = 0;
 
     if(email == '' || email == null){
       //if email field is empty or null then show error message
@@ -59,9 +60,10 @@ import './Login.css';
         setEmailLabelError(false);
       }, 5000);
 
-      return false;
+      chkErrSum++;
+      
     }
-    else if(password == '' || password == null){
+    if(password == '' || password == null){
       //if email field is empty or null then show error message
       setPasswordError(true)
       setPasswordErrorMessage("Please check again");
@@ -75,33 +77,35 @@ import './Login.css';
         setPasswordLabelError(false);
       }, 5000);
 
-      return false;
+      chkErrSum++;
+      
     }
-    else{
+    
+    if (chkErrSum > 0) return;
 
       //use trycatch block to handle errors if any should arise
-      try {
-        
-        setShowLoginButton(false) // set this to false to hide and show the loading state
-        setShowLoading(true)
+    try {
+      
+      setShowLoginButton(false) // set this to false to hide and show the loading state
+      setShowLoading(true)
 
-        
-        //====================================================================================================//
+      
+      //====================================================================================================//
 
-          //handle your backend database validaiton here if email and password is not empty
-          // alert('Success i just logged in') 
-          navigate('/Empty')
+        //handle your backend database validaiton here if email and password is not empty
+        // alert('Success i just logged in') 
+        navigate('/Empty')
 
-        //====================================================================================================//
-          // history.push('/CreateAccount')
-        //after response from server backend make sure to hide the loading and then show the login button again
-        setShowLoginButton(true) 
-        setShowLoading(false)
+      //====================================================================================================//
+        // history.push('/CreateAccount')
+      //after response from server backend make sure to hide the loading and then show the login button again
+      setShowLoginButton(true) 
+      setShowLoading(false)
 
-      } catch (error) {
-        console.log('Error:', + error)
-      }
+    } catch (error) {
+      console.log('Error:', + error)
     }
+    
   }
 
 

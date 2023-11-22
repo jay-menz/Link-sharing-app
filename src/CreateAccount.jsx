@@ -46,7 +46,7 @@ import './CreateAccount.css';
   const handleLogin = async () => {
 
     //validate email and password field before granting access
-
+    let chkSum = 0;
     if(email == '' || email == null){
       //if email field is empty or null then show error message
       setEmailError(true)
@@ -61,9 +61,9 @@ import './CreateAccount.css';
         setEmailLabelError(false);
       }, 5000);
 
-      return false;
+     chkSum++;
     }
-    else if(password == '' || password == null){
+    if(password == '' || password == null){
       //if email field is empty or null then show error message
       setPasswordError(true)
       setPasswordErrorMessage("Please check again");
@@ -77,17 +77,17 @@ import './CreateAccount.css';
         setPasswordLabelError(false);
       }, 5000);
 
-      return false;
+      chkSum++;
     }
-    else{
+    
 
       // Skip validation for "Confirm password" if it is not filled
     if (document.getElementById('confirmPasswordInput').value !== '') {
       setConfirmPassword(false);
-      return false;
+      chkSum++;
     }
 
-      
+    if (chkSum > 0) return;
 
       //use trycatch block to handle errors if any should arise
       try {
@@ -111,7 +111,7 @@ import './CreateAccount.css';
       } catch (error) {
         console.log('Error:', + error)
       }
-    }
+    
   }
 
 
@@ -168,8 +168,8 @@ import './CreateAccount.css';
         </div>
 
         <div className="confirmPwd">
-        <label htmlFor="password" className={passwordLabelError ? 'error-label' : ''}>Confirm password</label>
-            <div className={`input-container ${passwordError ? 'error-border' : ''}`}>
+        <label htmlFor="password" className={''}>Confirm password</label>
+            <div className={`input-container`}>
                 <img src={passwordIcon} alt="password icon" />
                 <input 
                 type="password" 
@@ -189,7 +189,7 @@ import './CreateAccount.css';
           )}
       </div>
 
-      <p className='createAccLink'>Already have an account? <a href="/Login">Login</a></p>
+      <p className='createAccLink'>Already have an account? <a href="/">Login</a></p>
 
      
       </div>

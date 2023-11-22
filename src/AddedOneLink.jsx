@@ -8,6 +8,7 @@ import dragDrop from './assets/images/icon-drag-and-drop.svg';
 import githubImg from './assets/images/icon-github.svg'
 import chevronDown from './assets/images/icon-chevron-down.svg';
 import iconLink from './assets/images/icon-link-copied-to-clipboard.svg';
+
 import { useNavigate } from 'react-router-dom'
 
 
@@ -60,10 +61,28 @@ const AddedOneLink = () => {
                           <p>Platform</p>
                           <div className="gitHubBtn">
                             {/* <img src={githubImg} alt="" /> */}
+                            <select style={{ width: '100%', height: '3em' }}>
+                              <option>
+                                Youtube
+                              </option>
+                              <option>
+                                Github
+                              </option>
+                              <option>
+                                Facebook
+                              </option>
+                              <option>
+                                Twitter
+                              </option>
+                            </select>
                           </div>
                        </div>
                        <div className="linkSection">
-                       <p>Link</p>
+                         <p>Link</p>
+                         <div className="linkInputContainer">
+                           <img src={githubImg} alt="gitHub icon" />
+                           <input type="text" name="" id="" />
+                         </div>
                        </div>
                   </div>
                   
