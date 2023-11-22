@@ -47,6 +47,7 @@ html, body {
   border: none;
   border-radius: 5px;
   color: #beadff; 
+  position: relative;
   /* border: solid 2px red; */
 }
 
@@ -54,6 +55,11 @@ html, body {
   margin-right: 5px;
   margin-left: -10px; 
   /* margin-top: 30px;  */
+}
+
+.linksDetails button:hover {
+  background-color: #007bff; 
+  color: white;
 }
 
 .linksDetails button:first-child {
@@ -76,6 +82,12 @@ html, body {
 
 .linksDetails button:last-child span {
   white-space: nowrap; 
+}
+
+
+.linksDetails button:hover img,
+.linksDetails button:hover span {
+  color: blue; 
 }
 
 button:hover img,

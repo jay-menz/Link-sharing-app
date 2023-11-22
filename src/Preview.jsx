@@ -10,15 +10,20 @@ const Preview = () => {
   
   return (
     <div className="mauve-cover">
-      <div className="navbar">
-        <div className="inner-navbar">
-          <button onClick={() => navigate("/AddedLinks") }>Back to Editor</button>
-          <button>Share Link</button>
+      <div className="navigationBar">
+        <div className="innerNavigationBar">
+          <div className="innerNavigationBarBtn">
+            <button>Back to Editor</button>
+            <button>Share Link</button>
+          </div>
         </div>
       </div>
-      <img src={iphoneIcon} alt="" />
-    </div>
-  );
-}
+      <img src={iphoneIcon} alt="" className='previewImg'/>
+      </div>
+     );
+    }
+     
+    
+ 
 
 export default Preview;

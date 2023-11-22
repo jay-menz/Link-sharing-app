@@ -138,7 +138,7 @@
     width: 760px; 
     height: 535px;
     text-align: center; 
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
   }
   
   .customisationHeaderParagraph {
@@ -168,23 +168,24 @@
 }
 
 
-  .saveBtn {
+  .AddedOneLinksaveBtn {
     position: absolute;
-    top: 490px; 
-    right: 40px; 
-    width: 790px; 
+    top: 483px; 
+    right: 1px; 
+    /* width: 790px;  */
+    width: 100%;
     height: 50px; 
     /* border: 2px solid red; */
   }
   
   
-  .saveBtn .save {
+  .AddedOneLinksaveBtn .AddedOneLinksave {
     width: 70px;
     height: 40px;
-    margin-left: 700px;
+    margin-left: 650px;
     /* margin-right: 700px;  */
     border: none;
-    background-color: #d9d9d9;
+    background-color: #633cff;
     color: white;
     text-align: center; 
     line-height: 40px; 

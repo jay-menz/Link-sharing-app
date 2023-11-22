@@ -69,8 +69,8 @@ const AddedOneLink = () => {
                   
                   </div>
                  
-                  <div className="saveBtn">
-                      <button className='save'>save</button>
+                  <div className="AddedOneLinksaveBtn">
+                      <button className='AddedOneLinksave'>save</button>
                    </div>
                 </div>            
             </div>
