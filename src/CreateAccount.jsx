@@ -37,6 +37,8 @@ import './CreateAccount.css';
   const [emailLabelError, setEmailLabelError] = React.useState(false);
   const [passwordLabelError, setPasswordLabelError] = React.useState(false);
 
+  const [confirmPassword, setConfirmPassword] = React.useState(false);
+
 
 
   //this function handles the login button when clicked.
@@ -57,7 +59,7 @@ import './CreateAccount.css';
         setEmailError(false) //set message to false to hide it
         setEmailErrorMessage("") //remove the error message
         setEmailLabelError(false);
-      }, 3000);
+      }, 5000);
 
       return false;
     }
@@ -73,11 +75,19 @@ import './CreateAccount.css';
         setPasswordError(false) //set message to false to hide it
         setPasswordErrorMessage("") //remove the error message
         setPasswordLabelError(false);
-      }, 3000);
+      }, 5000);
 
       return false;
     }
     else{
+
+      // Skip validation for "Confirm password" if it is not filled
+    if (document.getElementById('confirmPasswordInput').value !== '') {
+      setConfirmPassword(false);
+      return false;
+    }
+
+      
 
       //use trycatch block to handle errors if any should arise
       try {
@@ -131,7 +141,9 @@ import './CreateAccount.css';
                       className='custom-input'
                       /> 
                      {emailError &&(
+                      <div id="error-message-container">
                        <span id="passwordError">{emailErrorMessage}</span>
+                      </div>
                      )}
                   </div>
         </div> 
@@ -148,7 +160,9 @@ import './CreateAccount.css';
                 onChange={handleOnChangePassword}
                 />
                 {passwordError &&(
+                  <div id="password-error-message-container">
                   <span id="passwordError">{passwordErrorMessage}</span>
+                  </div>
                 )}
             </div>
         </div>
@@ -160,13 +174,13 @@ import './CreateAccount.css';
                 <input 
                 type="password" 
                 placeholder='At least 8 characters' 
-                id="createPasswordInput" 
+                id="confirmPasswordInput" 
                 className='custom-input'
                 onChange={handleOnChangePassword}
                 />
-                {passwordError &&(
+                {/* {passwordError &&(
                   <span id="passwordError">{passwordErrorMessage}</span>
-                )}
+                )} */}
             </div>
         </div>
 

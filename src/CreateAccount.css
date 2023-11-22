@@ -337,6 +337,39 @@ label {
     border:1px solid #ff3939;
   }
 
+  .error-message  {
+    color: red;
+    font-size: 10px;
+    margin-left: 5px;
+  }
+
+  .error-label {
+    color: red;
+    margin-top: 5px;
+    font-size: 12px;
+  }
+
+  .input-container.error-border {
+    border:1px solid #ff3939;
+  }
+  
+  #error-message-container {
+    position: absolute;
+    display: flex;
+    font-size: 10px;
+    color: red;
+    margin-left: 260px;
+    /* border: 2px solid blue; */
+  }
+
+  #password-error-message-container {
+    position: absolute;
+    display: flex;
+    font-size: 10px;
+    color: red;
+    margin-left: 260px;
+    /* border: 2px solid blue; */
+  }
 
 input[type="email"],
 input[type="password"] {
