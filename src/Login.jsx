@@ -57,7 +57,7 @@ import './Login.css';
         setEmailError(false) //set message to false to hide it
         setEmailErrorMessage("") //remove the error message
         setEmailLabelError(false);
-      }, 3000);
+      }, 5000);
 
       return false;
     }
@@ -73,7 +73,7 @@ import './Login.css';
         setPasswordError(false) //set message to false to hide it
         setPasswordErrorMessage("") //remove the error message
         setPasswordLabelError(false);
-      }, 3000);
+      }, 5000);
 
       return false;
     }
@@ -131,7 +131,9 @@ import './Login.css';
                       className='custom-input'
                       /> 
                      {emailError &&(
-                       <span id="passwordError">{emailErrorMessage}</span>
+                       <div id="error-message-container">
+                       <span className="error-message">{emailErrorMessage}</span>
+                     </div>
                      )}
                   </div>
         </div> 
@@ -148,7 +150,9 @@ import './Login.css';
                 onChange={handleOnChangePassword}
                 />
                 {passwordError &&(
+                  <div id="password-error-message-container">
                   <span id="passwordError">{passwordErrorMessage}</span>
+                  </div>
                 )}
             </div>
         </div>

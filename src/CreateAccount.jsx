@@ -1,4 +1,5 @@
 import React from 'react';
+// import { Link } from 'react-router-dom';
 import devLinkLogo from './assets/images/logo-devlinks-large.svg';
 import emailIcon from './assets/images/icon-email.svg';
 import passwordIcon from './assets/images/icon-password.svg';
@@ -7,21 +8,18 @@ import {useNavigate} from 'react-router-dom';
 
 import './CreateAccount.css';
 
- const CreateAccount = () => {
+ const Login = () => {
 
   const navigate = useNavigate();
-
+  
   //set states to track changes in app
   const [email, setEmail] = React.useState(''); //set state for user email
   const [password, setPassword] = React.useState(''); //set state for user password
-  const [passwordConfirm, setPasswordConfirm] = React.useState('');
 
 
   //handle Onchange when user enters any character in inputs
   const handleOnChangeEmail = (event)=>{setEmail(event.target.value);}
   const handleOnChangePassword = (event)=>{setPassword(event.target.value);}
-  const handleOnChangeConfirmPassword = (event)=>{setPasswordConfirm(event.target.value);}
-  
 
   //show errors and success messages
   const [emailError, setEmailError] = React.useState(false); //set this to false on initial load. when field is empty set it to true to show error message
@@ -29,9 +27,6 @@ import './CreateAccount.css';
   
   const [passwordError, setPasswordError] = React.useState(false); //set this to false on initial load. when field is empty set it to true to show error message
   const [passwordErrorMessage, setPasswordErrorMessage] = React.useState(''); //show error meesage in password
-
-  const [passwordConfirmError, setPasswordConfirmError] = React.useState(false); //set this to false on initial load. when field is empty set it to true to show error message
-  const [passwordConfirmErrorMessage, setPasswordConfirmErrorMessage] = React.useState(''); //show error meesage in password
 
   const [showLoginButton, setShowLoginButton] = React.useState(true); //show login button on load
   const [showLoading, setShowLoading] = React.useState(false); //show loading state when button is clicked
@@ -41,7 +36,6 @@ import './CreateAccount.css';
 
   const [emailLabelError, setEmailLabelError] = React.useState(false);
   const [passwordLabelError, setPasswordLabelError] = React.useState(false);
-  const [passwordConfirmLabelError, setPasswordConfirmLabelError] = React.useState(false);
 
 
 
@@ -83,24 +77,7 @@ import './CreateAccount.css';
 
       return false;
     }
-
-    else if(passwordConfirm == '' || passwordConfirm == null) {
-      setPasswordConfirmError(true)
-      setPasswordConfirmErrorMessage("Please check again");
-      setPasswordConfirmLabelError(true);
-      
-
-      //remove the error message after 3seconds. You can play with the time yourself by changing it in the setTimout function
-      setTimeout(() => {
-        
-        setPasswordError(false) //set message to false to hide it
-        setPasswordErrorMessage("") //remove the error message
-        setPasswordLabelError(false);
-      }, 3000); 
-      return false;
-    } else {
-
-    
+    else{
 
       //use trycatch block to handle errors if any should arise
       try {
@@ -113,9 +90,10 @@ import './CreateAccount.css';
 
           //handle your backend database validaiton here if email and password is not empty
           // alert('Success i just logged in') 
-          navigate('/Empty');
-        //====================================================================================================//
+          navigate('/Empty')
 
+        //====================================================================================================//
+          // history.push('/CreateAccount')
         //after response from server backend make sure to hide the loading and then show the login button again
         setShowLoginButton(true) 
         setShowLoading(false)
@@ -130,19 +108,19 @@ import './CreateAccount.css';
   return(
     <div className="body">
 
-      <img src={devLinkLogo} alt="dev link logo" className='devvLinkLogo'/>  
+      <img src={devLinkLogo} alt="dev link logo" className='devLinkLogo'/>  
 
-      <div className="whiteBoxX">
+      <div className="whiteBox">
 
-      <div className="createAccount">
-          <h1 className='createAccount-title'>Create account</h1>
-          <p className='createAccount-info'>Let's get you started sharing your links!</p>
+      <div className="create">
+          <h1 className='log-title'>Create account</h1>
+          <p className='log-info'>Let's get you started sharing your links!</p>
       </div>
 
-        <div className="emailccPwd">
-          <div className="emaill">
+      <div className="createEmailPwd">
+        <div className="email">
           <label htmlFor="email" className={emailLabelError ? 'error-label' : ''}>Email address</label>
-                 <div className={`inputt-container ${emailError ? 'error-border' : ''}`}>
+                 <div className={`input-container ${emailError ? 'error-border' : ''}`}>
                     <img src={emailIcon} alt="email icon" />
                       <input 
                       type="email" 
@@ -156,10 +134,11 @@ import './CreateAccount.css';
                        <span id="passwordError">{emailErrorMessage}</span>
                      )}
                   </div>
-          </div>
-          <div className="createPassword">
-          <label htmlFor="password" className={passwordLabelError ? 'error-label' : ''}>Create Password</label>
-            <div className={`inputt-container ${passwordError ? 'error-border' : ''}`}>
+        </div> 
+
+        <div className="createPwd">
+        <label htmlFor="password" className={passwordLabelError ? 'error-label' : ''}>Create password</label>
+            <div className={`input-container ${passwordError ? 'error-border' : ''}`}>
                 <img src={passwordIcon} alt="password icon" />
                 <input 
                 type="password" 
@@ -172,43 +151,38 @@ import './CreateAccount.css';
                   <span id="passwordError">{passwordErrorMessage}</span>
                 )}
             </div>
-          </div>
-          <div className="confirmPassword">
-          <label htmlFor="password" className={passwordLabelError ? 'error-label' : ''}>Confirm Password</label>
-            <div className={`inputt-container ${passwordError ? 'error-border' : ''}`}>
-                <img src={passwordIcon} alt="password icon" />
-                <input 
-                type="password" 
-                placeholder='At least 8 characters' 
-                id="createPasswordInput" 
-                className='custom-input'
-                onChange={handleOnChangePassword}
-                />
-                {passwordError &&(
-                  <span id="passwordError">{passwordErrorMessage}</span>
-                )}
-            </div>
-          </div>
-
-          <p className="pwdReminder">Password must contain at least 8 characters </p>
-
-{/* {showLoginButton &&(
-            <button className='createAccount-btn' onClick={() => handleLogin()}>Create new account</button>
-          )} */}
-
-          {showLoading &&(
-            <button className='createAccount-btn' style={{backgroundColor:'gray'}} >Logging in... Please wait</button>
-          )}
-
-          <p className='loginAcc'>Already have an account? <a href="/">Login</a></p>
-            
         </div>
 
+        <div className="confirmPwd">
+        <label htmlFor="password" className={passwordLabelError ? 'error-label' : ''}>Confirm password</label>
+            <div className={`input-container ${passwordError ? 'error-border' : ''}`}>
+                <img src={passwordIcon} alt="password icon" />
+                <input 
+                type="password" 
+                placeholder='At least 8 characters' 
+                id="createPasswordInput" 
+                className='custom-input'
+                onChange={handleOnChangePassword}
+                />
+                {passwordError &&(
+                  <span id="passwordError">{passwordErrorMessage}</span>
+                )}
+            </div>
+        </div>
+
+        {showLoginButton &&(
+            <button className='log-btn' onClick={() => handleLogin()}>Create new account</button>
+          )}
       </div>
 
+      <p className='createAccLink'>Already have an account? <a href="/Login">Login</a></p>
 
+     
+      </div>
+
+      
     </div>
   )
 }
 
-export default CreateAccount;
+export default Login;

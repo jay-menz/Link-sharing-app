@@ -1,3 +1,181 @@
+/* *{
+  padding: 0;
+  margin: 0;
+  box-sizing:border-box;
+} */
+
+/* .body {
+overflow: hidden;
+overflow: hidden;
+margin: 0;
+background-color: #fafafa;
+display: flex;
+justify-content: flex-start;
+align-items: center;
+height: 100vh;
+flex-direction: column;
+} */
+
+/* .devvLinkLogo {
+  position: absolute;
+  top: 17%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  margin-top: -40px;  
+} */
+
+/* .whiteBoxX {
+  width: 400px;
+  height: 450px;
+  background-color: #fff; 
+  position: absolute;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  border: 2px solid blue;
+} */
+
+/* .createAccount {
+  border: 2px solid green;
+  width: 90%;
+  height: 14%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-left: 22px;
+} */
+
+/* .createAccount-title {
+  align-self: flex-start; 
+  margin-bottom: 10px; 
+  margin-left: 3px; 
+  color: #333333;
+  font-size: 25px;
+} */
+
+/* .createAccount-info {
+  margin-top: 2px;
+  margin-left: 3px; 
+  color: #737373;
+  font-size: 14px;
+  font-weight: 300;
+} */
+
+/* .emailccPwd {
+  width: 90%;
+  height: 77%;
+  display: flex;
+  border: 2px solid red;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-left: 22px;
+  align-items: flex-start; 
+} */
+
+/* .emaill {
+  width: 100%;
+  height: 20%;
+  border: 2px solid black;
+} */
+
+/* .createPassword {
+  width: 100%;
+  height: 20%;
+  margin-top: -205px;
+  border: 2px solid black; 
+} */
+
+/* .confirmPassword {
+  width: 100%;
+  height: 20%;
+  margin-top: -205px;
+  border: 2px solid black; 
+} */
+
+/* .emaill label,
+.createPassword label,
+.confirmPassword label {
+  margin-top: -5px; 
+} */
+
+/* .inputt-container{
+  display:flex;
+  width: 100%;
+  border:1px solid #ccc;
+  padding: 10px;
+  border-radius:8px;
+  transition: border 0.3s, box-shadow 0.3s;
+  margin-top: 5px;
+} */
+
+/* .inputt-container:hover {
+  border: 1px solid #633cff;
+  box-shadow: 0 0 20px #633cff;
+  } */
+
+  /* .inputt-container.error-border {
+    border:1px solid #ff3939;
+  } */
+
+  /* input[type="email"],
+  input[type="password"] {
+    border:none;
+    padding: 2px;
+    border-radius: 5px;
+    font-size: 13px;
+    outline: none;
+    margin-right: 130px;
+} */
+
+
+/* img {
+  float: left; 
+  margin-right: 10px; 
+} */
+
+
+/* .pwdReminder {
+  font-size: 13px;
+  color: #737373;
+  margin-right: 100px;
+  margin-top: -10px;
+} */
+
+/* .createAccount-btn {
+  width: 100%;
+  height: 45px;
+  margin-top: 20px;
+  color: #fff;
+  background-color: #633cff;
+  border: #633cff;
+  font-weight: 500;
+} */
+
+/* .createAccount-btn:hover {
+  border: #beadff;
+  background-color: #beadff;
+  color: #fff;
+} */
+
+/* .loginAcc {
+  text-align: center;
+  color: #737373;
+  margin-top: 45px;
+  justify-content: center;
+  font-size: 14px;
+  margin-left: 80px;
+} */
+
+/* .loginAcc a {
+  text-decoration: none;
+  color: #633cff;
+} */
+
+
 *{
   padding: 0;
   margin: 0;
@@ -16,99 +194,161 @@ height: 100vh;
 flex-direction: column;
 }
 
-.devvLinkLogo {
+.devLinkLogo {
   position: absolute;
-  top: 17%; 
+  top: 20%; 
   left: 50%; 
   transform: translate(-50%, -50%); 
-  margin-top: -40px;  
+  margin-top: -40px; 
 }
 
-.whiteBoxX {
-  width: 400px;
-  height: 450px;
+.whiteBox {
+  /* border: 2px solid red; */
+  width: 410px; 
+  height: 442px;
   background-color: #fff; 
   position: absolute;
-  top: 53%;
+  top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 5px;
-  /* border: 2px solid blue; */
 }
 
-.createAccount {
-  /* border: 2px solid green; */
+.create {
   width: 90%;
-  height: 14%;
+  height: 17%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 20px;
   margin-left: 22px;
 }
 
-.createAccount-title {
+.log-title {
   align-self: flex-start; 
   margin-bottom: 10px; 
-  margin-left: 3px; 
+  margin-left: 25px; 
   color: #333333;
-  font-size: 25px;
+  font-size: 25px; 
 }
 
-.createAccount-info {
-  margin-top: 2px;
-  margin-left: 3px; 
+.log-info {
+  margin-top: 10px;
+  margin-left: 25px; 
+  /* color: #d9d9d9;  */
   color: #737373;
   font-size: 14px;
   font-weight: 300;
 }
 
-.emailccPwd {
+.createEmailPwd{
   width: 90%;
-  height: 77%;
+  height: 73%;
   display: flex;
-  /* border: 2px solid red; */
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-top: 10px;
   margin-left: 22px;
-  align-items: flex-start; 
+  /* border: 2px solid green; */
 }
 
-.emaill, .createPassword, .confirmPassword {
+.email {
+  /* border: 2px solid yellow; */
   width: 100%;
-  margin-bottom: 23px; 
+  height: 22%;
+  /* margin-top: -170px; */
+  /* margin-bottom: 5px; */
+  box-sizing: border-box; 
+  align-self: flex-start;
 }
 
-.inputt-container{
+.createPwd {
+  /* border: 2px solid yellow; */
+  width: 100%;
+  height: 22%;
+  /* margin-top: -20px; */
+  /* margin-bottom: 5px; */
+  box-sizing: border-box; 
+  align-self: flex-start;
+}
+
+.confirmPwd {
+  /* border: 2px solid yellow; */
+  width: 100%;
+  height: 22%;
+  /* margin-top: -20px; */
+  /* margin-bottom: 5px; */
+  box-sizing: border-box; 
+  align-self: flex-start;
+}
+
+label {
+  color: #737373;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.log-btn {
+  width: 100%;
+  height: 40px;
+  margin-left: 40px;
+  margin-bottom: -45px;
+  margin-top: 10px;
+  color: #fff;
+  background-color: #633cff;
+  border: #633cff;
+  font-weight: 500;
+}
+
+.log-btn:hover {
+  border: #beadff;
+  background-color: #beadff;
+  color: #fff;
+}
+
+.createAccLink {
+  text-align: center;
+  color: #737373;
+  margin-top: -35px;
+}
+
+.createAccLink a {
+  text-decoration: none;
+  color: #633cff;
+  /* border: 2px solid red; */
+}
+
+.input-container{
   display:flex;
-  width: 100%;
   border:1px solid #ccc;
+  /* border:1px solid red; */
   padding: 10px;
   border-radius:8px;
   transition: border 0.3s, box-shadow 0.3s;
 }
 
-.inputt-container:hover {
+.input-container:hover {
   border: 1px solid #633cff;
   box-shadow: 0 0 20px #633cff;
   }
 
-  .inputt-container.error-border {
+  .input-container.error-border {
     border:1px solid #ff3939;
   }
 
-  input[type="email"],
-  input[type="password"] {
+
+input[type="email"],
+input[type="password"] {
     border:none;
     padding: 2px;
     border-radius: 5px;
+    /* width: 100%; */
+    width: calc(100% - 90px);
     font-size: 13px;
     outline: none;
     margin-right: 130px;
 }
-
 
 img {
   float: left; 
@@ -116,47 +356,3 @@ img {
 }
 
 
-.pwdReminder {
-  font-size: 13px;
-  /* margin-top: -5px; */
-  /* margin-button: 30px; */
-  color: #737373;
-  margin-right: 100px;
-}
-
-.createAccount-btn {
-  width: 100%;
-  height: 100px;
-  /* margin-bottom: -45px; */
-  /* margin-button: -50px; */
-  margin-top: -5px;
-  color: #fff;
-  background-color: #633cff;
-  border: #633cff;
-  font-weight: 500;
-}
-
-.createAccount-btn:hover {
-  border: #beadff;
-  background-color: #beadff;
-  color: #fff;
-}
-
-.loginAcc {
-  text-align: center;
-  color: #737373;
-  margin-top: 45px;
-  /* margin-button: 70px; */
-  justify-content: center;
-  font-size: 14px;
-  margin-left: 80px;
-  /* margin-bottom: 1px; */
-}
-
-.loginAcc a {
-  text-decoration: none;
-  color: #633cff;
-}
-
-
-    
