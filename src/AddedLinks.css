@@ -1,485 +1,293 @@
 *{
-    padding: 0;
-    margin: 0;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  html, body {
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .nav-container {
-    color: #fff; 
-    padding: 15px;
-    margin-top: 10px; 
-    /* border: 1px solid red; */
-  }
-  
-  .innerNav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center; 
-    color: #beadff;
-  }
-  
-  
-  .innerNav-container img {
-    margin-left: 20px; 
-  }
-  
-  .linksDetails {
-    display: flex;
-    padding-right: 5px;
-    justify-content: center; 
-  }
-  
-  .linksDetails button {
-    display: flex;
-    align-items: center;
-    margin-right: 25px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    color: #beadff; 
-    /* border: solid 2px red; */
-  }
-  
-  .linksDetails button img {
-    margin-right: 5px;
-    margin-left: -10px; 
-    /* margin-top: 30px;  */
-  }
-  
-  .linksDetails button:first-child {
-    background-color: #beadff;
-    color: #633cff;
-    font-weight: 900;
-    width: 110px; 
-    height: 50px;
-    /* border: solid 2px red; */
-  }
-  
-  .linksDetails button:last-child {
-    background-color: white; 
-    color: #737373; 
-    font-weight: 800;
-    width: 160px; 
-    height: 50px;
-    /* border: solid 2px red; */
-  }
-  
-  .linksDetails button:last-child span {
-    white-space: nowrap; 
-  }
-  
-  button:hover img,
-  button:hover span {
-    color: #633cff;
-  }
-  
-  button {
-    background-color: white;
-    border: 1px solid blue;
-    width: 120px; 
-    height: 50px;
-    color: #633cff;
-    font-weight: 900;
-    border-radius: 5px;
-    margin-right: 17px;
-  }
-  
-  button:hover {
-    background-color: #beadff;
-    color: #633cff;
-  }
-  
-  .main-container {
-    width: 94%; 
-    max-width: 1300px;
-    margin: 0 auto; 
-    padding: 25px; 
-    margin-left: 18px;
-  }
-  
-  .phoneIcon {
-    width: 250px; 
-    height: 130px; 
-    /* border: 2px solid red; */
-  }
-  
-  .phone {
-    position: relative;
-    /* border: 2px solid pink; */
-    top: 1px; 
-    right: -15px;
-    width: 300px;
-  }
-  
-  .phone img {
-    width: 500px; /* Adjust this value to your desired width */
-    height: 500px; /* Adjust this value to your desired height */
-    position: relative;
-    top: 20px; /* To move to the top, or use 'bottom: 0' to move to the bottom */
-    right: 25px; /* To move to the right, or use 'left: 0' to move to the left */
-    /* border: 2px solid yellow; */
-  }
-  
-  
-  .AddOneLink-customisation {
-    position: absolute;
-    top: 0;
-    margin-left: 530px;
-    margin-top: 93px;
-    width: 760px; 
-    height: 535px;
-    text-align: center; 
-    /* border: 2px solid blue; */
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+}
 
-  }
-  
-  .customisationHeaderParagraph {
-    margin-left: 74px; 
-    /* margin-top: 15px; */
-  }
-  
-  .customisationHeaderParagraph h1 {
-    text-align: left;
-    color: #333333;
-  }
-  
-  .customisationHeaderParagraph p {
-    text-align: left;
-    color: #737373;
-    margin-top: 10px;
-  }
-  
-  .newLink-section {
-    margin-top: 30px; 
-  }
-  
-  .addLinkBtn {
-    width: 710px; 
-    margin-left: 75px; 
-    margin-top: -5px; 
-  }
+html, body {
+  overflow: hidden;
+} 
 
-  /* .saveBtn .save {
-    width: 70px;
-    height: 40px;
-    border: none;
-    background-color: #633cff;
-    color: white;
-    text-align: center;
-    line-height: 40px;
-  } */
+.nav-container {
+  color: #fff; 
+  padding: 15px;
+  margin-top: 1px; 
+  background-color: #fafafa;
+  /* border: 5px solid green; */
+}
 
-  /* .save {
-    position: absolute;
-    top: 600px; 
-    right: 30px; 
-  } */
-    
-        .link-container {
-            width: 660px;
-            height: 200px; 
-            /* border: 1px solid #ccc; */
-            padding: 20px; 
-            margin-top: 20px;
-            margin-left: 75px;
-            border: 2px solid red;
-            background-color: #fafafa;
-            border-radius: 5px;
-        }
+.innerNav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+  color: #beadff;
+  /* border: 1px solid red; */
+  background-color: #fff;
+  border-radius: 5px;
+  height: 60px;
+}
 
-        .linkOne {
-          background-color: #efebff;
-          width: 90%;
-          height: 159px;
-          margin-left: 33px;
-          margin-top: 10px;
+
+.innerNav-container img {
+  margin-left: 20px; 
+}
+
+.linksDetails {
+  display: flex;
+  padding-right: 5px;
+  justify-content: center; 
+}
+
+.linksDetails button {
+  display: flex;
+  align-items: center;
+  margin-right: 25px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  color: #beadff; 
+  /* border: solid 2px red; */
+}
+
+.linksDetails button img {
+  margin-right: 5px;
+  margin-left: -10px; 
+  /* margin-top: 30px;  */
+}
+
+.linksDetails button:first-child {
+  background-color: #beadff;
+  color: #633cff;
+  font-weight: 900;
+  width: 110px; 
+  height: 50px;
+  /* border: solid 2px red; */
+}
+
+.linksDetails button:last-child {
+  background-color: white; 
+  color: #737373; 
+  font-weight: 800;
+  width: 160px; 
+  height: 50px;
+  /* border: solid 2px red; */
+}
+
+.linksDetails button:last-child span {
+  white-space: nowrap; 
+}
+
+button:hover img,
+button:hover span {
+  color: #633cff;
+}
+
+button {
+  background-color: white;
+  /* border: 1px solid blue; */
+  width: 120px; 
+  height: 50px;
+  color: #633cff;
+  font-weight: 900;
+  border-radius: 5px;
+  margin-right: 40px;
+}
+
+button:hover {
+  background-color: #beadff;
+  color: #633cff;
+}
+
+.main-container {
+  width: 94%; 
+  max-width: 1300px;
+  margin: 0 auto; 
+  padding: 25px; 
+  margin-left: 18px;
+}
+
+.phoneIcon {
+  width: 250px; 
+  height: 130px; 
+}
+
+.phone {
+  position: relative;
+  /* border: 2px solid pink; */
+  top: 1px; 
+  right: -15px;
+  width: 300px;
+}
+
+.phone img {
+  width: 500px;
+  height: 500px;
+  position: relative;
+  top: 20px; 
+  right: 25px; 
+  /* border: 2px solid yellow; */
+}
+
+
+.AddedOneLink-customisation {
+  position: absolute;
+  top: 0;
+  margin-left: 530px;
+  margin-top: 93px;
+  width: 760px; 
+  height: 535px;
+  text-align: center; 
+  border: 2px solid blue;
+}
+
+.customisationHeaderParagraph {
+  margin-left: 30px; 
+  margin-top: 5px;
+  font-size: 20px;
+}
+
+.customisationHeaderParagraph h1 {
+  text-align: left;
+  color: #333333;
+}
+
+.customisationHeaderParagraph p {
+  text-align: left;
+  color: #737373;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.AddedOneLink-addLinkBtn {
+color: #633cff;
+width: 695px;
+height: 37px;
+margin-top: -7px;
+margin-left: 30px;
+}
+
+
+.AddedLinksaveBtn {
+  position: absolute;
+  top: 483px; 
+  right: 1px; 
+  /* width: 790px;  */
+  width: 100%;
+  height: 50px; 
+  /* border: 2px solid red; */
+}
+
+
+.AddedLinksaveBtn .AddedOneLinksave {
+  width: 70px;
+  height: 40px;
+  margin-left: 650px;
+  /* margin-right: 700px;  */
+  border: none;
+  background-color: #633cff;
+  color: white;
+  text-align: center; 
+  line-height: 40px; 
+}
+
+.saveBtn .save:hover {
+  background-color: #beadff; 
+}
+
+  
+      .link-container {
+          width: 660px;
+          height: 200px; 
+          padding: 20px; 
+          margin-top: 20px;
+          margin-left: 75px;
+          background-color: #fafafa;
           border-radius: 5px;
-          position: relative;
-        }
-        
-        .removeLink {
-          display: flex;
-          align-items: center;
-          justify-content: space-between; /* Add this to space items horizontally */
-          flex-direction: row; /* Add this to make items appear horizontally */
-          width: 92%;
-          height: 20px;
-          margin-left: 20px; /* Adjust this value to control spacing from the left */
-          /* border: 2px solid blue; */
-          top: 150px;
-        }
-        
-        .equalLink {
-          display: flex;
-          align-items: center;
-        }
-        
-        .equalLink img {
-          margin-right: 5px; 
-          filter: grayscale(100%);
-        }
-        
-        .equalLink p {
-          color: #737373; 
-          font-weight: 500;
-        }
-
-        .removeLink p {
-          color: #737373; /* Set the color to #737373 */
-        }
-
-        .platformSection {
-          width: 92%;
-          height: 60px;
-          margin-top: 5px;
-          margin-left: 20px;
-          border: 2px solid red;
-        }
-
-        .linkSection {
-          width: 92%;
-          height: 60px;
-          margin-top: 5px;
-          margin-left: 20px;
-          border: 2px solid red;
-        }
-
-        /* .platformSection p {
-          color: #737373;
-          font-size: 12px;
-          font-weight: 500;
-        } */
-
-        .platformSection {
-          position: relative;
-        }
-        
-        .platformSection p {
-          position: absolute;
-          top: 0;
-          left: 0;
-          color: #737373;
-          font-size: 12px;
-          font-weight: 500;
-        }
-  
-        .linkSection {
-          position: relative;
-        }
-
-        .linkSection p {
-          position: absolute;
-          top: 0;
-          left: 0;
-          color: #737373;
-          font-size: 12px;
-          font-weight: 500;
-        }
-
-        /* .linkInput {
-          display: flex;
-          align-items: center;
-        } */
-        
-        /* .iconWrapper {
-          width: 40px; 
-          height: 40px; 
-          margin-right: 10px; 
-        }
-        
-        .iconWrapper img {
-          width: 100%; 
-          height: 100%; 
-        } */
-        
-        
-        
-        
-        
-        
-        .linkTwo {
-          background-color: #efebff;
-          width: 90%;
-          height: 159px;
-          margin-left: 33px;
-          margin-top: 10px;
-          border-radius: 5px;
-        }
-
-        .linkOneSave {
-          position: absolute;
-          top: 570px; 
-          right: 32px; 
-          width: 760px; 
-          height: 58px; 
-        }
-
-        .linkSaveOneBtn {
-          width: 70px;
-          height: 40px;
-          margin-left: 650px;
-          margin-top: 6px;
-          border: none;
-          background-color: #633cff;
-          color: white;
-          text-align: center; 
-          line-height: 40px; 
-        }
-
-       
-
-        /* .linkNum1Sec {
-          width: 90%;
-          height: 215px;
-          margin-right: 43px;
-          margin-top: 15px;
-          background-color: #efebff;
-          border-radius: 5px;
-        } */
-        /* .linkNum2Sec {
-          border: 1px solid red;
-          margin-top: 10px;
-          width: 90%;
-          height: 159px;
-          margin-left: auto;
-          background-color: #efebff;
-          border-radius: 5px;
-        } */
-
-        /* .linkRemove {
-          width: 92%;
-          height: 20px;
-          margin-top: 15px;
-          margin-left: 25px;
-        } */
-
-        /* .linkRemove {
-          display: flex; 
-          align-items: center; 
-          justify-content: space-between; 
-        } */
-
-        /* .linkRemove p {
-          color: #737373;
-          font-weight: 500;
-
-        } */
-       
-        /* .img-p {
-          display: flex; 
-          align-items: center; 
-          justify-content: space-between; 
-        }
-
-        .img-p img,
-        .img-p p {
-           margin: 5px; 
-         }
-
-         .img-p p {
-          color: #737373;
-          font-weight: 500;
-         } */
-         .link {
-          /* border: 2px solid green; */
-          width: 90%;
-          height: 65px;
-          margin-left: 35px;
-          margin-top: 10px;
-          position: relative;
-          display: flex;
-          align-items: center;
-        }
-        
-        .link p {
-          position: absolute;
-          top: 0;
-          left: 0;
-          margin: 0;
-          color: #737373;
-          font-size: 13px;
-          font-weight: 600;
-        }
-        
-        .link .input-container {
-          display: flex;
-          align-items: center;
-          width: 100%;
-        }
-        
-        .link .input-container input {
-          flex: 1;
-          height: 3em;
-          padding-left: 30px; 
-          border: 1px solid #d9d9d9;
-          margin-top: 18px;
-          border-radius: 5px;
-        }
-        
-        .link .icon-link {
-          position: absolute;
-          left: 5px; /* Adjust this value to position the icon at the left corner of the input */
-          top: 65%; /* Vertically center the icon within the input */
-          transform: translateY(-50%); /* Adjust the vertical position */
-        }
+      }
       
-         /* .platform {
-          position: relative;
-          flex-direction: column;
-          display: flex;
-          border: 2px solid red;
-          width: 90%;
-          height: 65px;
-          margin-top: 15px;
-          margin-left: 34px;
-        } */
-        
-        .platform p {
-          position: absolute;
-          top: 0;
-          left: 0;
-          margin: 0;
-          color: #737373;
-          font-size: 13px;
-          font-weight: 600;
-        }
-        
-       
-        
-               
-        
-
-        
-        
-        
-        
-          
-          
-          
-          
-          
-          
-          
-
-          
-          
-          
-          
-          
-
-          
-
-          
-          
-          
-          
+      .linkSection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
       
-  
+      .linkInputContainer {
+        position: absolute;
+        margin-top: -5px;
+        /* border: 2px solid yellow; */
+        width: 100%;
+        height: 10px;
+      }
+      
+      .linkInputContainer img {
+        position: absolute;
+        top: 190%;
+        left: 5px;
+        transform: translateY(-50%);
+      }
+
+      .linkOneContainer {
+        width: 695px;
+        height: 170px;
+        border-radius: 5px;
+        margin-left: 30px;
+        margin-top: 5px;
+        border: 2px solid red;
+      }
+
+      .linkTwoContainer {
+        width: 695px;
+        height: 170px;
+        border-radius: 5px;
+        margin-left: 30px;
+        margin-top: 5px;
+        border: 2px solid red;
+      }
+      
+      .linkInputContainer input {
+        width: 100%;
+        height: 40px;
+        padding-left: 30px;
+        border-radius: 5px;
+        box-sizing: border-box; 
+        border: 1px solid #ccc; 
+      }
+
+      
+      
+      
+     
+      
+     
+      
+             
+      
+
+      
+      
+      
+      
+        
+        
+        
+        
+        
+        
+        
+
+        
+        
+        
+        
+        
+
+        
+
+        
+        
+        
+        
     
+
+  
