@@ -147,6 +147,7 @@
   .customisationHeaderParagraph h1 {
     text-align: left;
     color: #333333;
+    /* border: 2px solid red; */
   }
   
   .customisationHeaderParagraph p {
@@ -205,9 +206,9 @@
         }
 
         .linkRemove {
-          display: flex; /* Use flex to create a horizontal layout */
-          align-items: center; /* Vertically center the content */
-          justify-content: space-between; /* Push the children to the far left and far right */
+          display: flex; 
+          align-items: center;
+          justify-content: space-between; 
         }
 
         .linkRemove p {
@@ -274,26 +275,6 @@
           transform: translateY(-50%); 
         }
       
-         /* .platform {
-          position: relative;
-          flex-direction: column;
-          display: flex;
-          border: 2px solid red;
-          width: 90%;
-          height: 65px;
-          margin-top: 15px;
-          margin-left: 34px;
-        } */
-        
-        /* .platform p {
-          position: absolute;
-          top: 0;
-          left: 0;
-          margin: 0;
-          color: #737373;
-          font-size: 13px;
-          font-weight: 600;
-        } */
 
         .image-info-section {
             height: 70%;
@@ -345,21 +326,42 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-          }
-
-          .image-container img {
+            transition: background-color 0.3s;
+        }
+        
+        .image-container img {
             order: -1; 
             margin-left: 10px;
             margin-top: 2px;
-          }
-          
-
-          .upload-text {
+        }
+        
+        .image-container img:hover {
+            background: #fff;
+        }
+        
+        .upload-text {
             color: blue;
             font-weight: 500;
             margin-top: 34px;
             margin-right: 28px;
-          }
+            transition: color 0.3s;
+        }
+        
+        .image-container:hover .upload-text {
+            content: 'Change Image';
+            color: #fff; 
+        }
+        
+        .image-container:hover .upload-text::before {
+            content: ''; 
+            color: blue;
+        }
+        
+        .image-container:active img,
+        .image-container:active .upload-text {
+            color: white;
+        }
+        
 
           .pp {
             color: #737373;
@@ -417,7 +419,7 @@
             align-items: center;
           }
 
-          .firstNameInput p {
+          .firstNameInput label {
             margin-bottom: 1px;
             display: block; 
             color: #737373;
@@ -425,7 +427,7 @@
             width: 190px;
           } 
 
-          .lastNameInput p {
+          .lastNameInput label {
             margin-bottom: 1px;
             display: block; 
             color: #737373;
@@ -433,7 +435,7 @@
             width: 190px;
           } 
 
-          .emailInput p {
+          .emailInput label {
              margin-bottom: 1px;
              display: block; 
              color: #737373;
@@ -488,25 +490,34 @@
 
 
 
-.profileSave {
+.profileDetailSave {
   position: absolute;
-  top: 570px; 
-  right: 32px; 
-  width: 760px; 
-  height: 58px; 
+  top: 87%; 
+  left : 42%; 
+  width: 56%;
+  height: 50px; 
 }
 
-.profileSaveBtn {
-  width: 70px;
-  height: 40px;
-  margin-left: 650px;
-  margin-top: 2px;
+.profileDetailSaveBtn {
+  width: 10%;
+  height: 86%;
+  background: #633cff;
+  color: #fff; 
+  outline: none; 
   border: none;
-  background-color: #633cff;
-  color: white;
-  text-align: center; 
-  line-height: 40px; 
+  /* border: 2px solid red; */
+  margin-top: 3px;
+  margin-left: 88%;
 }
+
+.profileDetailSaveBtn:hover {
+  background: #633cff;
+  color: #fff;
+}
+
+
+
+
 
           
           

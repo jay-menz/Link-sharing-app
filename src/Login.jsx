@@ -52,7 +52,7 @@ import './Login.css';
       setEmailErrorMessage("Can't be empty")
       setEmailLabelError(true);
 
-      //remove the error message after 3seconds. You can play with the time yourself by changing it in the setTimout function
+      //remove the error message after 5seconds. 
       setTimeout(() => {
         
         setEmailError(false) //set message to false to hide it
@@ -69,7 +69,7 @@ import './Login.css';
       setPasswordErrorMessage("Please check again");
       setPasswordLabelError(true);
 
-      //remove the error message after 3seconds. You can play with the time yourself by changing it in the setTimout function
+      //remove the error message after 5seconds. You can play with the time yourself by changing it in the setTimout function
       setTimeout(() => {
         
         setPasswordError(false) //set message to false to hide it
@@ -83,7 +83,7 @@ import './Login.css';
     
     if (chkErrSum > 0) return;
 
-      //use trycatch block to handle errors if any should arise
+      // trycatch block to handle errors
     try {
       
       setShowLoginButton(false) // set this to false to hide and show the loading state

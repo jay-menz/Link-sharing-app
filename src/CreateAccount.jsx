@@ -145,7 +145,7 @@ import './CreateAccount.css';
                        <span id="passwordError">{emailErrorMessage}</span>
                       </div>
                      )}
-                  </div>
+                </div>
         </div> 
 
         <div className="createPwd">

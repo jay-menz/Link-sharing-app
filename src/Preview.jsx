@@ -1,6 +1,8 @@
 import React from 'react';
 import './Preview.css';
 import iphoneIcon from './assets/images/illustration-phone-mockup.svg';
+
+
 import { useNavigate } from 'react-router-dom'
 
 
@@ -13,7 +15,7 @@ const Preview = () => {
       <div className="navigationBar">
         <div className="innerNavigationBar">
           <div className="innerNavigationBarBtn">
-            <button>Back to Editor</button>
+            <button onClick={() =>navigate("Profile")}>Back to Editor</button>
             <button>Share Link</button>
           </div>
         </div>
