@@ -41,6 +41,8 @@ const Profile = () => {
     const handleOnChangeFirstName = (event)=>{setfirstName(event.target.value);}
     const handleOnChangeLastName = (event)=>{setlastName(event.target.value);}
 
+    const [borderError, setBorderError] = React.useState(false);
+
 
 
 
@@ -53,7 +55,7 @@ const Profile = () => {
         //validate firstname and lastname field before granting access
         let chkErrSum = 0;
 
-        if(firstName == '' || firstName == null){
+        if(firstName === '' || firstName == null){
             //if the first name field is empty or null then show error message
             setFirstNameError(true)
             setFirstNameErrorMessage("Can't be empty")
@@ -71,7 +73,7 @@ const Profile = () => {
 
         }
 
-        if(lastName == '' || lastName == null) {
+        if(lastName === '' || lastName == null) {
             //if the last name field is empty or null then show the error message
             setLastNameError(true);
             setLastNameErrorMessage("Can't be empty");
@@ -150,7 +152,7 @@ const Profile = () => {
                         <div className="firstNameInput">
                            <label 
                            htmlFor='firstNameInput'
-                            className={firstNameLabelError ? 'error-label' : ''}
+                            // className={firstNameLabelError ? 'error-label' : ''}
                             >First name*</label>
                            <input 
                            type="text" 
@@ -159,22 +161,34 @@ const Profile = () => {
                            placeholder='e.g. John' 
                            value={firstName}
                            onChange={handleOnChangeFirstName}
+                           className={firstNameLabelError ? 'error-border' : ''}
                            />
+                           {firstNameLabelError &&(
+                            <div className="name-message-container">
+                                <span id="firstnameError">{firstNameErrorMessage}</span>
+                            </div>
+                )}
                         </div>  
                         <div className="lastNameInput">
-                        <label 
-                        htmlFor='lastNameInput'
-                        className={lastNameLabelMessage ? 'error-label' : ''}
-                        >Last name*</label>
-                           <input 
-                           type="text" 
-                           name="" 
-                           id="last name input" 
-                           placeholder='e.g. Appleseed' 
-                           value={lastName}
-                           onChange={handleOnChangeLastName}
-                           />
-                        </div>  
+                            <label 
+                            htmlFor='lastNameInput'
+                            // className={lastNameLabelMessage ? 'error-label' : ''}
+                            >Last name*</label>
+                            <input 
+                            type="text" 
+                            name="" 
+                            id="last name input" 
+                            placeholder='e.g. Appleseed' 
+                            value={lastName}
+                            onChange={handleOnChangeLastName}
+                            className={lastNameLabelMessage ? 'error-border' : ''}
+                            />
+                           {lastNameLabelMessage &&(
+                            <div className="name-message-container">
+                                <span id="lastnameError">{firstNameErrorMessage}</span>
+                            </div>
+                            )}
+                        </div>
                         <div className="emailInput">
                            <label htmlFor='emailInput'>Email</label>
                            <input 

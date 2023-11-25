@@ -515,6 +515,18 @@
   color: #fff;
 }
 
+.name-message-container {
+    position: absolute;
+    display: flex;
+    font-size: 10px;
+    color: red;
+    margin-left: 610px;
+}
+
+.error-border {
+  border: 1px solid #ff3939 !important;
+}
+
 
 
 
