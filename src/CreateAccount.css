@@ -1,3 +1,180 @@
+/* *{
+  padding: 0;
+  margin: 0;
+  box-sizing:border-box;
+} */
+
+/* .body {
+overflow: hidden;
+overflow: hidden;
+margin: 0;
+background-color: #fafafa;
+display: flex;
+justify-content: flex-start;
+align-items: center;
+height: 100vh;
+flex-direction: column;
+} */
+
+/* .devvLinkLogo {
+  position: absolute;
+  top: 17%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  margin-top: -40px;  
+} */
+
+/* .whiteBoxX {
+  width: 400px;
+  height: 450px;
+  background-color: #fff; 
+  position: absolute;
+  top: 53%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  border: 2px solid blue;
+} */
+
+/* .createAccount {
+  border: 2px solid green;
+  width: 90%;
+  height: 14%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-left: 22px;
+} */
+
+/* .createAccount-title {
+  align-self: flex-start; 
+  margin-bottom: 10px; 
+  margin-left: 3px; 
+  color: #333333;
+  font-size: 25px;
+} */
+
+/* .createAccount-info {
+  margin-top: 2px;
+  margin-left: 3px; 
+  color: #737373;
+  font-size: 14px;
+  font-weight: 300;
+} */
+
+/* .emailccPwd {
+  width: 90%;
+  height: 77%;
+  display: flex;
+  border: 2px solid red;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-left: 22px;
+  align-items: flex-start; 
+} */
+
+/* .emaill {
+  width: 100%;
+  height: 20%;
+  border: 2px solid black;
+} */
+
+/* .createPassword {
+  width: 100%;
+  height: 20%;
+  margin-top: -205px;
+  border: 2px solid black; 
+} */
+
+/* .confirmPassword {
+  width: 100%;
+  height: 20%;
+  margin-top: -205px;
+  border: 2px solid black; 
+} */
+
+/* .emaill label,
+.createPassword label,
+.confirmPassword label {
+  margin-top: -5px; 
+} */
+
+/* .inputt-container{
+  display:flex;
+  width: 100%;
+  border:1px solid #ccc;
+  padding: 10px;
+  border-radius:8px;
+  transition: border 0.3s, box-shadow 0.3s;
+  margin-top: 5px;
+} */
+
+/* .inputt-container:hover {
+  border: 1px solid #633cff;
+  box-shadow: 0 0 20px #633cff;
+  } */
+
+  /* .inputt-container.error-border {
+    border:1px solid #ff3939;
+  } */
+
+  /* input[type="email"],
+  input[type="password"] {
+    border:none;
+    padding: 2px;
+    border-radius: 5px;
+    font-size: 13px;
+    outline: none;
+    margin-right: 130px;
+} */
+
+
+/* img {
+  float: left; 
+  margin-right: 10px; 
+} */
+
+
+/* .pwdReminder {
+  font-size: 13px;
+  color: #737373;
+  margin-right: 100px;
+  margin-top: -10px;
+} */
+
+/* .createAccount-btn {
+  width: 100%;
+  height: 45px;
+  margin-top: 20px;
+  color: #fff;
+  background-color: #633cff;
+  border: #633cff;
+  font-weight: 500;
+} */
+
+/* .createAccount-btn:hover {
+  border: #beadff;
+  background-color: #beadff;
+  color: #fff;
+} */
+
+/* .loginAcc {
+  text-align: center;
+  color: #737373;
+  margin-top: 45px;
+  justify-content: center;
+  font-size: 14px;
+  margin-left: 80px;
+} */
+
+/* .loginAcc a {
+  text-decoration: none;
+  color: #633cff;
+} */
+
 
 *{
   padding: 0;
@@ -44,23 +221,24 @@ flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-top: 20px;
-  margin-left: -3px;
+  margin-left: 22px;
 }
 
 .log-title {
   align-self: flex-start; 
   margin-bottom: 10px; 
   margin-left: 25px; 
-  color: dark grey;
-  font-size: 30px; 
+  color: #333333;
+  font-size: 25px; 
 }
 
 .log-info {
   margin-top: 10px;
   margin-left: 25px; 
-  color: grey;
+  /* color: #d9d9d9;  */
+  color: #737373;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .createEmailPwd{
@@ -86,8 +264,11 @@ flex-direction: column;
 }
 
 .createPwd {
+  /* border: 2px solid yellow; */
   width: 100%;
   height: 22%;
+  /* margin-top: -20px; */
+  /* margin-bottom: 5px; */
   box-sizing: border-box; 
   align-self: flex-start;
 }
@@ -103,7 +284,7 @@ flex-direction: column;
 }
 
 label {
-  color: dark grey;
+  color: #737373;
   font-size: 12px;
   margin-top: 10px;
 }
@@ -118,7 +299,6 @@ label {
   background-color: #633cff;
   border: #633cff;
   font-weight: 500;
-  
 }
 
 .log-btn:hover {

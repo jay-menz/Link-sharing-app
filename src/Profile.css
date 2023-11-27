@@ -411,12 +411,19 @@
 
           .lastNameInput, .firstNameInput, .emailInput {
             /* border: 2px solid red; */
-            width: 700px;
+            width: 95%;
             height: 45px;
             margin-left: 15px;
             margin-bottom: 5px; 
             display: flex;
             align-items: center;
+            position:relative;
+          }
+
+          .firstNameInput p, .lastNameInput p{
+            position:absolute;
+            right:30px;
+           font-size:12px;
           }
 
           .firstNameInput label {
@@ -425,6 +432,7 @@
             color: #737373;
             font-size: 15px;
             width: 190px;
+            
           } 
 
           .lastNameInput label {
@@ -515,18 +523,21 @@
   color: #fff;
 }
 
-.name-message-container {
-    position: absolute;
-    display: flex;
-    font-size: 10px;
-    color: red;
-    margin-left: 610px;
+.error-label {
+  color: red;
+
 }
 
-.error-border {
-  border: 1px solid #ff3939 !important;
+.input-field.invalid {
+  border: 2px solid red; /* Set your desired border style and color */
 }
 
+
+
+.error-message {
+  color: red;
+  font-size: 10px;
+}
 
 
 

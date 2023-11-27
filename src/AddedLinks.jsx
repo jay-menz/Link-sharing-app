@@ -1,17 +1,11 @@
-import React from "react";
+// AddedLinks.js
+
+import React, { useState } from "react";
 import devLinkLogo from "./assets/images/logo-devlinks-large.svg";
 import iphoneIcon from "./assets/images/illustration-phone-mockup.svg";
-import fingerSwipe from "./assets/images/illustration-empty.svg";
 import links from "./assets/images/icon-link.svg";
 import profie from "./assets/images/icon-profile-details-header.svg";
-import dragDrop from "./assets/images/icon-drag-and-drop.svg";
-import githubImg from "./assets/images/icon-github.svg";
-import youtubeImg from './assets/images/icon-youtube.svg';
-import linkedInImg from "./assets/images/icon-linkedin.svg";
-import facebookImg from "./assets/images/icon-facebook.svg";
-import frontendmentorImg from "./assets/images/icon-frontend-mentor.svg";
 import chevronDown from "./assets/images/icon-chevron-down.svg";
-import iconLink from "./assets/images/icon-link-copied-to-clipboard.svg";
 
 import { useNavigate } from "react-router-dom";
 
@@ -20,12 +14,19 @@ import "./AddedLinks.css";
 const AddedLinks = () => {
   const navigate = useNavigate();
 
+  const [hide, setHide] = useState(true);
+
+  const handleDropDown = () => {
+    setHide(!hide); // Toggle the hide state
+    console.log("I just clicked");
+  };
+
   return (
     <section>
-      <div class="nav-container">
-        <div class="innerNav-container">
+      <div className="nav-container">
+        <div className="innerNav-container">
           <img src={devLinkLogo} alt="dev link logo" />
-          <div class="linksDetails">
+          <div className="linksDetails">
             <button>
               <img src={links} alt="links" />
               Links
@@ -72,19 +73,22 @@ const AddedLinks = () => {
                 </div>
                 <div>Remove</div>
               </div>
-              <div>
-                <label htmlFor="">Platform</label>
-                <input type="text" placeholder="Youtube" />
-                <img src={youtubeImg} alt="/" />
-                <input type="text" placeholder="GitHub" />
-                <img src={githubImg} alt="/" />
-                <input type="text" placeholder="LinkedIn" />
-                <img src={linkedInImg} alt="/" />
-                <input type="text" placeholder="Facebook" />
-                <img src={facebookImg} alt="/" />
-                <input type="text" placeholder="Frontend Mentor" />
-                <img src={frontendmentorImg} alt="/" />
-              </div>
+              <form>
+                <div className="youtube-cont">
+                  <div className="space">
+                    <img src={chevronDown} alt="" className="arrowDown" />
+                    <label htmlFor="">Platform</label>
+                    <input
+                      type="text"
+                      placeholder="Youtube"
+                      onClick={handleDropDown}
+                    />
+                  </div>
+                  <div className={`dropdown ${hide ? "hidden" : ""}`}>
+                    <p>Dropdown Content</p>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
 

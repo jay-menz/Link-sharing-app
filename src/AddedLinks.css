@@ -1,19 +1,12 @@
-*{
-  padding: 0;
-  margin: 0;
-  box-sizing:border-box;
-}
 
-html, body {
-  overflow: hidden;
-} 
+
 
 .nav-container {
   color: #fff; 
   padding: 15px;
   margin-top: 1px; 
   background-color: #fafafa;
-  /* border: 5px solid green; */
+  
 }
 
 .innerNav-container {
@@ -21,7 +14,6 @@ html, body {
   justify-content: space-between;
   align-items: center; 
   color: #beadff;
-  /* border: 1px solid red; */
   background-color: #fff;
   border-radius: 5px;
   height: 60px;
@@ -36,6 +28,7 @@ html, body {
   display: flex;
   padding-right: 5px;
   justify-content: center; 
+
 }
 
 .linksDetails button {
@@ -126,6 +119,51 @@ button:hover {
   right: 25px; 
   /* border: 2px solid yellow; */
 }
+
+
+
+.youtube-cont{
+  position:relative;
+  flex-direction:column;
+
+}
+
+.arrowDown{
+  z-index:1;
+  position:absolute;
+  top:55px;
+  right:30px;
+  font-size:12px;
+}
+
+.dropdown{
+  width:95%;
+  position:absolute;
+  top:80px; 
+   height:300px;
+  background:#fff;
+  box-shadow:0px 0px 6px rgba(0,0,0,0.4);
+}
+
+.dropdown.hidden{
+  display:none;
+}
+
+
+form input{
+  position:absolute;
+  top:40px;
+  left:0;
+  width:95%;
+  padding:8px;
+}
+
+form label{
+  float:left;
+}
+
+
+
 
 
 .AddedOneLink-customisation {
