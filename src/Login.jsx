@@ -114,7 +114,7 @@ import './Login.css';
 
       <img src={devLinkLogo} alt="dev link logo" className='devLinkLogo'/>  
 
-      <div className="whiteBox">
+      <div className="login-whiteBox">
 
       <div className="log">
           <h1 className='log-title'>Login</h1>
@@ -160,11 +160,11 @@ import './Login.css';
                 )}
             </div>
         </div>
-
+        </div>
         {showLoginButton &&(
             <button className='log-btn' onClick={() => handleLogin()}>Login</button>
           )}
-      </div>
+      
 
       <p className='createAccLink'>Don't have an account? <a href="/CreateAccount">Create account</a></p>
 

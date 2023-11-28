@@ -196,7 +196,7 @@ flex-direction: column;
 
 .devLinkLogo {
   position: absolute;
-  top: 20%; 
+  top: 17%; 
   left: 50%; 
   transform: translate(-50%, -50%); 
   margin-top: -40px; 
@@ -205,13 +205,14 @@ flex-direction: column;
 .whiteBox {
   /* border: 2px solid red; */
   width: 410px; 
-  height: 442px;
+  height: 475px;
   background-color: #fff; 
   position: absolute;
   top: 55%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border-radius: 5px;
+  border-radius: 10px;
+  /* border: 2px solid red; */
 }
 
 .create {
@@ -220,21 +221,22 @@ flex-direction: column;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
-  margin-left: 22px;
+  margin-top: 25px;
+  margin-left: 21px;
+  /* border: 2px solid red; */
 }
 
-.log-title {
+.create-title {
   align-self: flex-start; 
   margin-bottom: 10px; 
-  margin-left: 25px; 
+  margin-left: 2px; 
   color: #333333;
   font-size: 25px; 
 }
 
-.log-info {
+.create-info {
   margin-top: 10px;
-  margin-left: 25px; 
+  margin-left: 2px; 
   /* color: #d9d9d9;  */
   color: #737373;
   font-size: 14px;
@@ -248,7 +250,7 @@ flex-direction: column;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: -5px;
   margin-left: 22px;
   /* border: 2px solid green; */
 }
@@ -258,7 +260,7 @@ flex-direction: column;
   width: 100%;
   height: 22%;
   /* margin-top: -170px; */
-  /* margin-bottom: 5px; */
+  /* margin-bottom: 55px; */
   box-sizing: border-box; 
   align-self: flex-start;
 }
@@ -268,7 +270,7 @@ flex-direction: column;
   width: 100%;
   height: 22%;
   /* margin-top: -20px; */
-  /* margin-bottom: 5px; */
+  /* margin-top: 25px; */
   box-sizing: border-box; 
   align-self: flex-start;
 }
@@ -289,31 +291,31 @@ label {
   margin-top: 10px;
 }
 
-.log-btn {
+.create-btn {
   width: 100%;
   height: 40px;
   margin-left: 40px;
   margin-bottom: -45px;
-  margin-top: 10px;
+  margin-top: 15px;
   color: #fff;
   background-color: #633cff;
   border: #633cff;
   font-weight: 500;
 }
 
-.log-btn:hover {
+.create-btn:hover {
   border: #beadff;
   background-color: #beadff;
   color: #fff;
 }
 
-.createAccLink {
+.loginLink {
   text-align: center;
   color: #737373;
-  margin-top: -35px;
+  margin-top: -20px;
 }
 
-.createAccLink a {
+.loginLink a {
   text-decoration: none;
   color: #633cff;
   /* border: 2px solid red; */
@@ -388,4 +390,9 @@ img {
   margin-right: 10px; 
 }
 
+.reminder {
+  color: grey;
+  font-size: 13px;
+  margin-right: 105px;
+}
 

@@ -123,8 +123,8 @@ import './CreateAccount.css';
       <div className="whiteBox">
 
       <div className="create">
-          <h1 className='log-title'>Create account</h1>
-          <p className='log-info'>Let's get you started sharing your links!</p>
+          <h1 className='create-title'>Create account</h1>
+          <p className='create-info'>Let's get you started sharing your links!</p>
       </div>
 
       <div className="createEmailPwd">
@@ -184,12 +184,16 @@ import './CreateAccount.css';
             </div>
         </div>
 
+        <p className='reminder'>Password must contain at least 8 characters</p>
+        
         {showLoginButton &&(
-            <button className='log-btn' onClick={() => handleLogin()}>Create new account</button>
+            <button className='create-btn' onClick={() => handleLogin()}>Create new account</button>
           )}
       </div>
 
-      <p className='createAccLink'>Already have an account? <a href="/">Login</a></p>
+      
+
+      <p className='loginLink'>Already have an account? <a href="/">Login</a></p>
 
      
       </div>
