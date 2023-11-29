@@ -14,7 +14,8 @@
     height: 265px;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
-    position: relative;
+    position: absolute;
+    width: 100%;
   }
 
   .navigationBar {
@@ -42,6 +43,9 @@
   .innerNavigationBarBtn button:first-child {
     margin-left: 20px;
     font-weight: 750;
+    background-color: #fff;
+    color: #633cff;
+    /* border: 2px solid green; */
   }
   
   .innerNavigationBarBtn button:last-child {
@@ -49,25 +53,65 @@
     font-weight: 750;
     background-color: #633cff;
     color: #fff;
+    /* border: 2px solid red; */
   }
 
   .innerNavigationBarBtn button:last-child:hover {
     background-color: #fff;
   }
 
-  .innerNavigationBarBtn button:last-child:active {
-    background-color: #fff;
+  .innerNavigationBarBtn button:last-child:hover {
+    background-color: #633cff;
+    color: #fff;
   }
 
 
   .previewImg {
-    max-width: 110%; 
-    max-height: 190%; 
+    max-width: 150%; 
+    max-height: 150%; 
+    display: block;
     margin: 0 auto; 
     position: relative;
-    top: 120%;
+    top: 110%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+
+  /* .linkPopUp {
+    position: absolute;
+    width: 30%;
+    height: 20%;
+    border: 2px solid blue;
+  } */
+
+
+  .linkPopUp {
+    position: absolute;
+    top: 225%;
+    left: 50%;
+    padding: 5px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: #333333;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .linkPopUp img {
+    margin-bottom: 5px;
+  }
+  
+  .linkPopUp p {
+    margin: 0;
+    font-size: 13px;
+    color: #fff;
+    display: inline;
+  }
+
+  .previewBox {
+    width: 20%;
+    height: 40%;
+    border: 1px solid red;
   }
   
   

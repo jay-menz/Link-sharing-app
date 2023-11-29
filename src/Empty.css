@@ -58,21 +58,21 @@ html, body {
 }
 
 .linksDetails button:hover {
-  background-color: #007bff; 
+  /* background-color: #007bff;  */
   color: white;
 }
 
 .linksDetails button:first-child {
-  background-color: #beadff;
-  color: #633cff;
+  /* background-color: #beadff; */
+  color: #737373;
   font-weight: 900;
   width: 110px; 
   height: 50px;
-  /* border: solid 2px red; */
+  /* border: solid 2px red;  */
 }
 
 .linksDetails button:last-child {
-  background-color: white; 
+  /* background-color: white;  */
   color: #737373; 
   font-weight: 800;
   width: 160px; 
@@ -84,20 +84,9 @@ html, body {
   white-space: nowrap; 
 }
 
-
-.linksDetails button:hover img,
-.linksDetails button:hover span {
-  color: blue; 
-}
-
-button:hover img,
-button:hover span {
-  color: #633cff;
-}
-
 button {
   background-color: white;
-  border: 1px solid blue;
+  border: 1px solid #633cff;
   width: 120px; 
   height: 50px;
   color: #633cff;
@@ -235,6 +224,8 @@ button:hover {
   background-color: #beadff; 
   color: white;
 }
+
+
 
 
 

@@ -1,7 +1,8 @@
 import React from 'react';
-import './Preview.css';
 import iphoneIcon from './assets/images/illustration-phone-mockup.svg';
+import copied from './assets/images/icon-link-copied-to-clipboard.svg';
 
+import './Preview.css';
 
 import { useNavigate } from 'react-router-dom'
 
@@ -20,8 +21,16 @@ const Preview = () => {
           </div>
         </div>
       </div>
-      <img src={iphoneIcon} alt="" className='previewImg'/>
+      
+      <div className="previewBox">
+
       </div>
+
+      <div className="linkPopUp">
+        <img src={copied} alt=""/>
+        <p>The link has been copied to your clipboard!</p>
+      </div>
+    </div>
      );
     }
      

@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import devLinkLogo from "./assets/images/logo-devlinks-large.svg";
 import iphoneIcon from "./assets/images/illustration-phone-mockup.svg";
 import links from "./assets/images/icon-link.svg";
-import profie from "./assets/images/icon-profile-details-header.svg";
+import profile from "./assets/images/icon-profile-details-header.svg";
 import chevronDown from "./assets/images/icon-chevron-down.svg";
 
 import { useNavigate } from "react-router-dom";
@@ -15,6 +15,7 @@ const AddedLinks = () => {
   const navigate = useNavigate();
 
   const [hide, setHide] = useState(true);
+  const [selectedButton, setSelectedButton] = useState("links");
 
   const handleDropDown = () => {
     setHide(!hide); // Toggle the hide state
@@ -27,16 +28,28 @@ const AddedLinks = () => {
         <div className="innerNav-container">
           <img src={devLinkLogo} alt="dev link logo" />
           <div className="linksDetails">
-            <button>
-              <img src={links} alt="links" />
-              Links
-            </button>
-            <button onClick={() => navigate("/Profile")}>
-              <img src={profie} alt="profile" />
-              <span>Profile Details</span>
-            </button>
-          </div>
-          <button>Preview</button>
+        <button
+          onClick={() => {
+            navigate("/AddedLinks");
+            setSelectedButton("links");
+          }}
+          className={`links-button ${selectedButton === "links" ? "active" : ""}`}
+        >
+          <img src={links} alt="links" />
+          Links
+        </button>
+        <button
+          onClick={() => {
+            navigate("/Profile");
+            setSelectedButton("profile");
+          }}
+          className={`profile-button ${selectedButton === "profile" ? "active" : ""}`}
+        >
+          <img src={profile} alt="profile" />
+          <span>Profile Details</span>
+        </button>
+      </div>
+          <button onClick={() => navigate('/preview')}>Preview</button>
         </div>
       </div>
       <div className="main-container">
@@ -62,14 +75,36 @@ const AddedLinks = () => {
                 +Add new link
               </button>
             </div>
+
             <div className="linkOneContainer">
-              <div className="linkNumTwoHeader"></div>
+              <div className="linkNumTwoHeader">
+                <div>
+                  <p>=Link #1</p>
+                </div>
+                <div>Remove</div>
+              </div>
+              <form>
+                <div className="youtube-cont">
+                  <div className="space">
+                    <img src={chevronDown} alt="" className="arrowDown" />
+                    <label htmlFor="">Platform</label>
+                    <input
+                      type="text"
+                      placeholder="Youtube"
+                      onClick={handleDropDown}
+                    />
+                  </div>
+                  <div className={`dropdown ${hide ? "hidden" : ""}`}>
+                    <p>Dropdown Content</p>
+                  </div>
+                </div>
+              </form>
             </div>
 
             <div className="linkTwoContainer">
               <div className="linkNumTwoHeader">
                 <div>
-                  <p>=Link 2</p>
+                  <p>=Link #2</p>
                 </div>
                 <div>Remove</div>
               </div>

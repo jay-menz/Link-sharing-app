@@ -49,7 +49,7 @@
 }
 
 .linksDetails button:first-child {
-  background-color: #beadff;
+  /* background-color: #beadff; */
   color: #633cff;
   font-weight: 900;
   width: 110px; 
@@ -58,7 +58,7 @@
 }
 
 .linksDetails button:last-child {
-  background-color: white; 
+  /* background-color: white;  */
   color: #737373; 
   font-weight: 800;
   width: 160px; 
@@ -66,25 +66,11 @@
   /* border: solid 2px red; */
 }
 
-.linksDetails button:last-child span {
-  white-space: nowrap; 
-}
-
 button:hover img,
 button:hover span {
   color: #633cff;
 }
 
-button {
-  background-color: white;
-  /* border: 1px solid blue; */
-  width: 120px; 
-  height: 50px;
-  color: #633cff;
-  font-weight: 900;
-  border-radius: 5px;
-  margin-right: 40px;
-}
 
 button:hover {
   background-color: #beadff;
@@ -125,22 +111,22 @@ button:hover {
 .youtube-cont{
   position:relative;
   flex-direction:column;
-
 }
 
 .arrowDown{
   z-index:1;
   position:absolute;
-  top:55px;
+  top: 40px;
   right:30px;
   font-size:12px;
+  /* border: 2px solid red; */
 }
 
 .dropdown{
   width:95%;
   position:absolute;
-  top:80px; 
-   height:300px;
+  top: 75px; 
+  height:300px;
   background:#fff;
   box-shadow:0px 0px 6px rgba(0,0,0,0.4);
 }
@@ -152,18 +138,24 @@ button:hover {
 
 form input{
   position:absolute;
-  top:40px;
-  left:0;
-  width:95%;
+  top: 25px;
+  left: 37px;
+  width:90%;
   padding:8px;
+  border-radius: 5px;
+  border: 1px solid grey;
+}
+
+form input: hover {
+   color: blue;
 }
 
 form label{
   float:left;
+  margin-left: 38px;
+  margin-top: 2px;
+  color: dark grey;
 }
-
-
-
 
 
 .AddedOneLink-customisation {
@@ -270,16 +262,25 @@ margin-left: 30px;
         margin-left: 30px;
         margin-top: 5px;
         background-color: #fafafa;
+        /* border: 2px solid blue; */
       }
 
-    
+
+      .links-button.active {
+        background-color: #fff;
+      }
     
 
       .linkNumTwoHeader {
         display:flex;
         justify-content:space-between;
         padding:1% 5%;
-        
+        color: grey;
+        font-size: 14px;
+      }
+
+      .linkNumTwoHeader p {
+        font-weight: bold;
       }
       
       .linkInputContainer input {
@@ -288,8 +289,8 @@ margin-left: 30px;
         border-radius: 5px;
         box-sizing: border-box; 
         border: 1px solid #ccc; 
+        transition: border-color 0.3s; 
       }
-
       
       
       

@@ -203,3 +203,29 @@ img {
 }
 
 
+
+
+
+
+
+
+
+
+/* media query for tablet */
+@media (min-width: 600px) {
+
+ .login-whiteBox {
+  /* border: 2px solid red; */
+  justify-content: center;
+  /* height: 50%; */
+  margin-top: -20px;
+ }
+
+ .devLinkLogo {
+  /* border: 2px solid red; */
+ }
+
+}
+
+
+
