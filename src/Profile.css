@@ -30,7 +30,6 @@ body {
   justify-content: center;
 }
 
-
 .links-button {
   background-color: white;
   color: #737373;
@@ -285,11 +284,9 @@ body {
   transition: color 0.3s;
 }
 
-
 .image-container:hover .upload-text {
   color: white;
 }
-
 
 .pp {
   color: #737373;
@@ -455,7 +452,7 @@ body {
 }
 
 .input-field.invalid {
-  border: 2px solid red; 
+  border: 2px solid red;
 }
 
 .error-message {
@@ -463,3 +460,26 @@ body {
   font-size: 10px;
 }
 
+.profile-button.active span {
+  color: #633cff;
+}
+
+/* .profile-button.active img.profile-image {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg) brightness(100%) contrast(100%);
+} */
+
+
+.changesSaved {
+  width: 50%;
+  height: 60%;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #333333;
+  margin-top: -30px;
+}
+
+.changesSaved p {
+  color: #fafafa; 
+}

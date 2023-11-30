@@ -11,6 +11,7 @@ import githubImg from "./assets/images/icon-github.svg";
 import chevronDown from "./assets/images/icon-chevron-down.svg";
 import iconLink from "./assets/images/icon-link-copied-to-clipboard.svg";
 import uploadimageIcon from "./assets/images/icon-upload-image.svg";
+import changesSavedIcon from "./assets/images/icon-changes-saved.svg";
 
 import { useNavigate } from "react-router-dom";
 
@@ -36,19 +37,17 @@ const Profile = () => {
 
   const [isProfileImageHovered, setIsProfileImageHovered] =
     React.useState(false);
-    const [selectedButton, setSelectedButton] = useState("profile"); // Fix duplicate declaration
+  const [selectedButton, setSelectedButton] = useState("profile"); // Fix duplicate declaration
 
-   
-    const handleLinksButtonClick = () => {
-      navigate("/AddedLinks");
-      setSelectedButton("links");
-    };
-  
-    const handleProfileButtonClick = () => {
-      navigate("/Profile");
-      setSelectedButton("profile");
-    };
+  const handleLinksButtonClick = () => {
+    navigate("/AddedLinks");
+    setSelectedButton("links");
+  };
 
+  const handleProfileButtonClick = () => {
+    navigate("/Profile");
+    setSelectedButton("profile");
+  };
 
   const handleOnChangeFirstName = (event) => {
     setfirstName(event.target.value);
@@ -57,7 +56,6 @@ const Profile = () => {
   const handleOnChangeLastName = (event) => {
     setlastName(event.target.value);
   };
-
 
   const handleProfileSaveBtn = async () => {
     let chkErrSum = 0;
@@ -111,27 +109,31 @@ const Profile = () => {
     }
   };
 
- return (
+  return (
     <section>
       <div className="nav-container">
         <div className="innerNav-container">
           <img src={devLinkLogo} alt="dev link logo" />
           <div className="linksDetails">
-        <button
-          onClick={handleLinksButtonClick}
-          className={`links-button ${selectedButton === "links" ? "active" : ""}`}
-        >
-          <img src={links} alt="links" className="links-image"/>
-          <span>Links</span>
-        </button>
-        <button
-          onClick={handleProfileButtonClick}
-          className={`profile-button ${selectedButton === "profile" ? "active" : ""}`}
-        >
-          <img src={profile} alt="profile" className="profile-image" />
-          <span>Profile Details</span>
-        </button>
-      </div>
+            <button
+              onClick={handleLinksButtonClick}
+              className={`links-button ${
+                selectedButton === "links" ? "active" : ""
+              }`}
+            >
+              <img src={links} alt="links" className="links-image" />
+              <span>Links</span>
+            </button>
+            <button
+              onClick={handleProfileButtonClick}
+              className={`profile-button ${
+                selectedButton === "profile" ? "active" : ""
+              }`}
+            >
+              <img src={profile} alt="profile" className="profile-image" />
+              <span>Profile Details</span>
+            </button>
+          </div>
           <button onClick={() => navigate("/preview")} className="previewBtn">
             Preview
           </button>
@@ -241,6 +243,11 @@ const Profile = () => {
             Save
           </button>
         )}
+
+        <div className="changesSaved">
+          <img src={changesSavedIcon} alt="changes saved" />
+          <p>Your changes have been successfully saved!</p>
+        </div>
       </div>
     </section>
   );

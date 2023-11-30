@@ -1,117 +1,215 @@
-*{
-    padding: 0;
-    margin: 0;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  html, body {
-    overflow: hidden;
-  }
+* {
+  padding: 0;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+}
 
-  .mauve-cover {
-    background-color: #633cff;
-    height: 265px;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    position: absolute;
-    width: 100%;
-  }
+html,
+body {
+  overflow: hidden;
+}
 
-  .navigationBar {
-    width: 100%;
-    height: 85px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+.mauve-cover {
+  background-color: #633cff;
+  height: 265px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  position: absolute;
+  width: 100%;
+}
 
-  .innerNavigationBar {
-    width: 1330px;
-    height: 60px;
-    background-color: #fff;
-    border-radius: 10px;
-  }
+.navigationBar {
+  width: 100%;
+  height: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  .innerNavigationBarBtn {
-    display: flex;
-    justify-content: space-between; 
-    padding: 10px; 
-    margin-top: -6px;
-  }
+.innerNavigationBar {
+  width: 1330px;
+  height: 60px;
+  background-color: #fff;
+  border-radius: 10px;
+}
 
-  .innerNavigationBarBtn button:first-child {
-    margin-left: 20px;
-    font-weight: 750;
-    background-color: #fff;
-    color: #633cff;
-    /* border: 2px solid green; */
-  }
-  
-  .innerNavigationBarBtn button:last-child {
-    margin-right: 30px; 
-    font-weight: 750;
-    background-color: #633cff;
-    color: #fff;
-    /* border: 2px solid red; */
-  }
+.innerNavigationBarBtn {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin-top: -6px;
+}
 
-  .innerNavigationBarBtn button:last-child:hover {
-    background-color: #fff;
-  }
+.innerNavigationBarBtn button:first-child {
+  margin-left: 20px;
+  font-weight: 750;
+  background-color: #fff;
+  color: #633cff;
+  /* border: 2px solid green; */
+}
 
-  .innerNavigationBarBtn button:last-child:hover {
-    background-color: #633cff;
-    color: #fff;
-  }
+.innerNavigationBarBtn button:last-child {
+  margin-right: 30px;
+  font-weight: 750;
+  background-color: #633cff;
+  color: #fff;
+  /* border: 2px solid red; */
+}
 
+.innerNavigationBarBtn button:last-child:hover {
+  background-color: #fff;
+}
 
-  .previewImg {
-    max-width: 150%; 
-    max-height: 150%; 
-    display: block;
-    margin: 0 auto; 
-    position: relative;
-    top: 110%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+.innerNavigationBarBtn button:last-child:hover {
+  background-color: #633cff;
+  color: #fff;
+}
 
-  /* .linkPopUp {
+.previewImg {
+  max-width: 150%;
+  max-height: 150%;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  top: 110%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* .linkPopUp {
     position: absolute;
     width: 30%;
     height: 20%;
     border: 2px solid blue;
   } */
 
+.linkPopUp {
+  position: absolute;
+  top: 225%;
+  left: 50%;
+  padding: 10px;
+  width: 25%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: #333333;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* border: 2px solid red; */
+}
 
-  .linkPopUp {
-    position: absolute;
-    top: 225%;
-    left: 50%;
-    padding: 5px;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    background-color: #333333;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
+.linkPopUp img {
+  margin-bottom: 3px;
+  margin-left: 10px;
+}
 
-  .linkPopUp img {
-    margin-bottom: 5px;
-  }
-  
-  .linkPopUp p {
-    margin: 0;
-    font-size: 13px;
-    color: #fff;
-    display: inline;
-  }
+.linkPopUp p {
+  margin: 0;
+  margin-right: 5px;
+  font-size: 14px;
+  color: #fafafa;
+  display: inline;
+}
 
-  .previewBox {
-    width: 20%;
-    height: 40%;
-    border: 1px solid red;
-  }
-  
-  
+.previewBox {
+  width: 23%;
+  height: 430px; /* Set a fixed height or adjust according to your design */
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  margin-top: 260px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+.profileCircle {
+  width: 100px;
+  height: 100px;
+  border: 3px solid #633cff;
+  /* background-color: #633cff; */
+  border-radius: 50%;
+  margin: 1px auto;
+}
+
+.innerPreview {
+  width: 80%;
+  height: 93%;
+  /* border: 2px solid red; */
+  margin: auto;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.previewHP {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 46%;
+}
+
+.previewHP h2 {
+  margin-bottom: 10px; 
+  color: #333333;
+}
+
+.previewHP p {
+  color: #737373;
+}
+
+
+.previewPlatforms {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+  margin-top: 15px;
+}
+
+.gitHubPlatform,
+.youTubePlatform,
+.linkedInPlatform {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 25%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  color: #fafafa;
+}
+
+.gitHubPlatform {
+  background-color: #333333;
+}
+
+.youTubePlatform {
+  background-color: #ff3939;
+}
+
+.linkedInPlatform {
+  background-color: #633cff;
+}
+
+.previewPlatforms img {
+  margin-left: 15px;
+}
+
+.previewPlatforms p {
+  margin-right: 90px;
+  /* border: 2px solid yellow; */
+}
+
+.previewPlatforms img:last-child {
+  margin-right: 15px;
+  /* border: 2px solid yellow; */
+}
+
+
+

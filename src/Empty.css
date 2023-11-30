@@ -57,10 +57,11 @@ html, body {
   /* margin-top: 30px;  */
 }
 
-.linksDetails button:hover {
-  /* background-color: #007bff;  */
-  color: white;
-}
+/* .linksDetails button:hover {
+  background-color: #007bff; 
+} */
+
+
 
 .linksDetails button:first-child {
   /* background-color: #beadff; */
@@ -95,10 +96,10 @@ button {
   margin-right: 40px;
 }
 
-button:hover {
+/* button:hover {
   background-color: #beadff;
   color: #633cff;
-}
+} */
 
 .main-container {
   width: 94%; 
@@ -225,6 +226,19 @@ button:hover {
   color: white;
 }
 
+.linksDetails button.activeButton  {
+  background-color: #beadff;
+  color: #633cff;
+}
+
+.linksDetails button.activeButton img {
+  filter: brightness(0.8); 
+}
+
+.linksDetails button.activeButton:hover {
+  /* background-color: #633cff; */
+  color: white;
+}
 
 
 

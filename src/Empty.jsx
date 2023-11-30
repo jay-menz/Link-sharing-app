@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import devLinkLogo from "./assets/images/logo-devlinks-large.svg";
 import iphoneIcon from "./assets/images/illustration-phone-mockup.svg";
 import fingerSwipe from "./assets/images/illustration-empty.svg";
@@ -10,6 +10,14 @@ import "./Empty.css";
 
 const Empty = () => {
   const navigate = useNavigate();
+  const [activeButton, setActiveButton] = useState("links");
+
+  const handleButtonClick = (button) => {
+    if(activeButton !== button){
+    navigate(`/${button}`);
+    setActiveButton(button);
+    }
+  };
 
   return (
     <section>
@@ -17,14 +25,21 @@ const Empty = () => {
         <div class="innerNav-container">
           <img src={devLinkLogo} alt="dev link logo" className="emptyLogo" />
           <div class="linksDetails">
-            <button onClick={() => navigate("/AddedOneLink")}>
+            <button onClick={() => handleButtonClick("links")}
+            className={activeButton === "links" ? "activeButton" : ""}
+            >
               <img src={links} alt="links" />
               Links
             </button>
-            <button onClick={() => navigate("/Profile")}>
-              <img src={profile} alt="profile" />
-              <span>Profile Details</span>
-            </button>
+
+              <button 
+              onClick={() => handleButtonClick("profile")}
+              className={activeButton === "profile" ? "activeButton" : ""}
+              >
+                <img src={profile} alt="profile" />
+                <span>Profile Details</span>
+              </button>
+
           </div>
           <button onClick={() => navigate("/preview")}>Preview</button>
         </div>

@@ -58,6 +58,7 @@ const AddedLinks = () => {
             <img src={iphoneIcon} alt="phone icon" />
           </div>
         </div>
+        
         <div className="AddedOneLink-customisation">
           <div className="customisationHeaderParagraph">
             <h1>Customize your links</h1>

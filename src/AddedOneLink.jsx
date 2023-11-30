@@ -12,6 +12,7 @@ import facebookImg from "./assets/images/icon-facebook.svg";
 import frontendmentorImg from "./assets/images/icon-frontend-mentor.svg";
 import chevronDown from "./assets/images/icon-chevron-down.svg";
 import iconLink from "./assets/images/icon-link-copied-to-clipboard.svg";
+import arrowRight from "./assets/images/icon-arrow-right.svg";
 
 import { useNavigate } from "react-router-dom";
 
@@ -51,6 +52,7 @@ const AddedOneLink = () => {
             <img src={iphoneIcon} alt="phone icon" />
           </div>
         </div>
+
         <div className="AddedOneLink-customisation">
           <div className="customisationHeaderParagraph">
             <h1>Customize your links</h1>
