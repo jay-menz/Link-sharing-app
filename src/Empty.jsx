@@ -13,11 +13,14 @@ const Empty = () => {
   const [activeButton, setActiveButton] = useState("links");
 
   const handleButtonClick = (button) => {
+    console.log("BUTTON CLICKED:::", button)
     if(activeButton !== button){
-    navigate(`/${button}`);
-    setActiveButton(button);
+      setActiveButton(button);
+      navigate(`/${button}`);
     }
   };
+
+  console.log("ACTIVE BUTTON:::", activeButton);
 
   return (
     <section>

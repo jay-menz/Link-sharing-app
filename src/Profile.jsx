@@ -23,6 +23,7 @@ const Profile = () => {
   const [showProfileSaveButton, setShowProfileSaveButton] =
     React.useState(true);
   const [showLoading, setShowLoading] = React.useState(false);
+  const [showToast, setShowToast] = React.useState(false);
 
   const [firstName, setfirstName] = React.useState("");
   const [lastName, setlastName] = React.useState("");
@@ -94,11 +95,15 @@ const Profile = () => {
       setShowProfileSaveButton(false);
       setShowLoading(true);
 
+      setShowToast(true);
+
+      setTimeout(() => setShowToast(false), 2000);
+
       // Simulating a successful save, replace with actual backend logic
       // navigate('/Preview');
 
       // Simulating an error, remove this block in actual implementation
-      throw new Error("Simulated error during profile save");
+      //throw new Error("Simulated error during profile save");
 
       setShowProfileSaveButton(true);
       setShowLoading(false);
@@ -244,10 +249,12 @@ const Profile = () => {
           </button>
         )}
 
-        <div className="changesSaved">
-          <img src={changesSavedIcon} alt="changes saved" />
-          <p>Your changes have been successfully saved!</p>
-        </div>
+        {showToast && (
+          <div className="changesSaved">
+            <img src={changesSavedIcon} alt="changes saved" />
+            <p>Your changes have been successfully saved!</p>
+          </div>
+        )}
       </div>
     </section>
   );

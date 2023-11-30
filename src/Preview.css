@@ -77,13 +77,6 @@ body {
   transform: translate(-50%, -50%);
 }
 
-/* .linkPopUp {
-    position: absolute;
-    width: 30%;
-    height: 20%;
-    border: 2px solid blue;
-  } */
-
 .linkPopUp {
   position: absolute;
   top: 225%;

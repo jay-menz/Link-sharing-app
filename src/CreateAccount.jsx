@@ -84,7 +84,6 @@ import './CreateAccount.css';
       // Skip validation for "Confirm password" if it is not filled
     if (document.getElementById('confirmPasswordInput').value !== '') {
       setConfirmPassword(false);
-      chkSum++;
     }
 
     if (chkSum > 0) return;

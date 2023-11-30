@@ -13,12 +13,13 @@ import { useNavigate } from "react-router-dom";
 const Preview = () => {
   const navigate = useNavigate();
 
+
   return (
     <div className="mauve-cover">
       <div className="navigationBar">
         <div className="innerNavigationBar">
           <div className="innerNavigationBarBtn">
-            <button onClick={() => navigate("Profile")}>Back to Editor</button>
+            <button onClick={() => navigate("/Profile")}>Back to Editor</button>
             <button>Share Link</button>
           </div>
         </div>

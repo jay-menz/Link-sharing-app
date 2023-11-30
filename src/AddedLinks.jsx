@@ -33,7 +33,7 @@ const AddedLinks = () => {
             navigate("/AddedLinks");
             setSelectedButton("links");
           }}
-          className={`links-button ${selectedButton === "links" ? "active" : ""}`}
+          className={`links-button ${selectedButton === "links" ? "activeButton" : ""}`}
         >
           <img src={links} alt="links" />
           Links
@@ -43,7 +43,7 @@ const AddedLinks = () => {
             navigate("/Profile");
             setSelectedButton("profile");
           }}
-          className={`profile-button ${selectedButton === "profile" ? "active" : ""}`}
+          className={`profile-button ${selectedButton === "profile" ? "activeButton" : ""}`}
         >
           <img src={profile} alt="profile" />
           <span>Profile Details</span>
