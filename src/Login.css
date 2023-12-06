@@ -1,33 +1,33 @@
-*{
+* {
   padding: 0;
   margin: 0;
-  box-sizing:border-box;
+  box-sizing: border-box;
 }
 
 .body {
-overflow: hidden;
-overflow: hidden;
-margin: 0;
-background-color: #fafafa;
-display: flex;
-justify-content: flex-start;
-align-items: center;
-height: 100vh;
-flex-direction: column;
+  overflow: hidden;
+  /* overflow: hidden; */
+  margin: 0;
+  background-color: #fafafa;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
 }
 
 .devLinkLogo {
   position: absolute;
-  top: 20%; 
-  left: 50%; 
-  transform: translate(-50%, -50%); 
-  margin-top: -40px; 
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: -40px;
 }
 
 .login-whiteBox {
-  width: 410px; 
+  width: 410px;
   height: 402px;
-  background-color: #fff; 
+  background-color: #fff;
   position: absolute;
   top: 55%;
   left: 50%;
@@ -48,24 +48,24 @@ flex-direction: column;
 }
 
 .log-title {
-  align-self: flex-start; 
-  margin-bottom: 10px; 
-  margin-left: 25px; 
+  align-self: flex-start;
+  margin-bottom: 10px;
+  margin-left: 25px;
   /* color: #333333; */
   color: dark grey;
-  font-size: 25px; 
+  font-size: 25px;
 }
 
 .log-info {
   margin-top: 10px;
-  margin-left: 25px; 
+  margin-left: 25px;
   /* color: #d9d9d9;  */
   color: #737373;
   font-size: 14px;
   font-weight: 300;
 }
 
-.emailPwd{
+.emailPwd {
   width: 90%;
   height: 45%;
   display: flex;
@@ -82,7 +82,7 @@ flex-direction: column;
   height: 20%;
   margin-top: -55px;
   margin-bottom: 5px;
-  box-sizing: border-box; 
+  box-sizing: border-box;
   align-self: flex-start;
   /* border: 2px solid red; */
 }
@@ -98,7 +98,7 @@ label {
   height: 20%;
   margin-top: 35px;
   /* margin-bottom: 10px; */
-  box-sizing: border-box; 
+  box-sizing: border-box;
   align-self: flex-start;
   /* border: 2px solid red; */
 }
@@ -146,7 +146,7 @@ label {
 }
 
 .input-container.error-border {
-  border:1px solid #ff3939;
+  border: 1px solid #ff3939;
 }
 
 #error-message-container {
@@ -167,65 +167,178 @@ label {
   /* border: 2px solid blue; */
 }
 
-
-
-
-.input-container{
-  display:flex;
-  border:1px solid #ccc;
+.input-container {
+  display: flex;
+  border: 1px solid #ccc;
   /* border:1px solid red; */
   padding: 10px;
-  border-radius:8px;
+  border-radius: 8px;
   transition: border 0.3s, box-shadow 0.3s;
 }
 
 .input-container:hover {
   border: 1px solid #633cff;
   box-shadow: 0 0 20px #633cff;
-  }
-
+}
 
 input[type="email"],
 input[type="password"] {
-    border:none;
-    padding: 2px;
-    border-radius: 5px;
-    /* width: 100%; */
-    width: calc(100% - 90px);
-    font-size: 13px;
-    outline: none;
-    margin-right: 130px;
+  border: none;
+  padding: 2px;
+  border-radius: 5px;
+  /* width: 100%; */
+  width: calc(100% - 90px);
+  font-size: 13px;
+  outline: none;
+  margin-right: 130px;
 }
 
 img {
-  float: left; 
-  margin-right: 10px; 
+  float: left;
+  margin-right: 10px;
 }
-
-
-
-
-
-
-
-
-
 
 /* media query for tablet */
-@media (min-width: 600px) {
+@media (min-width: 600px) and (max-width: 1024px) {
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
 
- .login-whiteBox {
-  /* border: 2px solid red; */
-  justify-content: center;
-  /* height: 50%; */
-  margin-top: -20px;
- }
+  html,
+  body {
+    overflow: hidden !important;
+  }
 
- .devLinkLogo {
-  /* border: 2px solid red; */
- }
+  .body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid red; */
+  }
 
+  .devLinkLogo {
+    position: absolute;
+    margin-left: -50px;
+    /* margin-top: -100px; */
+    top: 20px;
+  }
+
+  .login-whiteBox {
+    /* border: 2px solid red; */
+    justify-content: center;
+    align-items: center;
+    margin-left: -70px;
+    margin-top: -120px;
+  }
 }
 
+/* Media query for phones */
+@media (min-width: 320px) and (max-width: 599px) {
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    overflow: hidden;
+  }
+
+  .body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid red; */
+  }
+
+  .devLinkLogo {
+    margin-left: -90px;
+    margin-top: -100px;
+    width: 150px;
+    height: 150px;
+  }
+
+  .devLinkLogo img {
+    max-width: 100%;
+    width: 20px;
+    height: 20px;
+  }
+
+  .login-whiteBox {
+    border: 2px solid red;
+    height: 77%;
+    width: 77%;
+    justify-content: center;
+    align-items: center;
+    margin-left: -18px;
+  }
+
+  .log {
+    width: 100%;
+  }
+
+  .log-title {
+    width: 100%;
+    margin-left: 1px;
+  }
+
+  .log-info {
+    /* border: 2px solid red; */
+    width: 100%;
+    margin-left: 1px;
+  }
+
+  .emailPwd {
+    border: 2px solid blue;
+    width: 100%;
+    height: 35%;
+    margin-left: 1px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .email {
+    margin-top: 0px; 
+  }
+
+  .password {
+    margin-top: 40px;
+  }
+
+  .log-btn {
+    width: 100%;
+    margin-left: 1px;
+    /* margin-top: -200px;  */
+    order: -1; 
+  }
+
+  /* .createAccLink {
+    border: 2px solid red; 
+    font-size: 14px;
+  } */
+
+  .createAccLink {
+    border: 2px solid red;
+    width: 100%;
+    font-size: 21px;
+    height: 40px;
+    flex-direction: column; 
+    align-items: center; 
+  }
+
+  .createAccLink a {
+    margin-top: 500px;
+    /* margin-bottom: 20px; */
+    border: 2px solid red;
+    font-size: 15px;
+  }
+
+}
 
 
