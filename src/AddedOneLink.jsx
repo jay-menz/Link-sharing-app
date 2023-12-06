@@ -33,7 +33,8 @@ const AddedOneLink = () => {
 
   //error and success message
   const [linkOneEmptyError, setLinkOneEmptyError] = React.useState(false);
-  const [linkOneEmptyErrorMessage, setLinkOneEmptyErrorMessage] = React.useState("");
+  const [linkOneEmptyErrorMessage, setLinkOneEmptyErrorMessage] =
+    React.useState("");
 
   const [showSaveButton, setShowSaveButton] = React.useState(true); //show save button on load
   const [showLoadingg, setShowLoadingg] = React.useState(false); //show loading state when button is clicked
@@ -59,20 +60,17 @@ const AddedOneLink = () => {
       setLinkOneEmptyError(true);
       setLinkOneEmptyErrorMessage("Can't be empty");
       setLinkOneBorderError(true);
-      setInputError(true); 
-
+      setInputError(true);
 
       setTimeout(() => {
         setLinkOneEmptyError();
         setLinkOneEmptyErrorMessage("");
-        setLinkOneBorderError(false); 
-        setInputError(false); 
+        setLinkOneBorderError(false);
+        setInputError(false);
       }, 5000);
 
       checkErrorSum++;
     }
-
-
   };
 
   const navigate = useNavigate();
@@ -215,6 +213,11 @@ const AddedOneLink = () => {
                   placeholder="e.g.https://github.com/johnappleseed"
                   className="linkInput"
                 />
+
+                {/* <div id="error-message-container">
+                  <span className="error-message">{"can't be empty"}</span>
+                </div> */}
+
                 <img src={iconLink} alt="" className="link-icon" />
               </div>
             </div>
@@ -222,7 +225,12 @@ const AddedOneLink = () => {
 
           <div className="AddedOneLinksaveBtn">
             {showSaveButton && (
-              <button className="AddedOneLinksave" onClick={() => handleLinkOneSaveBtn()}>save</button>
+              <button
+                className="AddedOneLinksave"
+                onClick={() => handleLinkOneSaveBtn()}
+              >
+                save
+              </button>
             )}
           </div>
         </div>

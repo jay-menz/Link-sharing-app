@@ -23,9 +23,9 @@ const AddedLinks = () => {
   const [hide, setHide] = useState(true);
   const [selectedButton, setSelectedButton] = useState("links");
   const [selectedPlatform, setSelectedPlatform] = useState("");
+  const [selectedPlatformTwo, setSelectedPlatformTwo] = useState("YouTube");
   const [isActive, setIsActive] = useState(false);
-  const [linkOneErrorSaveButton, setLinkOneErrorSaveButton] =
-    React.useState(true);
+  const [linkOneErrorSaveButton, setLinkOneErrorSaveButton] = React.useState(true);
 
   const [linkOneEmpty, setLinkOneEmpty] = React.useState("");
 
@@ -68,6 +68,7 @@ const AddedLinks = () => {
       } else {
         myRef.current.className = "dropdown";
       }
+      
     }
 
     if (whichOne === 2) {
@@ -80,6 +81,18 @@ const AddedLinks = () => {
 
     console.log("I just clicked");
   };
+
+
+  const handlePlatformSelectTwo = (platform) => {
+    setSelectedPlatformTwo(platform)
+  }
+
+
+  const handlePlatformSelect = (platform) => {
+    setSelectedPlatform(platform) 
+    myRef.current.className = "dropdown hidden";
+    myRefTwo.current.className = "dropdown hidden"
+  }
 
   const handleLinkOneSaveBtn = async () => {
     //validate the link1 field before granting access
@@ -195,31 +208,41 @@ const AddedLinks = () => {
                   <img src={chevronDown} alt="" className="arrowDown" />
                   <div className={"dropdown hidden"} ref={myRef}>
                     <div className="github">
-                      <div className="icon-text-container">
+                      <div className="icon-text-container"
+                      onClick={() => handlePlatformSelect("GitHub")}
+                      >
                         <img src={githubImg} alt="" />
                         <p>GitHub</p>
                       </div>
                     </div>
                     <div className="github">
-                      <div className="icon-text-container">
+                      <div className="icon-text-container"
+                      onClick={() => handlePlatformSelect("YouTube")}
+                      >
                         <img src={youtubeImg} alt="" />
                         <p>YouTube</p>
                       </div>
                     </div>
                     <div className="github">
-                      <div className="icon-text-container">
+                      <div className="icon-text-container"
+                      onClick={() => handlePlatformSelect("LinkedIn")}
+                      >
                         <img src={linkedInImg} alt="" />
                         <p>LinkedIn</p>
                       </div>
                     </div>
                     <div className="github">
-                      <div className="icon-text-container">
+                      <div className="icon-text-container"
+                      onClick={() => handlePlatformSelect("Facebook")}
+                      >
                         <img src={facebookImg} alt="" />
                         <p>Facebook</p>
                       </div>
                     </div>
                     <div className="github">
-                      <div className="icon-text-container">
+                      <div className="icon-text-container"
+                      onClick={() => handlePlatformSelect("Frontend Mentor")}
+                      >
                         <img src={frontendmentorImg} alt="" />
                         <p>Frontend Mentor</p>
                       </div>
@@ -254,56 +277,66 @@ const AddedLinks = () => {
                   <div className="input-with-icon">
                     <input
                       type="text"
-                      placeholder="Youtube"
+                      placeholder={selectedPlatformTwo}
                       onClick={() => handleDropDown(2)}
                     />
-                    <img src={youtubeImg} alt="" className="platform-icon" />
-                    {/* <img
+                    {/* <img src={youtubeImg} alt="" className="platform-icon" /> */}
+                    <img
                       src={
-                        selectedPlatform === "GitHub"
+                        selectedPlatformTwo === "GitHub"
                           ? githubImg
-                          : selectedPlatform === "Youtube"
+                          : selectedPlatformTwo === "Youtube"
                           ? youtubeImg
-                          : selectedPlatform === "LinkedIn"
+                          : selectedPlatformTwo === "LinkedIn"
                           ? linkedInImg
-                          : selectedPlatform === "Facebook"
+                          : selectedPlatformTwo === "Facebook"
                           ? facebookImg
-                          : selectedPlatform === "Frontend Mentor"
+                          : selectedPlatformTwo === "Frontend Mentor"
                           ? frontendmentorImg
                           : githubImg
                       }
                       alt=""
                       className="platform-icon"
-                    /> */}
+                    />
                   </div>
                   <img src={chevronDown} alt="" className="arrowDown" />
                   <div className={"dropdown hidden"} ref={myRefTwo}>
                     <div className="github">
-                      <div className="icon-text-container">
+                      <div className="icon-text-container"
+                       onClick={() => handlePlatformSelectTwo("GitHub")}
+                      >
                         <img src={githubImg} alt="" />
                         <p>GitHub</p>
                       </div>
                     </div>
                     <div className="github">
-                      <div className="icon-text-container">
+                      <div className="icon-text-container"
+                       onClick={() => handlePlatformSelectTwo("YouTube")}
+                      >
                         <img src={youtubeImg} alt="" />
                         <p>YouTube</p>
                       </div>
                     </div>
                     <div className="github">
-                      <div className="icon-text-container">
+                      <div className="icon-text-container"
+                       onClick={() => handlePlatformSelectTwo("LinkedIn")}
+                      >
                         <img src={linkedInImg} alt="" />
                         <p>LinkedIn</p>
                       </div>
                     </div>
                     <div className="github">
-                      <div className="icon-text-container">
+                      <div className="icon-text-container"
+                       onClick={() => handlePlatformSelectTwo("Facebook")}
+                      >
                         <img src={facebookImg} alt="" />
                         <p>Facebook</p>
                       </div>
                     </div>
                     <div className="github">
-                      <div className="icon-text-container">
+                      <div className="icon-text-container"
+                       onClick={() => handlePlatformSelectTwo("Frontend Mentor")}
+                      >
                         <img src={frontendmentorImg} alt="" />
                         <p>Frontend Mentor</p>
                       </div>
