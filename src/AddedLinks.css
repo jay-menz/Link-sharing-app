@@ -100,32 +100,9 @@ button:hover {
   border: 2px solid yellow;
 } */
 
-.youtube-cont {
-  position: relative;
-  flex-direction: column;
-}
 
-.arrowDown {
-  z-index: 1;
-  position: absolute;
-  top: 40px;
-  right: 30px;
-  font-size: 12px;
-  /* border: 2px solid red; */
-}
 
-.dropdown {
-  width: 95%;
-  position: absolute;
-  top: 75px;
-  height: 300px;
-  background: #fff;
-  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);
-}
 
-.dropdown.hidden {
-  display: none;
-}
 
 form input {
   position: absolute;
@@ -137,9 +114,9 @@ form input {
   border: 1px solid grey;
 }
 
-forminput: hover {
+/* forminput: hover {
   color: blue;
-}
+} */
 
 form label {
   float: left;
@@ -186,24 +163,95 @@ form label {
 
 .AddedLinksaveBtn {
   position: absolute;
-  top: 483px;
+  top: 593px;
   right: 1px;
   /* width: 790px;  */
   width: 100%;
   height: 50px;
-  /* border: 2px solid red; */
 }
+
+.linkTwoContainer {
+  width: 695px;
+  height: 170px;
+  border-radius: 5px;
+  margin-left: 30px;
+  margin-top: 5px;
+  background-color: #fafafa;
+  /* border: 2px solid blue; */
+}
+
+.linkTwoHeader {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 1% 5%;
+  color: grey;
+  font-size: 14px;
+  /* border: 2px solid red; */
+  width: 90%;
+  height: 20px;
+  margin-top: 5px;
+  margin-left: 35px;
+}
+
+.linkTwoHeader p {
+  /* font-weight: bold; */
+  margin: 0;
+}
+
+.linkTwoHeader p:first-child {
+  font-weight: bold;
+  margin-left: -30px;
+}
+
+.linkTwoHeader p:last-child {
+  cursor: pointer; 
+  margin-right: -35px;
+}
+
+.youtube-cont {
+  position: relative;
+  flex-direction: column;
+  /* border: 2px solid red; */
+  width: 90%;
+  height: 60px;
+  margin-top: 10px;
+  margin-left: 35px;
+}
+
+.platform-text {
+  position: absolute;
+  top: 15%;
+  /* left: 1px; */
+  transform: translateY(-50%);
+  margin: 0;
+  font-weight: 700;
+  font-size: 11px;
+  color: #737373;
+  pointer-events: none; 
+}
+
+.arrowDown {
+  z-index: 1;
+  position: absolute;
+  top: 39px;
+  right: 2px;
+  font-size: 12px;
+}
+
+
 
 .AddedLinksaveBtn .AddedOneLinksave {
   width: 70px;
   height: 40px;
-  margin-left: 650px;
+  margin-left: 1230px;
   /* margin-right: 700px;  */
   border: none;
   background-color: #633cff;
   color: white;
   text-align: center;
   line-height: 40px;
+  /* border: 2px solid red; */
 }
 
 .saveBtn .save:hover {
@@ -241,32 +289,12 @@ form label {
   transform: translateY(-50%);
 }
 
-.linkOneContainer,
-.linkTwoContainer {
-  width: 695px;
-  height: 170px;
-  border-radius: 5px;
-  margin-left: 30px;
-  margin-top: 5px;
-  background-color: #fafafa;
-  /* border: 2px solid blue; */
-}
 
 .links-button.active {
   background-color: #fff;
 }
 
-.linkNumTwoHeader {
-  display: flex;
-  justify-content: space-between;
-  padding: 1% 5%;
-  color: grey;
-  font-size: 14px;
-}
 
-.linkNumTwoHeader p {
-  font-weight: bold;
-}
 
 .linkInputContainer input {
   width: 100%;

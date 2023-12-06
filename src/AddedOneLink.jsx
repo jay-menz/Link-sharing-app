@@ -20,10 +20,59 @@ import "./AddedOneLink.css";
 
 const AddedOneLink = () => {
   const [hide, setHide] = useState(true);
+  const [selectedPlatform, setSelectedPlatform] = useState("");
+  const [isActive, setIsActive] = useState(false);
+  const [linkOneErrorSaveButton, setLinkOneErrorSaveButton] =
+    React.useState(true);
+
+  const [linkOneEmpty, setLinkOneEmpty] = React.useState("");
+
+  const handleOnChangeLinkOneEmpty = (event) => {
+    setLinkOneEmpty(event.target.value);
+  };
+
+  //error and success message
+  const [linkOneEmptyError, setLinkOneEmptyError] = React.useState(false);
+  const [linkOneEmptyErrorMessage, setLinkOneEmptyErrorMessage] = React.useState("");
+
+  const [showSaveButton, setShowSaveButton] = React.useState(true); //show save button on load
+  const [showLoadingg, setShowLoadingg] = React.useState(false); //show loading state when button is clicked
+
+  const [linkOneBorderError, setLinkOneBorderError] = React.useState(false); //set border error to the color red
+  const [inputError, setInputError] = React.useState(false); //set error to the color red when the input space is empty
 
   const handleDropDown = () => {
     setHide(!hide); // Toggle the hide state
     console.log("I just clicked");
+  };
+
+  const handlePlatformSelect = (platform) => {
+    setSelectedPlatform(platform);
+    setHide(true);
+  };
+
+  const handleLinkOneSaveBtn = async () => {
+    //validate the link1 field before granting access
+    let checkErrorSum = 0;
+
+    if (linkOneEmpty == "" || linkOneEmpty == null) {
+      setLinkOneEmptyError(true);
+      setLinkOneEmptyErrorMessage("Can't be empty");
+      setLinkOneBorderError(true);
+      setInputError(true); 
+
+
+      setTimeout(() => {
+        setLinkOneEmptyError();
+        setLinkOneEmptyErrorMessage("");
+        setLinkOneBorderError(false); 
+        setInputError(false); 
+      }, 5000);
+
+      checkErrorSum++;
+    }
+
+
   };
 
   const navigate = useNavigate();
@@ -73,8 +122,108 @@ const AddedOneLink = () => {
             </div>
           </div>
 
+          <div className="linkOneContainer">
+            <div className="linkNumTwoHeader">
+              <p>= Link #1</p>
+              <p>Remove</p>
+            </div>
+            <form>
+              <div className="youtube-cont">
+                <p className="platform-text">Platform</p>
+                <div className="input-with-icon">
+                  <input
+                    type="text"
+                    placeholder="GitHub"
+                    onClick={handleDropDown}
+                    value={selectedPlatform}
+                  />
+                  <img
+                    src={
+                      selectedPlatform === "GitHub"
+                        ? githubImg
+                        : selectedPlatform === "Youtube"
+                        ? youtubeImg
+                        : selectedPlatform === "LinkedIn"
+                        ? linkedInImg
+                        : selectedPlatform === "Facebook"
+                        ? facebookImg
+                        : selectedPlatform === "Frontend Mentor"
+                        ? frontendmentorImg
+                        : githubImg
+                    }
+                    alt=""
+                    className="platform-icon"
+                  />
+                </div>
+                <img src={chevronDown} alt="" className="arrowDown" />
+                <div className={`dropdown ${hide ? "hidden" : ""}`}>
+                  <div className="github">
+                    <div className="icon-text-container">
+                      <img src={githubImg} alt="" />
+                      <p onClick={() => handlePlatformSelect("GitHub")}>
+                        GitHub
+                      </p>
+                    </div>
+                  </div>
+                  <div className="github">
+                    <div
+                      className="icon-text-container"
+                      onClick={() => handlePlatformSelect("Youtube")}
+                    >
+                      <img src={youtubeImg} alt="" />
+                      <p>YouTube</p>
+                    </div>
+                  </div>
+                  <div
+                    className="github"
+                    onClick={() => handlePlatformSelect("LinkedIn")}
+                  >
+                    <div className="icon-text-container">
+                      <img src={linkedInImg} alt="" />
+                      <p>LinkedIn</p>
+                    </div>
+                  </div>
+                  <div
+                    className="github"
+                    onClick={() => handlePlatformSelect("Facebook")}
+                  >
+                    <div className="icon-text-container">
+                      <img src={facebookImg} alt="" />
+                      <p>Facebook</p>
+                    </div>
+                  </div>
+                  <div
+                    className="github"
+                    onClick={() => handlePlatformSelect("Frontend Mentor")}
+                  >
+                    <div className="icon-text-container">
+                      <img src={frontendmentorImg} alt="" />
+                      <p>Frontend Mentor</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+
+            <div className="link-section">
+              <p className="link-text">Link</p>
+              <div className="linkInput">
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  placeholder="e.g.https://github.com/johnappleseed"
+                  className="linkInput"
+                />
+                <img src={iconLink} alt="" className="link-icon" />
+              </div>
+            </div>
+          </div>
+
           <div className="AddedOneLinksaveBtn">
-            <button className="AddedOneLinksave">save</button>
+            {showSaveButton && (
+              <button className="AddedOneLinksave" onClick={() => handleLinkOneSaveBtn()}>save</button>
+            )}
           </div>
         </div>
       </div>

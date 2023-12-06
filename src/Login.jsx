@@ -1,32 +1,33 @@
-import React from 'react';
+import React from "react";
 // import { Link } from 'react-router-dom';
-import devLinkLogo from './assets/images/logo-devlinks-large.svg';
-import emailIcon from './assets/images/icon-email.svg';
-import passwordIcon from './assets/images/icon-password.svg';
-import {useNavigate} from 'react-router-dom';
+import devLinkLogo from "./assets/images/logo-devlinks-large.svg";
+import emailIcon from "./assets/images/icon-email.svg";
+import passwordIcon from "./assets/images/icon-password.svg";
+import { useNavigate } from "react-router-dom";
 
+import "./Login.css";
 
-import './Login.css';
-
- const Login = () => {
-
+const Login = () => {
   const navigate = useNavigate();
-  
-  //set states to track changes in app
-  const [email, setEmail] = React.useState(''); //set state for user email
-  const [password, setPassword] = React.useState(''); //set state for user password
 
+  //set states to track changes in app
+  const [email, setEmail] = React.useState(""); //set state for user email
+  const [password, setPassword] = React.useState(""); //set state for user password
 
   //handle Onchange when user enters any character in inputs
-  const handleOnChangeEmail = (event)=>{setEmail(event.target.value);}
-  const handleOnChangePassword = (event)=>{setPassword(event.target.value);}
+  const handleOnChangeEmail = (event) => {
+    setEmail(event.target.value);
+  };
+  const handleOnChangePassword = (event) => {
+    setPassword(event.target.value);
+  };
 
   //show errors and success messages
   const [emailError, setEmailError] = React.useState(false); //set this to false on initial load. when field is empty set it to true to show error message
-  const [emailErrorMessage, setEmailErrorMessage] = React.useState(''); //show error meesage in email
-  
+  const [emailErrorMessage, setEmailErrorMessage] = React.useState(""); //show error meesage in email
+
   const [passwordError, setPasswordError] = React.useState(false); //set this to false on initial load. when field is empty set it to true to show error message
-  const [passwordErrorMessage, setPasswordErrorMessage] = React.useState(''); //show error meesage in password
+  const [passwordErrorMessage, setPasswordErrorMessage] = React.useState(""); //show error meesage in password
 
   const [showLoginButton, setShowLoginButton] = React.useState(true); //show login button on load
   const [showLoading, setShowLoading] = React.useState(false); //show loading state when button is clicked
@@ -37,143 +38,146 @@ import './Login.css';
   const [emailLabelError, setEmailLabelError] = React.useState(false);
   const [passwordLabelError, setPasswordLabelError] = React.useState(false);
 
-
-
   //this function handles the login button when clicked.
   //this is where all your validation & authentication goes
   const handleLogin = async () => {
-
     //validate email and password field before granting access
     let chkErrSum = 0;
 
-    if(email == '' || email == null){
+    if (email == "" || email == null) {
       //if email field is empty or null then show error message
-      setEmailError(true)
-      setEmailErrorMessage("Can't be empty")
+      setEmailError(true);
+      setEmailErrorMessage("Can't be empty");
       setEmailLabelError(true);
 
-      //remove the error message after 5seconds. 
+      //remove the error message after 5seconds.
       setTimeout(() => {
-        
-        setEmailError(false) //set message to false to hide it
-        setEmailErrorMessage("") //remove the error message
+        setEmailError(false); //set message to false to hide it
+        setEmailErrorMessage(""); //remove the error message
         setEmailLabelError(false);
       }, 5000);
 
       chkErrSum++;
-      
     }
-    if(password == '' || password == null){
+    if (password == "" || password == null) {
       //if email field is empty or null then show error message
-      setPasswordError(true)
+      setPasswordError(true);
       setPasswordErrorMessage("Please check again");
       setPasswordLabelError(true);
 
       //remove the error message after 5seconds. You can play with the time yourself by changing it in the setTimout function
       setTimeout(() => {
-        
-        setPasswordError(false) //set message to false to hide it
-        setPasswordErrorMessage("") //remove the error message
+        setPasswordError(false); //set message to false to hide it
+        setPasswordErrorMessage(""); //remove the error message
         setPasswordLabelError(false);
       }, 5000);
 
       chkErrSum++;
-      
     }
-    
+
     if (chkErrSum > 0) return;
 
-      // trycatch block to handle errors
+    // trycatch block to handle errors
     try {
-      
-      setShowLoginButton(false) // set this to false to hide and show the loading state
-      setShowLoading(true)
-
-      
-      //====================================================================================================//
-
-        //handle your backend database validaiton here if email and password is not empty
-        // alert('Success i just logged in') 
-        navigate('/Empty')
+      setShowLoginButton(false); // set this to false to hide and show the loading state
+      setShowLoading(true);
 
       //====================================================================================================//
-        // history.push('/CreateAccount')
+
+      //handle your backend database validaiton here if email and password is not empty
+      // alert('Success i just logged in')
+      navigate("/Empty");
+
+      //====================================================================================================//
+      // history.push('/CreateAccount')
       //after response from server backend make sure to hide the loading and then show the login button again
-      setShowLoginButton(true) 
-      setShowLoading(false)
-
+      setShowLoginButton(true);
+      setShowLoading(false);
     } catch (error) {
-      console.log('Error:', + error)
+      console.log("Error:", +error);
     }
-    
-  }
+  };
 
-
-  return(
+  return (
     <div className="body">
-
-      <img src={devLinkLogo} alt="dev link logo" className='devLinkLogo'/>  
+      <img src={devLinkLogo} alt="dev link logo" className="devLinkLogo" />
 
       <div className="login-whiteBox">
+        <div className="log">
+          <h1 className="log-title">Login</h1>
+          <p className="log-info">
+            Add your details below to get back into the app
+          </p>
+        </div>
 
-      <div className="log">
-          <h1 className='log-title'>Login</h1>
-          <p className='log-info'>Add your details below to get back into the app</p>
-      </div>
-
-      <div className="emailPwd">
-        <div className="email">
-          <label htmlFor="email" className={emailLabelError ? 'error-label' : ''}>Email address</label>
-                 <div className={`input-container ${emailError ? 'error-border' : ''}`}>
-                    <img src={emailIcon} alt="email icon" />
-                      <input 
-                      type="email" 
-                      placeholder='e.g.alex@email.com' 
-                      id='emailPwdInput' 
-                      value={email} 
-                      onChange={handleOnChangeEmail} 
-                      className='custom-input'
-                      /> 
-                     {emailError &&(
-                       <div id="error-message-container">
-                       <span className="error-message">{emailErrorMessage}</span>
-                     </div>
-                     )}
-                  </div>
-        </div> 
-
-        <div className="password">
-        <label htmlFor="password" className={passwordLabelError ? 'error-label' : ''}>Password</label>
-            <div className={`input-container ${passwordError ? 'error-border' : ''}`}>
-                <img src={passwordIcon} alt="password icon" />
-                <input 
-                type="password" 
-                placeholder='Enter your password' 
-                id="createPasswordInput" 
-                className='custom-input'
-                onChange={handleOnChangePassword}
-                />
-                {passwordError &&(
-                  <div id="password-error-message-container">
-                  <span id="passwordError">{passwordErrorMessage}</span>
-                  </div>
-                )}
+        <div className="emailPwd">
+          <div className="email">
+            <label
+              htmlFor="email"
+              className={emailLabelError ? "error-label" : ""}
+            >
+              Email address
+            </label>
+            <div
+              className={`input-container ${emailError ? "error-border" : ""}`}
+            >
+              <img src={emailIcon} alt="email icon" />
+              <input
+                type="email"
+                placeholder="e.g.alex@email.com"
+                id="emailPwdInput"
+                value={email}
+                onChange={handleOnChangeEmail}
+                className="custom-input"
+              />
+              {emailError && (
+                <div id="error-message-container">
+                  <span className="error-message">{emailErrorMessage}</span>
+                </div>
+              )}
             </div>
-        </div>
-        </div>
-        {showLoginButton &&(
-            <button className='log-btn' onClick={() => handleLogin()}>Login</button>
-          )}
-      
+          </div>
 
-      <p className='createAccLink'>Don't have an account? <a href="/CreateAccount">Create account</a></p>
+          <div className="password">
+            <label
+              htmlFor="password"
+              className={passwordLabelError ? "error-label" : ""}
+            >
+              Password
+            </label>
+            <div
+              className={`input-container ${
+                passwordError ? "error-border" : ""
+              }`}
+            >
+              <img src={passwordIcon} alt="password icon" />
+              <input
+                type="password"
+                placeholder="Enter your password"
+                id="createPasswordInput"
+                className="custom-input"
+                onChange={handleOnChangePassword}
+              />
+              {passwordError && (
+                <div id="password-error-message-container">
+                  <span id="passwordError">{passwordErrorMessage}</span>
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+        {showLoginButton && (
+          <button className="log-btn" onClick={() => handleLogin()}>
+            Login
+          </button>
+        )}
 
-     
+        <p className="createAccLink">
+          Don't have an account? <a href="/CreateAccount">Create account</a>
+        </p>
       </div>
-
-      
     </div>
-  )
-}
+  );
+};
 
 export default Login;

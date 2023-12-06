@@ -35,7 +35,7 @@ body {
 
 .linksDetails {
   display: flex;
-  padding-right: 5px;
+  padding-right: 10px;
   justify-content: center;
 }
 
@@ -47,7 +47,6 @@ body {
   border: none;
   border-radius: 5px;
   /* color: #beadff;  */
-  /* border: solid 2px red; */
 }
 
 .linksDetails button img {
@@ -74,6 +73,163 @@ body {
   /* border: solid 2px red; */
 }
 
+.linkOneContainer {
+  width: 695px;
+  height: 170px;
+  border-radius: 5px;
+  margin-left: 30px;
+  margin-top: 5px;
+  background-color: #fafafa;
+  /* border: 2px solid blue; */
+}
+
+.linkNumTwoHeader {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 1% 5%;
+  color: grey;
+  font-size: 14px;
+  /* border: 2px solid red; */
+  width: 90%;
+  height: 20px;
+  margin-top: 5px;
+  margin-left: 35px;
+}
+
+.linkNumTwoHeader p {
+  /* font-weight: bold; */
+  margin: 0;
+}
+
+.linkNumTwoHeader p:first-child {
+  font-weight: bold;
+  margin-left: -30px;
+}
+
+.linkNumTwoHeader p:last-child {
+  cursor: pointer; 
+  margin-right: -35px;
+}
+
+
+.youtube-cont {
+  position: relative;
+  flex-direction: column;
+  /* border: 2px solid red; */
+  width: 90%;
+  height: 60px;
+  margin-top: 10px;
+  margin-left: 35px;
+}
+
+.platform-text {
+  position: absolute;
+  top: 15%;
+  /* left: 1px; */
+  transform: translateY(-50%);
+  margin: 0;
+  font-weight: 700;
+  font-size: 11px;
+  color: #737373;
+  pointer-events: none; 
+}
+
+
+
+.arrowDown {
+  z-index: 1;
+  position: absolute;
+  top: 39px;
+  right: 2px;
+  font-size: 12px;
+}
+
+.dropdown {
+  width: 100%;
+  position: absolute;
+  top: 65px;
+  height: 200px;
+  background: #fff;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  z-index: 2;
+  /* border: 2px solid red; */
+}
+
+
+.dropdown div:hover,
+.dropdown img:hover {
+  color: blue; 
+  cursor: pointer;
+}
+
+.dropdown div {
+  transition: background-color 0.3s ease;
+}
+
+.dropdown.hidden {
+  display: none;
+}
+
+.github {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #737373;
+  align-items: flex-start;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.icon-text-container {
+  display: flex;
+  align-items: center;
+}
+
+.github img {
+  margin-right: 5px; 
+}
+
+/* .github p {
+  margin: 0; 
+  border: 2px solid red;
+} */
+
+.github::after {
+  content: "";
+  display: block;
+  width: 97%;
+  height: 1px;
+  background-color: #d9d9d9;
+  margin-top: 5px; 
+}
+
+
+.input-with-icon input {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 30px; 
+  margin-top: -5px;
+  margin-left: -37px;
+  border: 1px solid #beadff;
+  width: 100%;
+}
+
+.input-with-icon input:hover {
+  border-color: #633cff; 
+  box-shadow: 0 0 20px #633cff; 
+}
+
+.platform-icon {
+  position: absolute;
+  top: 70%;
+  right: 590px;
+  transform: translateY(-50%);
+  /* border: 2px solid red; */
+}
+
 .linksDetails button:last-child span {
   white-space: nowrap;
 }
@@ -81,6 +237,7 @@ body {
 button:hover img,
 button:hover span {
   color: #633cff;
+  /* border: 2px solid red; */
 }
 
 button {
@@ -192,42 +349,41 @@ button:hover {
   background-color: #beadff;
 }
 
-.link-container {
-  width: 660px;
-  height: 200px;
-  padding: 20px;
-  margin-top: 20px;
-  margin-left: 75px;
-  background-color: #fafafa;
-  border-radius: 5px;
+.link-section {
+  /* border: 2px solid red; */
+  width: 90%;
+  height: 60px;
+  margin-top: 5px;
+  margin-left: 35px;
+  position: relative;
 }
 
-.linkSection {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.linkInputContainer {
-  position: absolute;
-  margin-top: -5px;
-  /* border: 2px solid yellow; */
+.linkInput input{
+  border: 1px solid #d9d9d9;
+  height: 35px;
   width: 100%;
-  height: 10px;
+  border-radius: 5px;
+  padding-left: 40px;
+  margin-top: 5px;
+  /* border: 2px solid red; */
 }
 
-.linkInputContainer img {
+.linkInput input:hover {
+  border-color: #633cff; 
+  box-shadow: 0 0 20px #633cff; 
+}
+
+.link-icon {
   position: absolute;
-  top: 190%;
-  left: 5px;
+  right: 580px;
+  top: 65%;
   transform: translateY(-50%);
 }
 
-.linkInput {
-  border: 2px solid red;
-  margin-top: -10px;
-  width: 100%;
-  padding: 8px;
-  border-radius: 5px;
-  border: 1px solid grey;
+
+.link-text {
+  margin-right: 600px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #737373;
 }
