@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import devLinkLogo from "./assets/images/logo-devlinks-large.svg";
+import smallDevLinkLogo from "./assets/images/logo-devlinks-small.svg";
 import iphoneIcon from "./assets/images/illustration-phone-mockup.svg";
 import fingerSwipe from "./assets/images/illustration-empty.svg";
 import links from "./assets/images/icon-link.svg";
@@ -27,6 +28,7 @@ const Empty = () => {
       <div class="nav-container">
         <div class="innerNav-container">
           <img src={devLinkLogo} alt="dev link logo" className="emptyLogo" />
+          {/* <img src={smallDevLinkLogo} alt="small devlink logo" className="emptySmallLinkLogo" /> */}
           <div class="linksDetails">
             <button onClick={() => handleButtonClick("links")}
             className={activeButton === "links" ? "activeButton" : ""}
@@ -42,7 +44,6 @@ const Empty = () => {
                 <img src={profile} alt="profile" />
                 <span>Profile Details</span>
               </button>
-
           </div>
           <button onClick={() => navigate("/preview")}>Preview</button>
         </div>

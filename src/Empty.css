@@ -6,7 +6,7 @@
 }
 
 html, body {
-  overflow: hidden;
+  overflow: hidden !important;
 }
 
 .nav-container {
@@ -239,6 +239,138 @@ button {
   /* background-color: #633cff; */
   color: white;
 }
+
+
+
+
+
+/* media query for tablet */
+@media (min-width: 600px) and (max-width: 1024px) {
+
+  html,
+  body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+  
+  .nav-container {
+    height: 80px;
+    width: 385px;
+    margin-left: -15px;
+    margin-top: 20px;
+    /* border: 2px solid red; */
+  }
+
+  .innerNav-container {
+    width: 340px;
+    margin-left: 10px;
+    margin-top: -7px;
+  }
+
+  .emptyLogo {
+    width: 110px;
+    margin-left: 40px;
+  }
+
+  .linksDetails {
+    width: 20px;
+  }
+
+  .linksDetails button:first-child {
+    margin-left: 190px;
+  }
+
+  .linksDetails button:last-child {
+
+  }
+
+  .main-container {
+    justify-content: center;
+    width: 330px;
+    align-items: center;
+    margin-left: 15px;
+  }
+
+  .phone {
+   display: none;
+  }
+
+  .empty-customisation {
+    /* border: 2px solid green; */
+    width: 43%;
+    height: 500px;
+    /* margin-top: -12px; */
+    margin-left: -30px;
+  }
+
+  .customisationHeaderParagraph {
+    margin-left: 2px;
+    width: 100%;
+  }
+
+  .customisationHeaderParagraph p {
+    font-size: 10px;
+  }
+
+  .customisationHeaderParagraph h1 {
+    font-size: 15px;
+  }
+
+  .addLinkBtn {
+    width: 100%;
+    margin-left: -8px;
+  }
+
+.getStarted {
+  width: 100%;
+  margin-left: -8px;
+}
+
+.phoneSwipe img{
+  width: 120px;
+}
+
+.getStartedHeaderParagraph h1 {
+  font-size: 20px;
+}
+
+
+.getStartedHeaderParagraph p {
+  font-size: 10px;
+  margin-top: 10px;
+}
+
+.save {
+  width: 50%;
+}
+
+.saveBtnn {
+  /* border: 2px solid red; */
+  margin-left: -90px;
+  margin-top: -102px;
+}
+
+}
+
+
+/* Media query for phones */
+@media (min-width: 320px) and (max-width: 599px) {
+  html,
+  body {
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+  
+  .nav-container {
+    height: 80px;
+    width: 385px;
+    margin-left: -15px;
+    margin-top: 20px;
+    /* border: 2px solid red; */
+  }
+}
+  
+
 
 
 
