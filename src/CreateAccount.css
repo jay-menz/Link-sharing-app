@@ -117,11 +117,11 @@ flex-direction: column;
   box-shadow: 0 0 20px #633cff;
   } */
 
-  /* .inputt-container.error-border {
+/* .inputt-container.error-border {
     border:1px solid #ff3939;
   } */
 
-  /* input[type="email"],
+/* input[type="email"],
   input[type="password"] {
     border:none;
     padding: 2px;
@@ -131,12 +131,10 @@ flex-direction: column;
     margin-right: 130px;
 } */
 
-
 /* img {
   float: left; 
   margin-right: 10px; 
 } */
-
 
 /* .pwdReminder {
   font-size: 13px;
@@ -175,38 +173,37 @@ flex-direction: column;
   color: #633cff;
 } */
 
-
-*{
+* {
   padding: 0;
   margin: 0;
-  box-sizing:border-box;
+  box-sizing: border-box;
 }
 
 .body {
-overflow: hidden;
-overflow: hidden;
-margin: 0;
-background-color: #fafafa;
-display: flex;
-justify-content: flex-start;
-align-items: center;
-height: 100vh;
-flex-direction: column;
+  overflow: hidden;
+  overflow: hidden;
+  margin: 0;
+  background-color: #fafafa;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
 }
 
 .devLinkLogo {
   position: absolute;
-  top: 17%; 
-  left: 50%; 
-  transform: translate(-50%, -50%); 
-  margin-top: -40px; 
+  top: 17%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: -40px;
 }
 
 .whiteBox {
   /* border: 2px solid red; */
-  width: 410px; 
+  width: 410px;
   height: 475px;
-  background-color: #fff; 
+  background-color: #fff;
   position: absolute;
   top: 55%;
   left: 50%;
@@ -227,23 +224,23 @@ flex-direction: column;
 }
 
 .create-title {
-  align-self: flex-start; 
-  margin-bottom: 10px; 
-  margin-left: 2px; 
+  align-self: flex-start;
+  margin-bottom: 10px;
+  margin-left: 2px;
   color: #333333;
-  font-size: 25px; 
+  font-size: 25px;
 }
 
 .create-info {
   margin-top: 10px;
-  margin-left: 2px; 
+  margin-left: 2px;
   /* color: #d9d9d9;  */
   color: #737373;
   font-size: 14px;
   font-weight: 300;
 }
 
-.createEmailPwd{
+.createEmailPwd {
   width: 90%;
   height: 73%;
   display: flex;
@@ -261,7 +258,7 @@ flex-direction: column;
   height: 22%;
   /* margin-top: -170px; */
   /* margin-bottom: 55px; */
-  box-sizing: border-box; 
+  box-sizing: border-box;
   align-self: flex-start;
 }
 
@@ -271,7 +268,7 @@ flex-direction: column;
   height: 22%;
   /* margin-top: -20px; */
   /* margin-top: 25px; */
-  box-sizing: border-box; 
+  box-sizing: border-box;
   align-self: flex-start;
 }
 
@@ -281,7 +278,7 @@ flex-direction: column;
   height: 22%;
   /* margin-top: -20px; */
   /* margin-bottom: 5px; */
-  box-sizing: border-box; 
+  box-sizing: border-box;
   align-self: flex-start;
 }
 
@@ -321,73 +318,73 @@ label {
   /* border: 2px solid red; */
 }
 
-.input-container{
-  display:flex;
-  border:1px solid #ccc;
+.input-container {
+  display: flex;
+  border: 1px solid #ccc;
   /* border:1px solid red; */
   padding: 10px;
-  border-radius:8px;
+  border-radius: 8px;
   transition: border 0.3s, box-shadow 0.3s;
 }
 
 .input-container:hover {
   border: 1px solid #633cff;
   box-shadow: 0 0 20px #633cff;
-  }
+}
 
-  .input-container.error-border {
-    border:1px solid #ff3939;
-  }
+.input-container.error-border {
+  border: 1px solid #ff3939;
+}
 
-  .error-message  {
-    color: red;
-    font-size: 10px;
-    margin-left: 5px;
-  }
+.error-message {
+  color: red;
+  font-size: 10px;
+  margin-left: 5px;
+}
 
-  .error-label {
-    color: red;
-    margin-top: 5px;
-    font-size: 12px;
-  }
+.error-label {
+  color: red;
+  margin-top: 5px;
+  font-size: 12px;
+}
 
-  .input-container.error-border {
-    border:1px solid #ff3939;
-  }
-  
-  #error-message-container {
-    position: absolute;
-    display: flex;
-    font-size: 10px;
-    color: red;
-    margin-left: 260px;
-    /* border: 2px solid blue; */
-  }
+.input-container.error-border {
+  border: 1px solid #ff3939;
+}
 
-  #password-error-message-container {
-    position: absolute;
-    display: flex;
-    font-size: 10px;
-    color: red;
-    margin-left: 260px;
-    /* border: 2px solid blue; */
-  }
+#error-message-container {
+  position: absolute;
+  display: flex;
+  font-size: 10px;
+  color: red;
+  margin-left: 260px;
+  /* border: 2px solid blue; */
+}
+
+#password-error-message-container {
+  position: absolute;
+  display: flex;
+  font-size: 10px;
+  color: red;
+  margin-left: 260px;
+  /* border: 2px solid blue; */
+}
 
 input[type="email"],
 input[type="password"] {
-    border:none;
-    padding: 2px;
-    border-radius: 5px;
-    /* width: 100%; */
-    width: calc(100% - 90px);
-    font-size: 13px;
-    outline: none;
-    margin-right: 130px;
+  border: none;
+  padding: 2px;
+  border-radius: 5px;
+  /* width: 100%; */
+  width: calc(100% - 90px);
+  font-size: 13px;
+  outline: none;
+  margin-right: 130px;
 }
 
 img {
-  float: left; 
-  margin-right: 10px; 
+  float: left;
+  margin-right: 10px;
 }
 
 .reminder {
@@ -396,35 +393,104 @@ img {
   margin-right: 105px;
 }
 
+/* media query for phone */
+@media (min-width: 320px) and (max-width: 599px) {
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
 
+  html,
+  body {
+    overflow: hidden;
+  }
 
+  .body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    /* border: 2px solid red;   */
+  }
 
+  .devLinkLogo {
+    margin-top: -70px;
+  }
 
+  .create {
+    /* border: 2px solid red; */
+    margin-left: 40px;
+    margin-top: -45px;
+  }
 
+  .createEmailPwd {
+    /* border: 2px solid red; */
+    width: 75%;
+    margin-left: 40px;
+    height: 100%;
+    /* margin-bottom: 10px; */
+  }
 
+  .email {
+    /* border: 2px solid red; */
+    margin-top: 15px;
+  }
 
+  .createPwd {
+    margin-top: 15px;
+  }
 
+  .confirmPwd {
+    margin-top: 15px;
+  }
 
+  .reminder {
+    width: 100%;
+    margin-left: 110px;
+    margin-top: 10px;
+    /* margin-bottom: 100px; */
+  }
 
+  .create-btn {
+    margin-bottom: 120px;
+  }
 
-
-
-
-
+  .loginLink {
+    /* border: 2px solid red; */
+    width: 100%;
+    margin-bottom: -10px;
+  }
+}
 
 /* media query for tablet */
-@media (min-width: 600px) {
+@media (min-width: 600px) and (max-width: 1024px) {
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    overflow: hidden;
+  }
+
+  .body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .devLinkLogo {
+    text-align: center;
+    justify-content: center;
+  }
+
 
   .whiteBox {
-   /* border: 2px solid red; */
-   justify-content: center;
-   /* height: 50%; */
-   margin-top: -5px;
+    height: 55%;
+    width: 400px; 
+    margin-top: -50px;
   }
- 
-  .devLinkLogo {
-   /* border: 2px solid red; */
-  }
- 
- }
-
+}
