@@ -1,200 +1,202 @@
-import React from 'react';
-import devLinkLogo from './assets/images/logo-devlinks-large.svg';
-import emailIcon from './assets/images/icon-email.svg';
-import passwordIcon from './assets/images/icon-password.svg';
-import {useNavigate} from 'react-router-dom';
+import React from "react";
+import devLinkLogo from "./assets/images/logo-devlinks-large.svg";
+import emailIcon from "./assets/images/icon-email.svg";
+import passwordIcon from "./assets/images/icon-password.svg";
+import { useNavigate } from "react-router-dom";
 
+import "./CreateAccount.css";
 
-import './CreateAccount.css';
-
- const Login = () => {
-
+const Login = () => {
   const navigate = useNavigate();
-  
-  //set states to track changes in app
-  const [email, setEmail] = React.useState('');
-  const [password, setPassword] = React.useState(''); 
 
+  //set states to track changes in app
+  const [email, setEmail] = React.useState("");
+  const [password, setPassword] = React.useState("");
 
   //handle Onchange when user enters any character in inputs
-  const handleOnChangeEmail = (event)=>{setEmail(event.target.value);}
-  const handleOnChangePassword = (event)=>{setPassword(event.target.value);}
+  const handleOnChangeEmail = (event) => {
+    setEmail(event.target.value);
+  };
+  const handleOnChangePassword = (event) => {
+    setPassword(event.target.value);
+  };
 
   //show errors and success messages
-  const [emailError, setEmailError] = React.useState(false); 
-  const [emailErrorMessage, setEmailErrorMessage] = React.useState(''); 
-  
-  const [passwordError, setPasswordError] = React.useState(false); 
-  const [passwordErrorMessage, setPasswordErrorMessage] = React.useState(''); 
+  const [emailError, setEmailError] = React.useState(false);
+  const [emailErrorMessage, setEmailErrorMessage] = React.useState("");
 
-  const [showLoginButton, setShowLoginButton] = React.useState(true); 
-  const [showLoading, setShowLoading] = React.useState(false); 
+  const [passwordError, setPasswordError] = React.useState(false);
+  const [passwordErrorMessage, setPasswordErrorMessage] = React.useState("");
 
-  const [borderError, setBorderError] = React.useState(false); 
-  const [labelError, setLabelError] = React.useState(false); 
+  const [showLoginButton, setShowLoginButton] = React.useState(true);
+  const [showLoading, setShowLoading] = React.useState(false);
+
+  const [borderError, setBorderError] = React.useState(false);
+  const [labelError, setLabelError] = React.useState(false);
 
   const [emailLabelError, setEmailLabelError] = React.useState(false);
   const [passwordLabelError, setPasswordLabelError] = React.useState(false);
 
   const [confirmPassword, setConfirmPassword] = React.useState(false);
 
-
-
   const handleLogin = async () => {
-
     //validate email and password field before granting access
     let chkSum = 0;
-    if(email == '' || email == null){
+    if (email == "" || email == null) {
       //if email field is empty or null then show error message
-      setEmailError(true)
-      setEmailErrorMessage("Can't be empty")
+      setEmailError(true);
+      setEmailErrorMessage("Can't be empty");
       setEmailLabelError(true);
 
-      
       setTimeout(() => {
-        
-        setEmailError(false) //set message to false to hide it
-        setEmailErrorMessage("") //remove the error message
+        setEmailError(false); //set message to false to hide it
+        setEmailErrorMessage(""); //remove the error message
         setEmailLabelError(false);
       }, 5000);
 
-     chkSum++;
+      chkSum++;
     }
-    if(password == '' || password == null){
+    if (password == "" || password == null) {
       //if email field is empty or null then show error message
-      setPasswordError(true)
+      setPasswordError(true);
       setPasswordErrorMessage("Please check again");
       setPasswordLabelError(true);
 
-      
       setTimeout(() => {
-        
-        setPasswordError(false) 
-        setPasswordErrorMessage("") 
+        setPasswordError(false);
+        setPasswordErrorMessage("");
         setPasswordLabelError(false);
       }, 5000);
 
       chkSum++;
     }
-    
 
-      
-    if (document.getElementById('confirmPasswordInput').value !== '') {
+    if (document.getElementById("confirmPasswordInput").value !== "") {
       setConfirmPassword(false);
     }
 
     if (chkSum > 0) return;
 
-      //use trycatch block to handle errors if any should arise
-      try {
-        
-        setShowLoginButton(false) // set this to false to hide and show the loading state
-        setShowLoading(true)
+    //use trycatch block to handle errors if any should arise
+    try {
+      setShowLoginButton(false); // set this to false to hide and show the loading state
+      setShowLoading(true);
 
-        
-       
+      navigate("/Empty");
 
-         
-          navigate('/Empty')
+      // history.push('/CreateAccount')
+      //after response from server backend make sure to hide the loading and then show the login button again
+      setShowLoginButton(true);
+      setShowLoading(false);
+    } catch (error) {
+      console.log("Error:", +error);
+    }
+  };
 
-          // history.push('/CreateAccount')
-        //after response from server backend make sure to hide the loading and then show the login button again
-        setShowLoginButton(true) 
-        setShowLoading(false)
-
-      } catch (error) {
-        console.log('Error:', + error)
-      }
-    
-  }
-
-
-  return(
+  return (
     <div className="body">
-
-      <img src={devLinkLogo} alt="dev link logo" className='devLinkLogo'/>  
+      <img src={devLinkLogo} alt="dev link logo" className="devLinkLogo" />
 
       <div className="whiteBox">
-
-      <div className="create">
-          <h1 className='create-title'>Create account</h1>
-          <p className='create-info'>Let's get you started sharing your links!</p>
-      </div>
-
-      <div className="createEmailPwd">
-        <div className="email">
-          <label htmlFor="email" className={emailLabelError ? 'error-label' : ''}>Email address</label>
-                 <div className={`input-container ${emailError ? 'error-border' : ''}`}>
-                    <img src={emailIcon} alt="email icon" />
-                      <input 
-                      type="email" 
-                      placeholder='e.g.alex@email.com' 
-                      id='emailPwdInput' 
-                      value={email} 
-                      onChange={handleOnChangeEmail} 
-                      className='custom-input'
-                      /> 
-                     {emailError &&(
-                      <div id="error-message-container">
-                       <span id="passwordError">{emailErrorMessage}</span>
-                      </div>
-                     )}
-                </div>
-        </div> 
-
-        <div className="createPwd">
-        <label htmlFor="password" className={passwordLabelError ? 'error-label' : ''}>Create password</label>
-            <div className={`input-container ${passwordError ? 'error-border' : ''}`}>
-                <img src={passwordIcon} alt="password icon" />
-                <input 
-                type="password" 
-                placeholder='At least 8 characters' 
-                id="createPasswordInput" 
-                className='custom-input'
-                onChange={handleOnChangePassword}
-                />
-                {passwordError &&(
-                  <div id="password-error-message-container">
-                  <span id="passwordError">{passwordErrorMessage}</span>
-                  </div>
-                )}
-            </div>
+        <div className="create">
+          <h1 className="create-title">Create account</h1>
+          <p className="create-info">
+            Let's get you started sharing your links!
+          </p>
         </div>
 
-        <div className="confirmPwd">
-        <label htmlFor="password" className={''}>Confirm password</label>
-            <div className={`input-container`}>
-                <img src={passwordIcon} alt="password icon" />
-                <input 
-                type="password" 
-                placeholder='At least 8 characters' 
-                id="confirmPasswordInput" 
-                className='custom-input'
+        <div className="createEmailPwd">
+          <div className="create-acc-email">
+            <label
+              htmlFor="email"
+              className={emailLabelError ? "error-label" : ""}
+            >
+              Email address
+            </label>
+            <div
+              className={`input-container ${emailError ? "error-border" : ""}`}
+            >
+              <img src={emailIcon} alt="email icon" />
+              <input
+                type="email"
+                placeholder="e.g.alex@email.com"
+                id="emailPwdInput"
+                value={email}
+                onChange={handleOnChangeEmail}
+                className="custom-input"
+              />
+              {emailError && (
+                <div id="error-message-container">
+                  <span id="passwordError">{emailErrorMessage}</span>
+                </div>
+              )}
+            </div>
+          </div>
+
+          <div className="createPwd">
+            <label
+              htmlFor="password"
+              className={passwordLabelError ? "error-label" : ""}
+            >
+              Create password
+            </label>
+            <div
+              className={`input-container ${
+                passwordError ? "error-border" : ""
+              }`}
+            >
+              <img src={passwordIcon} alt="password icon" />
+              <input
+                type="password"
+                placeholder="At least 8 characters"
+                id="createPasswordInput"
+                className="custom-input"
                 onChange={handleOnChangePassword}
-                />
-                {/* {passwordError &&(
+              />
+              {passwordError && (
+                <div id="password-error-message-container">
+                  <span id="passwordError">{passwordErrorMessage}</span>
+                </div>
+              )}
+            </div>
+          </div>
+
+          <div className="confirmPwd">
+            <label htmlFor="password" className={""}>
+              Confirm password
+            </label>
+            <div className={`input-container`}>
+              <img src={passwordIcon} alt="password icon" />
+              <input
+                type="password"
+                placeholder="At least 8 characters"
+                id="confirmPasswordInput"
+                className="custom-input"
+                onChange={handleOnChangePassword}
+              />
+              {/* {passwordError &&(
                   <span id="passwordError">{passwordErrorMessage}</span>
                 )} */}
             </div>
+          </div>
+
+          <p className="reminder">
+            Password must contain at least 8 characters
+          </p>
+
+          {showLoginButton && (
+            <button className="create-btn" onClick={() => handleLogin()}>
+              Create new account
+            </button>
+          )}
         </div>
 
-        <p className='reminder'>Password must contain at least 8 characters</p>
-        
-        {showLoginButton &&(
-            <button className='create-btn' onClick={() => handleLogin()}>Create new account</button>
-          )}
+        <p className="loginLink">
+          Already have an account? <a href="/">Login</a>
+        </p>
       </div>
-
-      
-
-      <p className='loginLink'>Already have an account? <a href="/">Login</a></p>
-
-     
-      </div>
-
-      
     </div>
-  )
-}
+  );
+};
 
 export default Login;

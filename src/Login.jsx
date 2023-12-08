@@ -9,11 +9,9 @@ import "./Login.css";
 const Login = () => {
   const navigate = useNavigate();
 
-  
-  const [email, setEmail] = React.useState(""); 
-  const [password, setPassword] = React.useState(""); 
+  const [email, setEmail] = React.useState("");
+  const [password, setPassword] = React.useState("");
 
-  
   const handleOnChangeEmail = (event) => {
     setEmail(event.target.value);
   };
@@ -21,25 +19,22 @@ const Login = () => {
     setPassword(event.target.value);
   };
 
+  const [emailError, setEmailError] = React.useState(false);
+  const [emailErrorMessage, setEmailErrorMessage] = React.useState("");
 
-  const [emailError, setEmailError] = React.useState(false); 
-  const [emailErrorMessage, setEmailErrorMessage] = React.useState(""); 
+  const [passwordError, setPasswordError] = React.useState(false);
+  const [passwordErrorMessage, setPasswordErrorMessage] = React.useState("");
 
-  const [passwordError, setPasswordError] = React.useState(false); 
-  const [passwordErrorMessage, setPasswordErrorMessage] = React.useState(""); 
+  const [showLoginButton, setShowLoginButton] = React.useState(true);
+  const [showLoading, setShowLoading] = React.useState(false);
 
-  const [showLoginButton, setShowLoginButton] = React.useState(true); 
-  const [showLoading, setShowLoading] = React.useState(false); 
-
-  const [borderError, setBorderError] = React.useState(false); 
-  const [labelError, setLabelError] = React.useState(false); 
+  const [borderError, setBorderError] = React.useState(false);
+  const [labelError, setLabelError] = React.useState(false);
 
   const [emailLabelError, setEmailLabelError] = React.useState(false);
   const [passwordLabelError, setPasswordLabelError] = React.useState(false);
 
-  
   const handleLogin = async () => {
-  
     let chkErrSum = 0;
 
     if (email == "" || email == null) {
@@ -50,8 +45,8 @@ const Login = () => {
 
       //remove the error message after 5seconds.
       setTimeout(() => {
-        setEmailError(false); 
-        setEmailErrorMessage(""); 
+        setEmailError(false);
+        setEmailErrorMessage("");
         setEmailLabelError(false);
       }, 5000);
 
@@ -65,8 +60,8 @@ const Login = () => {
 
       //remove the error message after 5seconds. You can play with the time yourself by changing it in the setTimout function
       setTimeout(() => {
-        setPasswordError(false); 
-        setPasswordErrorMessage(""); 
+        setPasswordError(false);
+        setPasswordErrorMessage("");
         setPasswordLabelError(false);
       }, 5000);
 
@@ -77,9 +72,8 @@ const Login = () => {
 
     // trycatch block to handle errors
     try {
-      setShowLoginButton(false); 
+      setShowLoginButton(false);
       setShowLoading(true);
-
 
       //handle your backend database validaiton here if email and password is not empty
       // alert('Success i just logged in')
@@ -169,7 +163,7 @@ const Login = () => {
         )}
 
         <p className="createAccLink">
-          Don't have an account? <a href="/CreateAccount">Create account</a>
+          Don't have an account?<a href="/CreateAccount">Create account</a>
         </p>
       </div>
     </div>
