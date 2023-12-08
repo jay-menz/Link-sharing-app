@@ -95,9 +95,7 @@ label {
 
 .password {
   width: 100%;
-  height: 20%;
   margin-top: 35px;
-  /* margin-bottom: 10px; */
   box-sizing: border-box;
   align-self: flex-start;
   /* border: 2px solid red; */
@@ -137,6 +135,7 @@ label {
   color: #ff3939;
   font-size: 10px;
   margin-left: 5px;
+  display: inline;
 }
 
 .error-label {
@@ -337,6 +336,12 @@ img {
     /* margin-bottom: 20px; */
     /* border: 2px solid red; */
     font-size: 15px;
+  }
+
+  .error-message {
+    /* border: 2px solid red; */
+    display: inline;
+    margin-left: 20px;
   }
 
 }

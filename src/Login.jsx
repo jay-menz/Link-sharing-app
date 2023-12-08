@@ -1,5 +1,4 @@
 import React from "react";
-// import { Link } from 'react-router-dom';
 import devLinkLogo from "./assets/images/logo-devlinks-large.svg";
 import emailIcon from "./assets/images/icon-email.svg";
 import passwordIcon from "./assets/images/icon-password.svg";
@@ -10,11 +9,11 @@ import "./Login.css";
 const Login = () => {
   const navigate = useNavigate();
 
-  //set states to track changes in app
-  const [email, setEmail] = React.useState(""); //set state for user email
-  const [password, setPassword] = React.useState(""); //set state for user password
+  
+  const [email, setEmail] = React.useState(""); 
+  const [password, setPassword] = React.useState(""); 
 
-  //handle Onchange when user enters any character in inputs
+  
   const handleOnChangeEmail = (event) => {
     setEmail(event.target.value);
   };
@@ -22,26 +21,25 @@ const Login = () => {
     setPassword(event.target.value);
   };
 
-  //show errors and success messages
-  const [emailError, setEmailError] = React.useState(false); //set this to false on initial load. when field is empty set it to true to show error message
-  const [emailErrorMessage, setEmailErrorMessage] = React.useState(""); //show error meesage in email
 
-  const [passwordError, setPasswordError] = React.useState(false); //set this to false on initial load. when field is empty set it to true to show error message
-  const [passwordErrorMessage, setPasswordErrorMessage] = React.useState(""); //show error meesage in password
+  const [emailError, setEmailError] = React.useState(false); 
+  const [emailErrorMessage, setEmailErrorMessage] = React.useState(""); 
 
-  const [showLoginButton, setShowLoginButton] = React.useState(true); //show login button on load
-  const [showLoading, setShowLoading] = React.useState(false); //show loading state when button is clicked
+  const [passwordError, setPasswordError] = React.useState(false); 
+  const [passwordErrorMessage, setPasswordErrorMessage] = React.useState(""); 
 
-  const [borderError, setBorderError] = React.useState(false); //set border error to the color red
-  const [labelError, setLabelError] = React.useState(false); //set label error to the color red
+  const [showLoginButton, setShowLoginButton] = React.useState(true); 
+  const [showLoading, setShowLoading] = React.useState(false); 
+
+  const [borderError, setBorderError] = React.useState(false); 
+  const [labelError, setLabelError] = React.useState(false); 
 
   const [emailLabelError, setEmailLabelError] = React.useState(false);
   const [passwordLabelError, setPasswordLabelError] = React.useState(false);
 
-  //this function handles the login button when clicked.
-  //this is where all your validation & authentication goes
+  
   const handleLogin = async () => {
-    //validate email and password field before granting access
+  
     let chkErrSum = 0;
 
     if (email == "" || email == null) {
@@ -52,8 +50,8 @@ const Login = () => {
 
       //remove the error message after 5seconds.
       setTimeout(() => {
-        setEmailError(false); //set message to false to hide it
-        setEmailErrorMessage(""); //remove the error message
+        setEmailError(false); 
+        setEmailErrorMessage(""); 
         setEmailLabelError(false);
       }, 5000);
 
@@ -67,8 +65,8 @@ const Login = () => {
 
       //remove the error message after 5seconds. You can play with the time yourself by changing it in the setTimout function
       setTimeout(() => {
-        setPasswordError(false); //set message to false to hide it
-        setPasswordErrorMessage(""); //remove the error message
+        setPasswordError(false); 
+        setPasswordErrorMessage(""); 
         setPasswordLabelError(false);
       }, 5000);
 
@@ -79,16 +77,14 @@ const Login = () => {
 
     // trycatch block to handle errors
     try {
-      setShowLoginButton(false); // set this to false to hide and show the loading state
+      setShowLoginButton(false); 
       setShowLoading(true);
 
-      //====================================================================================================//
 
       //handle your backend database validaiton here if email and password is not empty
       // alert('Success i just logged in')
       navigate("/Empty");
 
-      //====================================================================================================//
       // history.push('/CreateAccount')
       //after response from server backend make sure to hide the loading and then show the login button again
       setShowLoginButton(true);
