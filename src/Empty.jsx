@@ -5,7 +5,7 @@ import iphoneIcon from "./assets/images/illustration-phone-mockup.svg";
 import fingerSwipe from "./assets/images/illustration-empty.svg";
 import links from "./assets/images/icon-link.svg";
 import profile from "./assets/images/icon-profile-details-header.svg";
-import phoneSizeLinkImg from "./assets/images/icon-link.svg";
+import previewHeader from "./assets/images/icon-preview-header.svg";
 import { useNavigate } from "react-router-dom";
 
 import "./Empty.css";
@@ -40,11 +40,10 @@ const Empty = () => {
           <div class="linksDetails">
             <button
               onClick={() => handleButtonClick("links")}
-              className={`phone-size-button ${activeButton === "links" ? "activeButton" : ""}`}
+              className={activeButton === "links" ? "activeButton" : ""}
             >
-              <img src={links} alt="links" className="default-image"/>
-              {/* <img src={phoneSizeLinkImg} alt="phone sized link image" /> */}
-              <span className="button-text">Links</span>
+              <img src={links} alt="links" />
+              <span>Links</span>
             </button>
             <button
               onClick={() => handleButtonClick("profile")}
@@ -55,6 +54,7 @@ const Empty = () => {
             </button>
           </div>
           <button onClick={() => navigate("/preview")}>Preview</button>
+          {/* <img src={previewHeader} alt="preview header for phone size" /> */}
         </div>
       </div>
       <div className="main-container">
