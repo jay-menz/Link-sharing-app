@@ -5,6 +5,7 @@ import iphoneIcon from "./assets/images/illustration-phone-mockup.svg";
 import fingerSwipe from "./assets/images/illustration-empty.svg";
 import links from "./assets/images/icon-link.svg";
 import profile from "./assets/images/icon-profile-details-header.svg";
+import phoneSizeLinkImg from "./assets/images/icon-link.svg";
 import { useNavigate } from "react-router-dom";
 
 import "./Empty.css";
@@ -14,8 +15,8 @@ const Empty = () => {
   const [activeButton, setActiveButton] = useState("links");
 
   const handleButtonClick = (button) => {
-    console.log("BUTTON CLICKED:::", button)
-    if(activeButton !== button){
+    console.log("BUTTON CLICKED:::", button);
+    if (activeButton !== button) {
       setActiveButton(button);
       navigate(`/${button}`);
     }
@@ -27,23 +28,31 @@ const Empty = () => {
     <section>
       <div class="nav-container">
         <div class="innerNav-container">
-          <img src={devLinkLogo} alt="dev link logo" className="emptyLogo" />
-          {/* <img src={smallDevLinkLogo} alt="small devlink logo" className="emptySmallLinkLogo" /> */}
+          {window.innerWidth < 600 ? (
+            <img
+              src={smallDevLinkLogo}
+              alt="small devlink logo"
+              className="emptySmallLinkLogo"
+            />
+          ) : (
+            <img src={devLinkLogo} alt="dev link logo" className="emptyLogo" />
+          )}
           <div class="linksDetails">
-            <button onClick={() => handleButtonClick("links")}
-            className={activeButton === "links" ? "activeButton" : ""}
+            <button
+              onClick={() => handleButtonClick("links")}
+              className={`phone-size-button ${activeButton === "links" ? "activeButton" : ""}`}
             >
-              <img src={links} alt="links" />
-              Links
+              <img src={links} alt="links" className="default-image"/>
+              {/* <img src={phoneSizeLinkImg} alt="phone sized link image" /> */}
+              <span className="button-text">Links</span>
             </button>
-
-              <button 
+            <button
               onClick={() => handleButtonClick("profile")}
               className={activeButton === "profile" ? "activeButton" : ""}
-              >
-                <img src={profile} alt="profile" />
-                <span>Profile Details</span>
-              </button>
+            >
+              <img src={profile} alt="profile" />
+              <span>Profile Details</span>
+            </button>
           </div>
           <button onClick={() => navigate("/preview")}>Preview</button>
         </div>

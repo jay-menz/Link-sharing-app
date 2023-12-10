@@ -54,7 +54,6 @@ html, body {
 .linksDetails button img {
   margin-right: 5px;
   margin-left: -10px; 
-  /* margin-top: 30px;  */
 }
 
 /* .linksDetails button:hover {
@@ -243,8 +242,87 @@ button {
 
 
 
+/* media queries for phone size  */
+@media (min-width: 320px) and (max-width: 599px) {
+
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    overflow: hidden;
+    background-color: #fafafa;
+  }
+
+  .emptyLogo {
+    display: none;
+  }
+
+  .emptySmallLinkLogo {
+    display: block;
+  }
+
+  .phone-size-button .default-image {
+    display: none;
+  }
 
   
+  .phone-size-button .phone-size-image {
+    display: block;
+  }
+
+  .phone-size-button .button-text {
+    display: none;
+  }
+
+  .phone-size-button {
+    width: 15px; 
+    height: 15px; 
+  }
+
+  @media (min-width: 601px) {
+    .emptyLogo {
+      display: block;
+    }
+  
+    .emptySmallLinkLogo {
+      display: none;
+    }
+
+    .phone-size-button .default-image {
+      display: block;
+    }
+
+    .phone-size-button .phone-size-image {
+      display: none;
+    }
+
+    .phone-size-button .button-text {
+      display: inline;
+    }
+  }
+
+  .phone-size-button {
+    width: 10px; 
+    height: 10px; 
+  }
+
+  .phone-size-button .phone-size-image {
+    display: block;
+    width: 40%; 
+    height: auto;
+  }
+
+  button .button-text {
+    display: none;
+  }
+
+}
+
+
 
 
 
