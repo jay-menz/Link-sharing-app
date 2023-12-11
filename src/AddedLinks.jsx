@@ -161,14 +161,14 @@ const AddedLinks = () => {
             </p>
           </div>
           <div className="newLink-section">
-            <div className="AddedOneLink-newLink">
+            {/* <div className="AddedOneLink-newLink"> */}
               <button
                 className="AddedOneLink-addLinkBtn"
                 onClick={() => navigate("/AddedLinks")}
               >
                 +Add new link
               </button>
-            </div>
+            {/* </div> */}
 
             <div className="linkOneContainer">
               <div className="linkNumTwoHeader">

@@ -105,13 +105,14 @@ body {
 }
 
 .previewBox {
-  width: 23%;
-  height: 430px; /* Set a fixed height or adjust according to your design */
+  width: 20%;
+  height: 510px; 
+  /* border: 2px solid red; */
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   position: absolute;
-  margin-top: 260px;
+  margin-top: 320px;
   left: 50%;
   transform: translate(-50%, -50%);
   overflow: hidden;
@@ -190,8 +191,22 @@ body {
   background-color: #633cff;
 }
 
+.gitHub-arrow {
+  /* border: 2px solid greenyellow; */
+  margin-left: -50px;
+}
+
+.youTube-arrow{
+  /* border: 2px solid red; */
+}
+
+.linkedIn-arrow {
+  /* border: 2px solid red; */
+}
+
 .previewPlatforms img {
   margin-left: 15px;
+  /* border: 2px solid red; */
 }
 
 .previewPlatforms p {
@@ -206,3 +221,60 @@ body {
 
 
 
+/* media queries for phone size  */
+@media (min-width: 320px) and (max-width: 599px) {
+  .mauve-cover {
+    background-color: #fff;
+  }
+
+  .previewBox {
+    width: 70%;
+    margin-left: -10px;
+    margin-top: 300px;
+  }
+
+  .gitHubPlatform,
+  .youTubePlatform,
+  .linkedInPlatform {
+    justify-content: flex-start;
+    padding-left: 15px; 
+    padding-right: 55px;
+  }
+
+  /* .previewPlatforms img:last-child {
+    margin-left: -30px; 
+    border: 2px solid red; 
+  } */
+
+  .gitHubPlatform img {
+    margin-left: -10px;
+  }
+
+  .youTubePlatform img {
+    margin-left: -10px;
+  }
+
+  .linkedInPlatform img {
+    margin-left: -10px;
+  }
+
+
+  .previewBox {
+    /* border: 2px solid red; */
+    height: 170%;
+    margin-top: 260px;
+  }
+
+}
+
+/* media queries for tablet size  */
+@media (min-width: 600px) and (max-width: 1024px) {
+
+  .previewBox {
+    border: 2px solid red;
+    width: 60%;
+    height: 330%;
+    margin-top: 470px;
+  }
+
+}

@@ -13,6 +13,7 @@ import frontendmentorImg from "./assets/images/icon-frontend-mentor.svg";
 import chevronDown from "./assets/images/icon-chevron-down.svg";
 import iconLink from "./assets/images/icon-link-copied-to-clipboard.svg";
 import arrowRight from "./assets/images/icon-arrow-right.svg";
+import smallDevLinkLogo from "./assets/images/logo-devlinks-small.svg";
 
 import { useNavigate } from "react-router-dom";
 
@@ -41,6 +42,12 @@ const AddedOneLink = () => {
 
   const [linkOneBorderError, setLinkOneBorderError] = React.useState(false); //set border error to the color red
   const [inputError, setInputError] = React.useState(false); //set error to the color red when the input space is empty
+  const [selectedButton, setSelectedButton] = useState("profile");
+
+  const handleLinksButtonClick = () => {
+    navigate("/AddedLinks");
+    setSelectedButton("links");
+  };
 
   const handleDropDown = () => {
     setHide(!hide); // Toggle the hide state
@@ -79,11 +86,24 @@ const AddedOneLink = () => {
     <section>
       <div class="nav-container">
         <div class="innerNav-container">
-          <img src={devLinkLogo} alt="dev link logo" />
+          {window.innerWidth < 600 ? (
+            <img
+              src={smallDevLinkLogo}
+              alt="small devlink logo"
+              className="emptySmallLinkLogo"
+            />
+          ) : (
+            <img src={devLinkLogo} alt="dev link logo" className="emptyLogo" />
+          )}
           <div class="linksDetails">
-            <button>
-              <img src={links} alt="links" />
-              Links
+          <button
+              onClick={handleLinksButtonClick}
+              className={`links-button ${
+                selectedButton === "links" ? "active" : ""
+              }`}
+            >
+              <img src={links} alt="links" className="links-image" />
+              <span>Links</span>
             </button>
             <button onClick={() => navigate("/Profile")}>
               <img src={profie} alt="profile" />
@@ -101,7 +121,7 @@ const AddedOneLink = () => {
         </div>
 
         <div className="AddedOneLink-customisation">
-          <div className="customisationHeaderParagraph">
+          <div className="oneLinkCustomisationHeaderParagraph">
             <h1>Customize your links</h1>
             <p>
               Add/edit/remove links below and then share all your profiles with
@@ -109,16 +129,16 @@ const AddedOneLink = () => {
             </p>
           </div>
 
-          <div className="newLink-section">
-            <div className="AddedOneLink-newLink">
+          {/* <div className="oneLinkNewLink-section"> */}
+            {/* <div className="AddedOneLink-newLink"> */}
               <button
                 className="AddedOneLink-addLinkBtn"
                 onClick={() => navigate("/AddedLinks")}
               >
                 +Add new link
               </button>
-            </div>
-          </div>
+            {/* </div> */}
+          {/* </div> */}
 
           <div className="linkOneContainer">
             <div className="linkNumTwoHeader">
