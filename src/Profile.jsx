@@ -12,6 +12,7 @@ import chevronDown from "./assets/images/icon-chevron-down.svg";
 import iconLink from "./assets/images/icon-link-copied-to-clipboard.svg";
 import uploadimageIcon from "./assets/images/icon-upload-image.svg";
 import changesSavedIcon from "./assets/images/icon-changes-saved.svg";
+import smallDevLinkLogo from "./assets/images/logo-devlinks-small.svg";
 
 import { useNavigate } from "react-router-dom";
 
@@ -118,7 +119,15 @@ const Profile = () => {
     <section>
       <div className="nav-container">
         <div className="innerNav-container">
-          <img src={devLinkLogo} alt="dev link logo" />
+        {window.innerWidth < 600 ? (
+            <img
+              src={smallDevLinkLogo}
+              alt="small devlink logo"
+              className="emptySmallLinkLogo"
+            />
+          ) : (
+            <img src={devLinkLogo} alt="dev link logo" className="emptyLogo" />
+          )}
           <div className="linksDetails">
             <button
               onClick={handleLinksButtonClick}
