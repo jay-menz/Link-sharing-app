@@ -83,26 +83,6 @@ button:hover {
   /* border: 2px solid red; */
 }
 
-/* .phone {
-  position: relative;
-  border: 2px solid pink;
-  top: 1px; 
-  right: -15px;
-  width: 300px;
-} */
-
-/* .phone img {
-  width: 500px;
-  height: 600px;
-  position: absolute;
-  top: 20px; 
-  right: 25px; 
-  border: 2px solid yellow;
-} */
-
-
-
-
 
 form input {
   position: absolute;
@@ -114,10 +94,6 @@ form input {
   border: 1px solid grey;
 }
 
-/* forminput: hover {
-  color: blue;
-} */
-
 form label {
   float: left;
   margin-left: 38px;
@@ -125,7 +101,7 @@ form label {
   color: dark grey;
 }
 
-.AddedOneLink-customisation {
+.AddedLinks-customisation {
   position: absolute;
   top: 0;
   margin-left: 530px;
@@ -141,6 +117,11 @@ form label {
   font-size: 20px;
 }
 
+.link-newLink-section {
+  /* border: 2px solid red; */
+  margin-top: 25px;
+}
+
 .customisationHeaderParagraph h1 {
   text-align: left;
   color: #333333;
@@ -153,7 +134,7 @@ form label {
   font-size: 14px;
 }
 
-.AddedOneLink-addLinkBtn {
+.AddedLinks-addLinkBtn {
   color: #633cff;
   width: 695px;
   height: 37px;
@@ -170,6 +151,16 @@ form label {
   height: 50px;
 }
 
+.links-linkOneContainer {
+  width: 695px;
+  height: 170px;
+  border-radius: 5px;
+  margin-left: 30px;
+  margin-top: 10px;
+  background-color: #fafafa;
+  /* border: 2px solid blue; */
+}
+
 .linkTwoContainer {
   width: 695px;
   height: 170px;
@@ -177,10 +168,9 @@ form label {
   margin-left: 30px;
   margin-top: 5px;
   background-color: #fafafa;
-  /* border: 2px solid blue; */
 }
 
-.linkTwoHeader {
+.linksTwoHeader {
   align-items: center;
   display: flex;
   justify-content: space-between;
@@ -209,7 +199,47 @@ form label {
   margin-right: -35px;
 }
 
-.youtube-cont {
+.linksNumTwoHeader {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 1% 5%;
+  color: grey;
+  font-size: 14px;
+  /* border: 2px solid red; */
+  width: 90%;
+  height: 20px;
+  margin-top: 5px;
+  margin-left: 35px;
+}
+
+.linksNumTwoHeader p {
+  /* font-weight: bold; */
+  margin: 0;
+}
+
+.linksNumTwoHeader p:first-child {
+  font-weight: bold;
+  margin-left: -30px;
+}
+
+.linksNumTwoHeader p:last-child {
+  cursor: pointer; 
+  margin-right: -35px;
+}
+
+
+.links-youtube-cont {
+  position: relative;
+  flex-direction: column;
+  /* border: 2px solid red; */
+  width: 90%;
+  height: 60px;
+  margin-top: 10px;
+  margin-left: 35px;
+}
+
+.youtube-container {
   position: relative;
   flex-direction: column;
   /* border: 2px solid red; */
@@ -303,4 +333,139 @@ form label {
   box-sizing: border-box;
   border: 1px solid #ccc;
   transition: border-color 0.3s;
+}
+
+
+
+
+/* media queries for phone size  */
+@media (min-width: 320px) and (max-width: 599px) {
+  .AddedLinks-customisation {
+    width: 93%;
+    height: 83%;
+    margin-left: -35px;
+  }
+
+  .links-customisationHeaderParagraph {
+    width: 100%;
+  }
+
+  .links-customisationHeaderParagraph h1 {
+    width: 85%;
+    margin-left: -5px;
+  }
+
+  .links-customisationHeaderParagraph p{
+    width: 90%;
+    margin-left: 10px;
+    color: #737373;
+  }
+
+  .link-newLink-section {
+    /* border: 2px solid yellowgreen; */
+    margin-left: 10px;
+    margin-top: 15px;
+    height: 81%;
+    width: 95%;
+  }
+
+  .AddedLinks-addLinkBtn {
+    width: 100%;
+    margin-top: 5px;
+    margin-left: auto;
+  }
+
+  .linksNumTwoHeader {
+    width: 100%;
+    margin-left: auto;
+  }
+
+  .linksNumTwoHeader p:first-child {
+    margin-left: -10px;
+  }
+
+  .linksNumTwoHeader p:last-child {
+    margin-right: -10px;
+  }
+
+  .links-youtube-cont {
+    width: 100%;
+    margin-left: auto;
+  }
+
+  .links-linkOneContainer {
+    width: 95%;
+    margin-left: 10px;
+  }
+
+  .link-section {
+    width: 100%;
+    margin-left: auto;
+  }
+
+  .linkTwoContainer {
+    width: 95%;
+    margin-left: 10px;
+  }
+
+  .linksTwoHeader p:first-child {
+    margin-left: -50px;
+  }
+
+  .linksTwoHeader p:last-child {
+    margin-right: -10px;
+  }
+
+  .youtube-container {
+    width: 100%;
+    margin: auto;
+  }
+
+  /* .AddedOneLinksaveBtn .AddedOneLinksave {
+    margin-left: 10px;
+    margin-top: 170px;
+    width: 85%;
+  } */
+
+
+
+}
+
+/* media queries for tablet size  */
+@media (min-width: 600px) and (max-width: 1024px) {
+  .AddedLinks-customisation {
+    margin-left: -10px;
+    height: 70%;
+    margin-top: 110px;
+  }
+
+  .links-customisationHeaderParagraph {
+    margin-top: 15px;
+    margin-left: 30px;
+    width: 92%;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .links-customisationHeaderParagraph h1 {
+    margin-left: 0;
+  }
+
+  .AddedLinks-addLinkBtn {
+    margin-top: 20px;
+  }
+
+  .links-linkOneContainer {
+    margin-top: 30px;
+  }
+
+  .linkTwoContainer {
+    margin-top: 40px;
+  }
+
+  .AddedLinksaveBtn .AddedOneLinksave {
+    margin-left: 690px;
+    margin-top: 400px; 
+  }
 }

@@ -271,7 +271,6 @@ body {
 @media (min-width: 600px) and (max-width: 1024px) {
 
   .previewBox {
-    border: 2px solid red;
     width: 60%;
     height: 330%;
     margin-top: 470px;

@@ -12,6 +12,7 @@ import linkedInImg from "./assets/images/icon-linkedin.svg";
 import facebookImg from "./assets/images/icon-facebook.svg";
 import frontendmentorImg from "./assets/images/icon-frontend-mentor.svg";
 import iconLink from "./assets/images/icon-link-copied-to-clipboard.svg";
+import smallDevLinkLogo from "./assets/images/logo-devlinks-small.svg";
 
 import { useNavigate } from "react-router-dom";
 
@@ -111,23 +112,33 @@ const AddedLinks = () => {
     }
   };
 
+  const handleLinksButtonClick = () => {
+    navigate("/AddedLinks");
+    setSelectedButton("links");
+  };
+
   return (
     <section>
       <div className="nav-container">
         <div className="innerNav-container">
-          <img src={devLinkLogo} alt="dev link logo" />
+        {window.innerWidth < 600 ? (
+            <img
+              src={smallDevLinkLogo}
+              alt="small devlink logo"
+              className="emptySmallLinkLogo"
+            />
+          ) : (
+            <img src={devLinkLogo} alt="dev link logo" className="emptyLogo" />
+          )}
           <div className="linksDetails">
-            <button
-              onClick={() => {
-                navigate("/AddedLinks");
-                setSelectedButton("links");
-              }}
+          <button
+              onClick={handleLinksButtonClick}
               className={`links-button ${
-                selectedButton === "links" ? "activeButton" : ""
+                selectedButton === "links" ? "active" : ""
               }`}
             >
-              <img src={links} alt="links" />
-              Links
+              <img src={links} alt="links" className="links-image" />
+              <span>Links</span>
             </button>
             <button
               onClick={() => {
@@ -152,31 +163,31 @@ const AddedLinks = () => {
           </div>
         </div>
 
-        <div className="AddedOneLink-customisation">
-          <div className="customisationHeaderParagraph">
+        <div className="AddedLinks-customisation">
+          <div className="links-customisationHeaderParagraph">
             <h1>Customize your links</h1>
             <p>
               Add/edit/remove links below and then share all your profiles with
               the world!
             </p>
           </div>
-          <div className="newLink-section">
-            {/* <div className="AddedOneLink-newLink"> */}
+          <div className="link-newLink-section">
+            <div className="AddedLinks-newLink">
               <button
-                className="AddedOneLink-addLinkBtn"
+                className="AddedLinks-addLinkBtn"
                 onClick={() => navigate("/AddedLinks")}
               >
                 +Add new link
               </button>
-            {/* </div> */}
+            </div>
 
-            <div className="linkOneContainer">
-              <div className="linkNumTwoHeader">
+            <div className="links-linkOneContainer">
+              <div className="linksNumTwoHeader">
                 <p>= Link #1</p>
                 <p>Remove</p>
               </div>
               <form>
-                <div className="youtube-cont">
+                <div className="links-youtube-cont">
                   <p className="platform-text">Platform</p>
                   <div className="input-with-icon">
                     <input
@@ -267,12 +278,12 @@ const AddedLinks = () => {
             </div>
 
             <div className="linkTwoContainer">
-              <div className="linkTwoHeader">
+              <div className="linksTwoHeader">
                 <p>= Link #2</p>
                 <p>Remove</p>
               </div>
               <form>
-                <div className="youtube-cont">
+                <div className="youtube-container">
                   <p className="platform-text">Platform</p>
                   <div className="input-with-icon">
                     <input

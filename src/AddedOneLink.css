@@ -41,8 +41,7 @@ body {
 }
 
 .linksDetails button {
-  /*display: flex;
-  */align-items: center;
+  align-items: center;
   margin-right: 25px;
   padding: 10px 20px;
   border: none;
@@ -78,47 +77,36 @@ body {
   margin-left: 30px;
   margin-top: 10px;
   background-color: #fafafa;
-  /* border: 2px solid blue; */
 }
 
 .linkNumTwoHeader {
-  align-items: center;
   display: flex;
   justify-content: space-between;
-  padding: 1% 5%;
   color: grey;
-  font-size: 14px;
-  /* border: 2px solid red; */
-  width: 90%;
+  width: 100%;
   height: 20px;
   margin-top: 5px;
-  margin-left: 35px;
 }
 
-.linkNumTwoHeader p {
-  /* font-weight: bold; */
-  margin: 0;
-}
 
 .linkNumTwoHeader p:first-child {
   font-weight: bold;
-  margin-left: -30px;
+  margin-right: auto;
 }
 
 .linkNumTwoHeader p:last-child {
   cursor: pointer; 
-  margin-right: -35px;
+  margin-left: auto;
 }
 
 
 .youtube-cont {
   position: relative;
   flex-direction: column;
-  /* border: 2px solid red; */
-  width: 90%;
+  width: 100%;
   height: 60px;
   margin-top: 10px;
-  margin-left: 35px;
+  margin-right: auto;
 }
 
 .platform-text {
@@ -330,7 +318,6 @@ button:hover {
   /* width: 790px;  */
   width: 100%;
   height: 50px;
-  /* border: 2px solid red; */
 }
 
 .AddedOneLinksaveBtn .AddedOneLinksave {
@@ -399,10 +386,6 @@ button:hover {
   /* border: solid 2px red; */
 }
 
-.AddedOneLink-newLink {
-  border: 2px solid red;
-}
-
 
 
 
@@ -450,22 +433,70 @@ button:hover {
     display: none;
   }
 
-  /* .oneLinkCustomisationHeaderParagraph {
-    margin-left: -560px;
+  .AddedOneLink-customisation {
+    margin-left: -30px;
+    width: 95%;
+    height: 770px;
+  }
+
+  .oneLinkCustomisationHeaderParagraph {
+    margin-top: 40px;
   }
 
   .oneLinkCustomisationHeaderParagraph h1 {
-    font-size: 20px;
+    font-size: 25px;
+    width: 95%;
+    margin-left: -10px;
   }
 
   .oneLinkCustomisationHeaderParagraph p {
-    width: 21%;
-  } */
-
-  .AddedOneLink-customisation {
-    border: 2px solid red;
-    margin-left: 20px;
+    margin-left: -10px;
+    width: 95%;
   }
 
+  .AddedOneLink-addLinkBtn {
+    width: 90%;
+    margin-left: 15px;
+    margin-top: 10px;
+
+  }
+
+  .linkOneContainer {
+    width: 95%;
+    margin-top: 30px;
+    margin-left: 10px;
+  }
+
+  .linkNumTwoHeader {
+    margin-left: -3px;
+  }
+
+  .youtube-cont {
+    margin-left: 3px;
+  }
+
+  .link-section {
+    margin-left: 3px;
+  }
+
+  .AddedOneLinksaveBtn .AddedOneLinksave {
+    margin-left: 40px;
+    margin-top: 230px;
+    width: 85%;
+    border: 2px solid red;
+  }
  
+}
+
+/* media queries for tablet size  */
+@media (min-width: 600px) and (max-width: 1024px) {
+  .AddedOneLink-customisation {
+    margin-left: -10px;
+    margin-top: 150px;
+    height: 85%;
+  }
+
+  .AddedOneLinksaveBtn .AddedOneLinksave {
+    margin-top: 400px; 
+  }
 }
