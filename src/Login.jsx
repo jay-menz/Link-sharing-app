@@ -38,12 +38,11 @@ const Login = () => {
     let chkErrSum = 0;
 
     if (email == "" || email == null) {
-      //if email field is empty or null then show error message
       setEmailError(true);
       setEmailErrorMessage("Can't be empty");
       setEmailLabelError(true);
 
-      //remove the error message after 5seconds.
+
       setTimeout(() => {
         setEmailError(false);
         setEmailErrorMessage("");
@@ -53,12 +52,11 @@ const Login = () => {
       chkErrSum++;
     }
     if (password == "" || password == null) {
-      //if email field is empty or null then show error message
       setPasswordError(true);
       setPasswordErrorMessage("Please check again");
       setPasswordLabelError(true);
 
-      //remove the error message after 5seconds. You can play with the time yourself by changing it in the setTimout function
+
       setTimeout(() => {
         setPasswordError(false);
         setPasswordErrorMessage("");
@@ -70,17 +68,15 @@ const Login = () => {
 
     if (chkErrSum > 0) return;
 
-    // trycatch block to handle errors
+
     try {
       setShowLoginButton(false);
       setShowLoading(true);
 
-      //handle your backend database validaiton here if email and password is not empty
-      // alert('Success i just logged in')
+
       navigate("/Empty");
 
-      // history.push('/CreateAccount')
-      //after response from server backend make sure to hide the loading and then show the login button again
+    
       setShowLoginButton(true);
       setShowLoading(false);
     } catch (error) {

@@ -9,11 +9,10 @@ import "./CreateAccount.css";
 const Login = () => {
   const navigate = useNavigate();
 
-  //set states to track changes in app
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
 
-  //handle Onchange when user enters any character in inputs
+ 
   const handleOnChangeEmail = (event) => {
     setEmail(event.target.value);
   };
@@ -21,7 +20,7 @@ const Login = () => {
     setPassword(event.target.value);
   };
 
-  //show errors and success messages
+
   const [emailError, setEmailError] = React.useState(false);
   const [emailErrorMessage, setEmailErrorMessage] = React.useState("");
 
@@ -40,24 +39,21 @@ const Login = () => {
   const [confirmPassword, setConfirmPassword] = React.useState(false);
 
   const handleLogin = async () => {
-    //validate email and password field before granting access
     let chkSum = 0;
     if (email == "" || email == null) {
-      //if email field is empty or null then show error message
       setEmailError(true);
       setEmailErrorMessage("Can't be empty");
       setEmailLabelError(true);
 
       setTimeout(() => {
-        setEmailError(false); //set message to false to hide it
-        setEmailErrorMessage(""); //remove the error message
+        setEmailError(false); 
+        setEmailErrorMessage(""); 
         setEmailLabelError(false);
       }, 5000);
 
       chkSum++;
     }
     if (password == "" || password == null) {
-      //if email field is empty or null then show error message
       setPasswordError(true);
       setPasswordErrorMessage("Please check again");
       setPasswordLabelError(true);
@@ -77,15 +73,13 @@ const Login = () => {
 
     if (chkSum > 0) return;
 
-    //use trycatch block to handle errors if any should arise
     try {
-      setShowLoginButton(false); // set this to false to hide and show the loading state
+      setShowLoginButton(false); 
       setShowLoading(true);
 
       navigate("/Empty");
 
-      // history.push('/CreateAccount')
-      //after response from server backend make sure to hide the loading and then show the login button again
+    
       setShowLoginButton(true);
       setShowLoading(false);
     } catch (error) {

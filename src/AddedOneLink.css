@@ -481,9 +481,9 @@ button:hover {
 
   .AddedOneLinksaveBtn .AddedOneLinksave {
     margin-left: 40px;
-    margin-top: 230px;
+    margin-top: 220px;
     width: 85%;
-    border: 2px solid red;
+    /* border: 2px solid red; */
   }
  
 }
