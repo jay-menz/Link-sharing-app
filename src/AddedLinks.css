@@ -118,7 +118,6 @@ form label {
 }
 
 .link-newLink-section {
-  /* border: 2px solid red; */
   margin-top: 25px;
 }
 
@@ -146,9 +145,57 @@ form label {
   position: absolute;
   top: 593px;
   right: 1px;
-  /* width: 790px;  */
   width: 100%;
   height: 50px;
+}
+
+.links-section {
+  width: 90%;
+  height: 60px;
+  margin-top: 5px;
+  margin-left: 35px;
+  position: relative;
+}
+
+.links-text {
+  margin-right: 600px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #737373;
+}
+
+.linksInput input{
+  border: 1px solid #d9d9d9;
+  height: 35px;
+  width: 100%;
+  border-radius: 5px;
+  padding-left: 40px;
+  margin-top: 5px;
+}
+
+.links-one-error-message {
+  color: red;
+  font-size: 12px;
+  margin-left: 80%; 
+  margin-top: -25px;
+}
+
+.input-field.invalid {
+  border: 1px solid #ff3939;
+}
+
+.input-field.filled {
+  border: 1px solid #d9d9d9;
+}
+
+
+.youtube-link-section{
+  /* border: 2px solid red; */
+  width: 90%;
+  height: 60px;
+  margin-top: 5px;
+  margin-left: 35px;
+  position: relative;
 }
 
 .links-linkOneContainer {
@@ -271,7 +318,7 @@ form label {
 
 
 
-.AddedLinksaveBtn .AddedOneLinksave {
+.AddedLinksaveBtn .AddedLinksave {
   width: 70px;
   height: 40px;
   margin-left: 1230px;
@@ -281,7 +328,6 @@ form label {
   color: white;
   text-align: center;
   line-height: 40px;
-  /* border: 2px solid red; */
 }
 
 .saveBtn .save:hover {

@@ -44,6 +44,13 @@ const AddedOneLink = () => {
   const [inputError, setInputError] = React.useState(false); //set error to the color red when the input space is empty
   const [selectedButton, setSelectedButton] = useState("profile");
 
+  const [linkOne, setLinkOne] = React.useState("");
+  // const [linkOneEmptyError, setLinkOneEmptyError] = React.useState(false);
+
+  const handleLinkNotFilled = (event) => {
+    setLinkOne(event.target.value);
+  };
+
   const handleLinksButtonClick = () => {
     navigate("/AddedLinks");
     setSelectedButton("links");
@@ -229,10 +236,19 @@ const AddedOneLink = () => {
                 <input
                   type="text"
                   name=""
-                  id=""
+                  id="added one link input"
                   placeholder="e.g.https://github.com/johnappleseed"
-                  className="linkInput"
+                  className={`input-field ${
+                    linkOneEmptyError ? "invalid" : ""
+                  }`}
+                  value={linkOne}
+                  onChange={handleLinkNotFilled}
                 />
+                {linkOneEmptyError && (
+                  <p className="link-one-error-message">
+                    {linkOneEmptyErrorMessage}
+                  </p>
+                )}
 
                 {/* <div id="error-message-container">
                   <span className="error-message">{"can't be empty"}</span>

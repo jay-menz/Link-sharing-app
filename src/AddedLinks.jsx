@@ -26,12 +26,13 @@ const AddedLinks = () => {
   const [selectedPlatform, setSelectedPlatform] = useState("");
   const [selectedPlatformTwo, setSelectedPlatformTwo] = useState("YouTube");
   const [isActive, setIsActive] = useState(false);
-  const [linkOneErrorSaveButton, setLinkOneErrorSaveButton] = React.useState(true);
+  const [linkOneErrorSaveButton, setLinkOneErrorSaveButton] =
+    React.useState(true);
 
-  const [linkOneEmpty, setLinkOneEmpty] = React.useState("");
+  const [linksOneEmpty, setLinksOneEmpty] = React.useState("");
 
   const handleOnChangeLinkOneEmpty = (event) => {
-    setLinkOneEmpty(event.target.value);
+    setLinksOneEmpty(event.target.value);
   };
 
   const [linkTwoUrlCheck, setLinkTwoUrlCheck] = React.useState("");
@@ -41,8 +42,8 @@ const AddedLinks = () => {
   };
 
   //error and success message
-  const [linkOneEmptyError, setLinkOneEmptyError] = React.useState(false);
-  const [linkOneEmptyErrorMessage, setLinkOneEmptyErrorMessage] =
+  const [linksOneEmptyError, setLinksOneEmptyError] = React.useState(false);
+  const [linksOneEmptyErrorMessage, setLinksOneEmptyErrorMessage] =
     React.useState("");
 
   //error and success message for the link two to check the url
@@ -50,7 +51,7 @@ const AddedLinks = () => {
   const [linkTwoUrlCheckErrorMessage, setLinkTwoUrlCheckErrorMessage] =
     React.useState("");
 
-  const [showSaveButton, setShowSaveButton] = React.useState(true); //show save button on load
+  const [showsSaveBtn, setShowsSaveBtn] = React.useState(true); //show save button on load
   const [showLoadingg, setShowLoadingg] = React.useState(false); //show loading state when button is clicked
 
   const [linkOneBorderError, setLinkOneBorderError] = React.useState(false); //set border error to the color red
@@ -58,6 +59,36 @@ const AddedLinks = () => {
 
   const [linkTwoBorderError, setLinkTwoBorderError] = React.useState(false); //set border error to the color red
   const [linkTwoInputError, setLinkTwoInputError] = React.useState(false); //set label error to the color red
+
+  const [linksOne, setLinksOne] = React.useState("");
+  const handleLinksOneNotFilled = (event) => {
+    setLinksOne(event.target.value);
+  };
+
+  const handleLinkOneTwoSaveBtn = async () => {
+     //validate the link1 field before granting access
+     let checkErrorSum = 0;
+
+     if (linksOneEmpty == "" || linksOneEmpty == null) {
+       setLinksOneEmptyError(true);
+       setLinksOneEmptyErrorMessage("Can't be empty");
+       setLinkOneBorderError(true);
+       setInputError(true);
+ 
+       setTimeout(() => {
+         setLinksOneEmptyError();
+         setLinksOneEmptyErrorMessage("");
+         setLinkOneBorderError(false);
+         setInputError(false);
+       }, 5000);
+ 
+       checkErrorSum++;
+     }
+  };
+
+  // const handleLinkTwoCheckUrl = async () => {
+
+  // }
 
   const myRef = useRef(null);
   const myRefTwo = useRef(null);
@@ -69,7 +100,6 @@ const AddedLinks = () => {
       } else {
         myRef.current.className = "dropdown";
       }
-      
     }
 
     if (whichOne === 2) {
@@ -83,31 +113,29 @@ const AddedLinks = () => {
     console.log("I just clicked");
   };
 
-
   const handlePlatformSelectTwo = (platform) => {
-    setSelectedPlatformTwo(platform)
-  }
-
+    setSelectedPlatformTwo(platform);
+  };
 
   const handlePlatformSelect = (platform) => {
-    setSelectedPlatform(platform) 
+    setSelectedPlatform(platform);
     myRef.current.className = "dropdown hidden";
-    myRefTwo.current.className = "dropdown hidden"
-  }
+    myRefTwo.current.className = "dropdown hidden";
+  };
 
   const handleLinkOneSaveBtn = async () => {
     //validate the link1 field before granting access
     let checkErrorSum = 0;
 
-    if (linkOneEmpty == "" || linkOneEmpty == null) {
-      setLinkOneEmptyError(true);
-      setLinkOneEmptyErrorMessage("Can't be empty");
+    if (linksOneEmpty == "" || linksOneEmpty == null) {
+      setLinksOneEmptyError(true);
+      setLinksOneEmptyErrorMessage("Can't be empty");
 
       setTimeout(() => {
-        setLinkOneEmptyError();
-        setLinkOneEmptyErrorMessage("");
+        setLinksOneEmptyError();
+        setLinksOneEmptyErrorMessage("");
       }, 5000);
-      
+
       checkErrorSum++;
     }
   };
@@ -121,7 +149,7 @@ const AddedLinks = () => {
     <section>
       <div className="nav-container">
         <div className="innerNav-container">
-        {window.innerWidth < 600 ? (
+          {window.innerWidth < 600 ? (
             <img
               src={smallDevLinkLogo}
               alt="small devlink logo"
@@ -131,7 +159,7 @@ const AddedLinks = () => {
             <img src={devLinkLogo} alt="dev link logo" className="emptyLogo" />
           )}
           <div className="linksDetails">
-          <button
+            <button
               onClick={handleLinksButtonClick}
               className={`links-button ${
                 selectedButton === "links" ? "active" : ""
@@ -219,40 +247,45 @@ const AddedLinks = () => {
                   <img src={chevronDown} alt="" className="arrowDown" />
                   <div className={"dropdown hidden"} ref={myRef}>
                     <div className="github">
-                      <div className="icon-text-container"
-                      onClick={() => handlePlatformSelect("GitHub")}
+                      <div
+                        className="icon-text-container"
+                        onClick={() => handlePlatformSelect("GitHub")}
                       >
                         <img src={githubImg} alt="" />
                         <p>GitHub</p>
                       </div>
                     </div>
                     <div className="github">
-                      <div className="icon-text-container"
-                      onClick={() => handlePlatformSelect("YouTube")}
+                      <div
+                        className="icon-text-container"
+                        onClick={() => handlePlatformSelect("YouTube")}
                       >
                         <img src={youtubeImg} alt="" />
                         <p>YouTube</p>
                       </div>
                     </div>
                     <div className="github">
-                      <div className="icon-text-container"
-                      onClick={() => handlePlatformSelect("LinkedIn")}
+                      <div
+                        className="icon-text-container"
+                        onClick={() => handlePlatformSelect("LinkedIn")}
                       >
                         <img src={linkedInImg} alt="" />
                         <p>LinkedIn</p>
                       </div>
                     </div>
                     <div className="github">
-                      <div className="icon-text-container"
-                      onClick={() => handlePlatformSelect("Facebook")}
+                      <div
+                        className="icon-text-container"
+                        onClick={() => handlePlatformSelect("Facebook")}
                       >
                         <img src={facebookImg} alt="" />
                         <p>Facebook</p>
                       </div>
                     </div>
                     <div className="github">
-                      <div className="icon-text-container"
-                      onClick={() => handlePlatformSelect("Frontend Mentor")}
+                      <div
+                        className="icon-text-container"
+                        onClick={() => handlePlatformSelect("Frontend Mentor")}
                       >
                         <img src={frontendmentorImg} alt="" />
                         <p>Frontend Mentor</p>
@@ -262,16 +295,27 @@ const AddedLinks = () => {
                 </div>
               </form>
 
-              <div className="link-section">
-                <p className="link-text">Link</p>
-                <div className="linkInput">
+              <div className="links-section">
+                <p className="links-text">Link</p>
+                <div className="linksInput">
                   <input
                     type="text"
                     name=""
-                    id=""
+                    id="added links link one input"
                     placeholder="e.g.https://github.com/johnappleseed"
-                    className="linkInput"
+                    className={`input-field ${
+                      linksOneEmptyError ? "invalid" : ""
+                    }`}
+                    value={linksOne}
+                    onChange={handleLinksOneNotFilled}
                   />
+
+                  {linksOneEmptyError && (
+                    <p className="links-one-error-message">
+                      {linksOneEmptyErrorMessage}
+                    </p>
+                  )}
+
                   <img src={iconLink} alt="" className="link-icon" />
                 </div>
               </div>
@@ -313,40 +357,47 @@ const AddedLinks = () => {
                   <img src={chevronDown} alt="" className="arrowDown" />
                   <div className={"dropdown hidden"} ref={myRefTwo}>
                     <div className="github">
-                      <div className="icon-text-container"
-                       onClick={() => handlePlatformSelectTwo("GitHub")}
+                      <div
+                        className="icon-text-container"
+                        onClick={() => handlePlatformSelectTwo("GitHub")}
                       >
                         <img src={githubImg} alt="" />
                         <p>GitHub</p>
                       </div>
                     </div>
                     <div className="github">
-                      <div className="icon-text-container"
-                       onClick={() => handlePlatformSelectTwo("YouTube")}
+                      <div
+                        className="icon-text-container"
+                        onClick={() => handlePlatformSelectTwo("YouTube")}
                       >
                         <img src={youtubeImg} alt="" />
                         <p>YouTube</p>
                       </div>
                     </div>
                     <div className="github">
-                      <div className="icon-text-container"
-                       onClick={() => handlePlatformSelectTwo("LinkedIn")}
+                      <div
+                        className="icon-text-container"
+                        onClick={() => handlePlatformSelectTwo("LinkedIn")}
                       >
                         <img src={linkedInImg} alt="" />
                         <p>LinkedIn</p>
                       </div>
                     </div>
                     <div className="github">
-                      <div className="icon-text-container"
-                       onClick={() => handlePlatformSelectTwo("Facebook")}
+                      <div
+                        className="icon-text-container"
+                        onClick={() => handlePlatformSelectTwo("Facebook")}
                       >
                         <img src={facebookImg} alt="" />
                         <p>Facebook</p>
                       </div>
                     </div>
                     <div className="github">
-                      <div className="icon-text-container"
-                       onClick={() => handlePlatformSelectTwo("Frontend Mentor")}
+                      <div
+                        className="icon-text-container"
+                        onClick={() =>
+                          handlePlatformSelectTwo("Frontend Mentor")
+                        }
                       >
                         <img src={frontendmentorImg} alt="" />
                         <p>Frontend Mentor</p>
@@ -356,14 +407,14 @@ const AddedLinks = () => {
                 </div>
               </form>
 
-              <div className="link-section">
+              <div className="youtube-link-section">
                 <p className="link-text">Link</p>
                 <div className="linkInput">
                   <input
                     type="text"
                     name=""
                     id=""
-                    placeholder="e.g.https://github.com/johnappleseed"
+                    placeholder="e.g.https://www.youtube.com/benwright"
                     className="linkInput"
                   />
                   <img src={iconLink} alt="" className="link-icon" />
@@ -374,7 +425,15 @@ const AddedLinks = () => {
         </div>
 
         <div className="AddedLinksaveBtn">
-          <button className="AddedOneLinksave">save</button>
+          {showsSaveBtn && (
+            <button
+              className="AddedLinksave"
+              onClick={() => handleLinkOneTwoSaveBtn()}
+              // onClick={() => handleLinkTwoCheckUrl()}
+            >
+              save
+            </button>
+          )}
         </div>
       </div>
       {/* </div> */}

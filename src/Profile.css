@@ -456,7 +456,7 @@ body {
 }
 
 .input-field.invalid {
-  border: 2px solid red;
+  border: 1px solid #ff3939;
 }
 
 .error-message {

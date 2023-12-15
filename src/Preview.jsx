@@ -14,12 +14,18 @@ const Preview = () => {
   const navigate = useNavigate();
 
   const [showToasts, setShowToasts] = React.useState(false);
-  const [showPreviewCopied, setShowPreviewCopied] =
-  React.useState(true);
+  const [showPreviewCopied, setShowPreviewCopied] = React.useState(true);
 
   const handleShowPreviewCopied = async () => {
-    
-  }
+
+
+    setShowToasts(true);
+
+
+    setTimeout(() => {
+      setShowToasts(false);
+    }, 5000);
+  };
 
   return (
     <div className="mauve-cover">
@@ -30,10 +36,13 @@ const Preview = () => {
 
             <div className="preview-copied">
               {showPreviewCopied && (
-              <button
-              className="preview-copiedBtn"
-              onClick={handleShowPreviewCopied}
-              >Share Link</button>)}
+                <button
+                  className="preview-copiedBtn"
+                  onClick={handleShowPreviewCopied}
+                >
+                  Share Link
+                </button>
+              )}
               {showToasts && (
                 <div className="linkPopUp">
                   <img src={copied} alt="copied to clipboard" />
@@ -86,13 +95,13 @@ const Preview = () => {
           </div>
         </div>
       </div>
-
-      {/* {showToasts && (
+{/* 
+       {showToasts && (
           <div className="linkPopUp">
             <img src={copied} alt="copied to clipboard" />
             <p>The link has been copied to your clipboard!</p>
           </div>
-        )} */}
+        )}  */}
     </div>
   );
 };
