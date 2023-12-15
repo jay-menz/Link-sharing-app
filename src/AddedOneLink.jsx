@@ -96,7 +96,7 @@ const AddedOneLink = () => {
             <img src={devLinkLogo} alt="dev link logo" className="emptyLogo" />
           )}
           <div class="linksDetails">
-          <button
+            <button
               onClick={handleLinksButtonClick}
               className={`links-button ${
                 selectedButton === "links" ? "active" : ""
@@ -130,14 +130,14 @@ const AddedOneLink = () => {
           </div>
 
           {/* <div className="oneLinkNewLink-section"> */}
-            {/* <div className="AddedOneLink-newLink"> */}
-              <button
-                className="AddedOneLink-addLinkBtn"
-                onClick={() => navigate("/AddedLinks")}
-              >
-                +Add new link
-              </button>
-            {/* </div> */}
+          {/* <div className="AddedOneLink-newLink"> */}
+          <button
+            className="AddedOneLink-addLinkBtn"
+            onClick={() => navigate("/AddedLinks")}
+          >
+            +Add new link
+          </button>
+          {/* </div> */}
           {/* </div> */}
 
           <div className="linkOneContainer">

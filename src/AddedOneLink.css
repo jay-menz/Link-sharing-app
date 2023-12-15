@@ -55,11 +55,16 @@ body {
 }
 
 .linksDetails button:first-child {
-  /* background-color: #beadff; */
+  background-color: #beadff;
   color: #633cff;
   font-weight: 900;
   width: 110px;
   height: 50px;
+}
+
+
+.links-button span {
+  color: #633cff;
 }
 
 .linksDetails button:last-child {
@@ -83,20 +88,23 @@ body {
   display: flex;
   justify-content: space-between;
   color: grey;
-  width: 100%;
   height: 20px;
   margin-top: 5px;
+  margin-left: 30px;
+  width: 90%;
 }
 
 
 .linkNumTwoHeader p:first-child {
   font-weight: bold;
-  margin-right: auto;
+  margin-right: auto; 
+  font-size: 14px; 
 }
 
 .linkNumTwoHeader p:last-child {
   cursor: pointer; 
   margin-left: auto;
+  font-size: 13px;
 }
 
 
@@ -106,13 +114,16 @@ body {
   width: 100%;
   height: 60px;
   margin-top: 10px;
+  width: 90%;
+  margin-left: 30px;
   margin-right: auto;
+  /* border: 2px solid red; */
 }
 
 .platform-text {
   position: absolute;
   top: 15%;
-  /* left: 1px; */
+  left: 30px;
   transform: translateY(-50%);
   margin: 0;
   font-weight: 700;

@@ -39,7 +39,17 @@ const Profile = () => {
 
   const [isProfileImageHovered, setIsProfileImageHovered] =
     React.useState(false);
-  const [selectedButton, setSelectedButton] = useState("profile"); // Fix duplicate declaration
+  const [selectedButton, setSelectedButton] = useState("profile"); 
+  const [activeButton, setActiveButton] = useState("links");
+
+
+  const handleButtonClick = (button) => {
+    console.log("BUTTON CLICKED:::", button);
+    if (activeButton !== button) {
+      setActiveButton(button);
+      navigate(`/${button}`);
+    }
+  };
 
   const handleLinksButtonClick = () => {
     navigate("/AddedLinks");
@@ -130,7 +140,7 @@ const Profile = () => {
           )}
           <div className="linksDetails">
             <button
-              onClick={handleLinksButtonClick}
+              onClick={handleButtonClick}
               className={`links-button ${
                 selectedButton === "links" ? "active" : ""
               }`}

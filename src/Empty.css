@@ -53,11 +53,6 @@ html, body {
   margin-left: -10px; 
 }
 
-/* .linksDetails button:hover {
-  background-color: #007bff; 
-} */
-
-
 
 .linksDetails button:first-child {
   /* background-color: #beadff; */
@@ -79,6 +74,11 @@ html, body {
 
 .linksDetails button:last-child span {
   white-space: nowrap; 
+}
+
+
+.linksDetails button:last-child:hover {
+ background-color: white;
 }
 
 button {

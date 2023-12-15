@@ -106,13 +106,12 @@ body {
 
 .previewBox {
   width: 20%;
-  height: 510px; 
-  /* border: 2px solid red; */
+  height: 400px; 
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   position: absolute;
-  margin-top: 320px;
+  margin-top: 280px;
   left: 50%;
   transform: translate(-50%, -50%);
   overflow: hidden;
@@ -163,7 +162,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 50%;
-  margin-top: 15px;
+  margin-top: 5px;
 }
 
 .gitHubPlatform,
@@ -172,7 +171,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  width: 110%;
   height: 25%;
   border-radius: 5px;
   margin-bottom: 10px;
@@ -192,7 +191,6 @@ body {
 }
 
 .gitHub-arrow {
-  /* border: 2px solid greenyellow; */
   margin-left: -50px;
 }
 
@@ -206,12 +204,10 @@ body {
 
 .previewPlatforms img {
   margin-left: 15px;
-  /* border: 2px solid red; */
 }
 
 .previewPlatforms p {
   margin-right: 90px;
-  /* border: 2px solid yellow; */
 }
 
 .previewPlatforms img:last-child {
@@ -228,7 +224,7 @@ body {
   }
 
   .previewBox {
-    width: 70%;
+    width: 60%;
     margin-left: -10px;
     margin-top: 300px;
   }
@@ -237,14 +233,11 @@ body {
   .youTubePlatform,
   .linkedInPlatform {
     justify-content: flex-start;
+    width: 125%;
     padding-left: 15px; 
     padding-right: 55px;
+    /* border: 2px solid red; */
   }
-
-  /* .previewPlatforms img:last-child {
-    margin-left: -30px; 
-    border: 2px solid red; 
-  } */
 
   .gitHubPlatform img {
     margin-left: -10px;
@@ -271,9 +264,9 @@ body {
 @media (min-width: 600px) and (max-width: 1024px) {
 
   .previewBox {
-    width: 60%;
-    height: 330%;
-    margin-top: 470px;
+    width: 45%;
+    height: 600px;
+    margin-top: 380px;
   }
 
 }
