@@ -251,12 +251,12 @@ img {
   .create {
     width: 100%;
     margin-left: 1px;
-    margin-top: 5px;
+    margin-top: 50px;
     height: 60px;
   }
 
   .createEmailPwd {
-    margin-top: 20px;
+    margin-top: -10px;
     margin-left: 1px;
     width: 100%;
     height: 80%;

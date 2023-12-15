@@ -159,7 +159,7 @@ const Login = () => {
         )}
 
         <p className="createAccLink">
-          Don't have an account?<a href="/CreateAccount">Create account</a>
+          Don't have an account?<a href="./CreateAccount">Create account</a>
         </p>
       </div>
     </div>

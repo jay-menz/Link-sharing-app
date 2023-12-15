@@ -186,7 +186,7 @@ const Login = () => {
         </div>
 
         <p className="loginLink">
-          Already have an account? <a href="/">Login</a>
+          Already have an account? <a href="./">Login</a>
         </p>
       </div>
     </div>
