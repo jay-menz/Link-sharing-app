@@ -68,9 +68,9 @@ const AddedOneLink = () => {
 
   const handleLinkOneSaveBtn = async () => {
     //validate the link1 field before granting access
-    let checkErrorSum = 0;
+    // let checkErrorSum = 0;
 
-    if (linkOneEmpty == "" || linkOneEmpty == null) {
+    if (linkOne === "" || linkOneEmpty == null) {
       setLinkOneEmptyError(true);
       setLinkOneEmptyErrorMessage("Can't be empty");
       setLinkOneBorderError(true);
@@ -83,7 +83,7 @@ const AddedOneLink = () => {
         setInputError(false);
       }, 5000);
 
-      checkErrorSum++;
+      // checkErrorSum++;
     }
   };
 

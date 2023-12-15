@@ -1,5 +1,5 @@
 import React from "react";
-import iphoneIcon from "./assets/images/illustration-phone-mockup.svg";
+// import iphoneIcon from "./assets/images/illustration-phone-mockup.svg";
 import copied from "./assets/images/icon-link-copied-to-clipboard.svg";
 import githubImg from "./assets/images/icon-github.svg";
 import arrowRight from "./assets/images/icon-arrow-right.svg";
@@ -14,7 +14,7 @@ const Preview = () => {
   const navigate = useNavigate();
 
   const [showToasts, setShowToasts] = React.useState(false);
-  const [showPreviewCopied, setShowPreviewCopied] = React.useState(true);
+  const showPreviewCopied = true;
 
   const handleShowPreviewCopied = async () => {
 

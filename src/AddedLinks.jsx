@@ -21,25 +21,23 @@ import "./AddedLinks.css";
 const AddedLinks = () => {
   const navigate = useNavigate();
 
-  const [hide, setHide] = useState(true);
+  // const [hide, setHide] = useState(true);
   const [selectedButton, setSelectedButton] = useState("links");
   const [selectedPlatform, setSelectedPlatform] = useState("");
   const [selectedPlatformTwo, setSelectedPlatformTwo] = useState("YouTube");
-  const [isActive, setIsActive] = useState(false);
-  const [linkOneErrorSaveButton, setLinkOneErrorSaveButton] =
+  // const [isActive, setIsActive] = useState(false);
+  // const [linkOneErrorSaveButton, setLinkOneErrorSaveButton] =
     React.useState(true);
 
   const [linksOneEmpty, setLinksOneEmpty] = React.useState("");
 
-  const handleOnChangeLinkOneEmpty = (event) => {
-    setLinksOneEmpty(event.target.value);
-  };
+  // const handleOnChangeLinkOneEmpty = (event) => {
+  //   setLinksOneEmpty(event.target.value);
+  // };
 
   const [linkTwoUrlCheck, setLinkTwoUrlCheck] = React.useState("");
 
-  const handleOnChangeTwoUrlCheck = (event) => {
-    setLinkTwoUrlCheck(event.target.value);
-  };
+  
 
   //error and success message
   const [linksOneEmptyError, setLinksOneEmptyError] = React.useState(false);
@@ -67,9 +65,8 @@ const AddedLinks = () => {
 
   const handleLinkOneTwoSaveBtn = async () => {
      //validate the link1 field before granting access
-     let checkErrorSum = 0;
-
-     if (linksOneEmpty == "" || linksOneEmpty == null) {
+    
+     if (linksOne === "" || linksOneEmpty == null) {
        setLinksOneEmptyError(true);
        setLinksOneEmptyErrorMessage("Can't be empty");
        setLinkOneBorderError(true);
@@ -80,10 +77,22 @@ const AddedLinks = () => {
          setLinksOneEmptyErrorMessage("");
          setLinkOneBorderError(false);
          setInputError(false);
-       }, 5000);
- 
-       checkErrorSum++;
+       }, 5000);     
      }
+
+     if (!isValidUrl(linkTwoUrlCheck)) {
+      setLinkTwoUrlCheckError(true);
+        setLinkTwoUrlCheckErrorMessage("Please check the URL");
+        setLinkTwoBorderError(true);
+        setLinkTwoInputError(true);
+      setTimeout(() => {
+        setLinkTwoUrlCheckError(false);
+        setLinkTwoUrlCheckErrorMessage("");
+        setLinkTwoBorderError(false);
+        setLinkTwoInputError(false);
+      }, 5000);
+     }
+
   };
 
   // const handleLinkTwoCheckUrl = async () => {
@@ -123,22 +132,36 @@ const AddedLinks = () => {
     myRefTwo.current.className = "dropdown hidden";
   };
 
-  const handleLinkOneSaveBtn = async () => {
-    //validate the link1 field before granting access
-    let checkErrorSum = 0;
+  // const handleLinkOneSaveBtn2 = async (evt) => {
+  //   //validate the link1 field before granting access
+   
+  //   // let checkErrorSum = 0;
 
-    if (linksOneEmpty == "" || linksOneEmpty == null) {
-      setLinksOneEmptyError(true);
-      setLinksOneEmptyErrorMessage("Can't be empty");
+  //   // if (linksOneEmpty === "" || linksOneEmpty == null) {
+  //   //   setLinksOneEmptyError(true);
+  //   //   setLinksOneEmptyErrorMessage("Can't be empty");
 
-      setTimeout(() => {
-        setLinksOneEmptyError();
-        setLinksOneEmptyErrorMessage("");
-      }, 5000);
+  //   //   setTimeout(() => {
+  //   //     setLinksOneEmptyError();
+  //   //     setLinksOneEmptyErrorMessage("");
+  //   //   }, 5000);
 
-      checkErrorSum++;
-    }
+  //   //   // checkErrorSum++;
+  //   // }
+  // };
+
+  const handleOnChangeTwoUrlCheck = (event) => {
+    setLinkTwoUrlCheck(event.target.value);
   };
+
+  const isValidUrl = urlString=> {
+    try { 
+      return Boolean(new URL(urlString)); 
+    }
+    catch(e){ 
+      return false; 
+    }
+}
 
   const handleLinksButtonClick = () => {
     navigate("/AddedLinks");
@@ -413,11 +436,21 @@ const AddedLinks = () => {
                   <input
                     type="text"
                     name=""
-                    id=""
+                    id="added links url check"
                     placeholder="e.g.https://www.youtube.com/benwright"
-                    className="linkInput"
+                    className={`input-field ${
+                      linkTwoUrlCheckError ? "invalid" : ""
+                    }`}
+                    // className="linkInput"
+                    value={linkTwoUrlCheck}
+                    onChange={handleOnChangeTwoUrlCheck}
                   />
                   <img src={iconLink} alt="" className="link-icon" />
+                  {linkTwoUrlCheckError && (
+                    <p className="links-one-error-message">
+                      {linkTwoUrlCheckErrorMessage}
+                    </p>
+                  )}
                 </div>
               </div>
             </div>

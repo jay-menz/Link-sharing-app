@@ -3,13 +3,8 @@
 import React, { useState } from "react";
 import devLinkLogo from "./assets/images/logo-devlinks-large.svg";
 import iphoneIcon from "./assets/images/illustration-phone-mockup.svg";
-import fingerSwipe from "./assets/images/illustration-empty.svg";
 import links from "./assets/images/icon-link.svg";
 import profile from "./assets/images/icon-profile-details-header.svg";
-import dragDrop from "./assets/images/icon-drag-and-drop.svg";
-import githubImg from "./assets/images/icon-github.svg";
-import chevronDown from "./assets/images/icon-chevron-down.svg";
-import iconLink from "./assets/images/icon-link-copied-to-clipboard.svg";
 import uploadimageIcon from "./assets/images/icon-upload-image.svg";
 import changesSavedIcon from "./assets/images/icon-changes-saved.svg";
 import smallDevLinkLogo from "./assets/images/logo-devlinks-small.svg";

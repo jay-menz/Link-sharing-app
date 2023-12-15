@@ -37,7 +37,7 @@ const Login = () => {
   const handleLogin = async () => {
     let chkErrSum = 0;
 
-    if (email == "" || email == null) {
+    if (email === "" || email === null) {
       setEmailError(true);
       setEmailErrorMessage("Can't be empty");
       setEmailLabelError(true);
@@ -51,7 +51,7 @@ const Login = () => {
 
       chkErrSum++;
     }
-    if (password == "" || password == null) {
+    if (password === "" || password === null) {
       setPasswordError(true);
       setPasswordErrorMessage("Please check again");
       setPasswordLabelError(true);
