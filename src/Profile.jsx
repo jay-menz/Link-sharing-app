@@ -18,7 +18,7 @@ const Profile = () => {
 
   const [showProfileSaveButton, setShowProfileSaveButton] =
     React.useState(true);
-  const [showLoading, setShowLoading] = React.useState(false);
+  // const [showLoading, setShowLoading] = React.useState(false);
   const [showToast, setShowToast] = React.useState(false);
 
   const [firstName, setfirstName] = React.useState("");
@@ -46,10 +46,10 @@ const Profile = () => {
     }
   };
 
-  const handleLinksButtonClick = () => {
-    navigate("/AddedLinks");
-    setSelectedButton("links");
-  };
+  // const handleLinksButtonClick = () => {
+  //   navigate("/AddedLinks");
+  //   setSelectedButton("links");
+  // };
 
   const handleProfileButtonClick = () => {
     navigate("/Profile");
@@ -99,7 +99,7 @@ const Profile = () => {
 
     try {
       setShowProfileSaveButton(false);
-      setShowLoading(true);
+      // setShowLoading(true);
 
       setShowToast(true);
 
@@ -112,11 +112,11 @@ const Profile = () => {
       //throw new Error("Simulated error during profile save");
 
       setShowProfileSaveButton(true);
-      setShowLoading(false);
+      //setShowLoading(false);
     } catch (error) {
       console.log("Error:", error);
       setShowProfileSaveButton(true);
-      setShowLoading(false);
+      //setShowLoading(false);
     }
   };
 

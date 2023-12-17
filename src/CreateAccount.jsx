@@ -28,19 +28,19 @@ const Login = () => {
   const [passwordErrorMessage, setPasswordErrorMessage] = React.useState("");
 
   const [showLoginButton, setShowLoginButton] = React.useState(true);
-  const [showLoading, setShowLoading] = React.useState(false);
+  // const [showLoading, setShowLoading] = React.useState(false);
 
-  const [borderError, setBorderError] = React.useState(false);
-  const [labelError, setLabelError] = React.useState(false);
+  // const [borderError, setBorderError] = React.useState(false);
+  // const [labelError, setLabelError] = React.useState(false);
 
   const [emailLabelError, setEmailLabelError] = React.useState(false);
   const [passwordLabelError, setPasswordLabelError] = React.useState(false);
 
-  const [confirmPassword, setConfirmPassword] = React.useState(false);
+  // const [confirmPassword, setConfirmPassword] = React.useState(false);
 
   const handleLogin = async () => {
     let chkSum = 0;
-    if (email == "" || email == null) {
+    if (email === "" || email == null) {
       setEmailError(true);
       setEmailErrorMessage("Can't be empty");
       setEmailLabelError(true);
@@ -53,7 +53,7 @@ const Login = () => {
 
       chkSum++;
     }
-    if (password == "" || password == null) {
+    if (password === "" || password == null) {
       setPasswordError(true);
       setPasswordErrorMessage("Please check again");
       setPasswordLabelError(true);
@@ -67,21 +67,21 @@ const Login = () => {
       chkSum++;
     }
 
-    if (document.getElementById("confirmPasswordInput").value !== "") {
-      setConfirmPassword(false);
-    }
+    // if (document.getElementById("confirmPasswordInput").value !== "") {
+    //   setConfirmPassword(false);
+    // }
 
     if (chkSum > 0) return;
 
     try {
       setShowLoginButton(false); 
-      setShowLoading(true);
+      //setShowLoading(true);
 
       navigate("/Empty");
 
     
       setShowLoginButton(true);
-      setShowLoading(false);
+     // setShowLoading(false);
     } catch (error) {
       console.log("Error:", +error);
     }

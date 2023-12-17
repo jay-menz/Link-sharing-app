@@ -5,7 +5,7 @@ import iphoneIcon from "./assets/images/illustration-phone-mockup.svg";
 import fingerSwipe from "./assets/images/illustration-empty.svg";
 import links from "./assets/images/icon-link.svg";
 import profile from "./assets/images/icon-profile-details-header.svg";
-import previewHeader from "./assets/images/icon-preview-header.svg";
+// import previewHeader from "./assets/images/icon-preview-header.svg";
 import { useNavigate } from "react-router-dom";
 
 import "./Empty.css";

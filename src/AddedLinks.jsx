@@ -29,7 +29,8 @@ const AddedLinks = () => {
   // const [linkOneErrorSaveButton, setLinkOneErrorSaveButton] =
     React.useState(true);
 
-  const [linksOneEmpty, setLinksOneEmpty] = React.useState("");
+  // const [linksOneEmpty, setLinksOneEmpty] = React.useState("");
+  const linksOneEmpty = ""
 
   // const handleOnChangeLinkOneEmpty = (event) => {
   //   setLinksOneEmpty(event.target.value);
@@ -49,14 +50,15 @@ const AddedLinks = () => {
   const [linkTwoUrlCheckErrorMessage, setLinkTwoUrlCheckErrorMessage] =
     React.useState("");
 
-  const [showsSaveBtn, setShowsSaveBtn] = React.useState(true); //show save button on load
-  const [showLoadingg, setShowLoadingg] = React.useState(false); //show loading state when button is clicked
+  // const [showsSaveBtn, setShowsSaveBtn] = React.useState(true); //show save button on load
+  const showsSaveBtn = true
+  //const [showLoadingg, setShowLoadingg] = React.useState(false); //show loading state when button is clicked
 
-  const [linkOneBorderError, setLinkOneBorderError] = React.useState(false); //set border error to the color red
-  const [inputError, setInputError] = React.useState(false); //set error to the color red when the input space is empty
+  // const [linkOneBorderError, setLinkOneBorderError] = React.useState(false); //set border error to the color red
+  // const [inputError, setInputError] = React.useState(false); //set error to the color red when the input space is empty
 
-  const [linkTwoBorderError, setLinkTwoBorderError] = React.useState(false); //set border error to the color red
-  const [linkTwoInputError, setLinkTwoInputError] = React.useState(false); //set label error to the color red
+  // const [linkTwoBorderError, setLinkTwoBorderError] = React.useState(false); //set border error to the color red
+  // const [linkTwoInputError, setLinkTwoInputError] = React.useState(false); //set label error to the color red
 
   const [linksOne, setLinksOne] = React.useState("");
   const handleLinksOneNotFilled = (event) => {
@@ -69,27 +71,27 @@ const AddedLinks = () => {
      if (linksOne === "" || linksOneEmpty == null) {
        setLinksOneEmptyError(true);
        setLinksOneEmptyErrorMessage("Can't be empty");
-       setLinkOneBorderError(true);
-       setInputError(true);
+      //  setLinkOneBorderError(true);
+      //  setInputError(true);
  
        setTimeout(() => {
          setLinksOneEmptyError();
          setLinksOneEmptyErrorMessage("");
-         setLinkOneBorderError(false);
-         setInputError(false);
+        //  setLinkOneBorderError(false);
+        //  setInputError(false);
        }, 5000);     
      }
 
      if (!isValidUrl(linkTwoUrlCheck)) {
       setLinkTwoUrlCheckError(true);
         setLinkTwoUrlCheckErrorMessage("Please check the URL");
-        setLinkTwoBorderError(true);
-        setLinkTwoInputError(true);
+        //setLinkTwoBorderError(true);
+       // setLinkTwoInputError(true);
       setTimeout(() => {
         setLinkTwoUrlCheckError(false);
         setLinkTwoUrlCheckErrorMessage("");
-        setLinkTwoBorderError(false);
-        setLinkTwoInputError(false);
+        //setLinkTwoBorderError(false);
+        //setLinkTwoInputError(false);
       }, 5000);
      }
 

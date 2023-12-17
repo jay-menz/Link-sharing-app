@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import devLinkLogo from "./assets/images/logo-devlinks-large.svg";
 import iphoneIcon from "./assets/images/illustration-phone-mockup.svg";
-import fingerSwipe from "./assets/images/illustration-empty.svg";
+// import fingerSwipe from "./assets/images/illustration-empty.svg";
 import links from "./assets/images/icon-link.svg";
 import profie from "./assets/images/icon-profile-details-header.svg";
-import dragDrop from "./assets/images/icon-drag-and-drop.svg";
+// import dragDrop from "./assets/images/icon-drag-and-drop.svg";
 import githubImg from "./assets/images/icon-github.svg";
 import youtubeImg from "./assets/images/icon-youtube.svg";
 import linkedInImg from "./assets/images/icon-linkedin.svg";
@@ -12,7 +12,7 @@ import facebookImg from "./assets/images/icon-facebook.svg";
 import frontendmentorImg from "./assets/images/icon-frontend-mentor.svg";
 import chevronDown from "./assets/images/icon-chevron-down.svg";
 import iconLink from "./assets/images/icon-link-copied-to-clipboard.svg";
-import arrowRight from "./assets/images/icon-arrow-right.svg";
+// import arrowRight from "./assets/images/icon-arrow-right.svg";
 import smallDevLinkLogo from "./assets/images/logo-devlinks-small.svg";
 
 import { useNavigate } from "react-router-dom";
@@ -22,26 +22,27 @@ import "./AddedOneLink.css";
 const AddedOneLink = () => {
   const [hide, setHide] = useState(true);
   const [selectedPlatform, setSelectedPlatform] = useState("");
-  const [isActive, setIsActive] = useState(false);
-  const [linkOneErrorSaveButton, setLinkOneErrorSaveButton] =
+  // const [isActive, setIsActive] = useState(false);
+  // const [linkOneErrorSaveButton, setLinkOneErrorSaveButton] =
     React.useState(true);
 
-  const [linkOneEmpty, setLinkOneEmpty] = React.useState("");
-
-  const handleOnChangeLinkOneEmpty = (event) => {
-    setLinkOneEmpty(event.target.value);
-  };
+  // const [linkOneEmpty, setLinkOneEmpty] = React.useState("");
+  const linkOneEmpty = ""
+  // const handleOnChangeLinkOneEmpty = (event) => {
+  //   setLinkOneEmpty(event.target.value);
+  // };
 
   //error and success message
   const [linkOneEmptyError, setLinkOneEmptyError] = React.useState(false);
   const [linkOneEmptyErrorMessage, setLinkOneEmptyErrorMessage] =
     React.useState("");
 
-  const [showSaveButton, setShowSaveButton] = React.useState(true); //show save button on load
-  const [showLoadingg, setShowLoadingg] = React.useState(false); //show loading state when button is clicked
+  // const [showSaveButton, setShowSaveButton] = React.useState(true); //show save button on load
+  const showSaveButton = true;
+  // const [showLoadingg, setShowLoadingg] = React.useState(false); //show loading state when button is clicked
 
-  const [linkOneBorderError, setLinkOneBorderError] = React.useState(false); //set border error to the color red
-  const [inputError, setInputError] = React.useState(false); //set error to the color red when the input space is empty
+  // const [linkOneBorderError, setLinkOneBorderError] = React.useState(false); //set border error to the color red
+  // const [inputError, setInputError] = React.useState(false); //set error to the color red when the input space is empty
   const [selectedButton, setSelectedButton] = useState("profile");
 
   const [linkOne, setLinkOne] = React.useState("");
@@ -73,14 +74,14 @@ const AddedOneLink = () => {
     if (linkOne === "" || linkOneEmpty == null) {
       setLinkOneEmptyError(true);
       setLinkOneEmptyErrorMessage("Can't be empty");
-      setLinkOneBorderError(true);
-      setInputError(true);
+      //setLinkOneBorderError(true);
+      // setInputError(true);
 
       setTimeout(() => {
         setLinkOneEmptyError();
         setLinkOneEmptyErrorMessage("");
-        setLinkOneBorderError(false);
-        setInputError(false);
+       // setLinkOneBorderError(false);
+        // setInputError(false);
       }, 5000);
 
       // checkErrorSum++;

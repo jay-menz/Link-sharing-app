@@ -26,10 +26,10 @@ const Login = () => {
   const [passwordErrorMessage, setPasswordErrorMessage] = React.useState("");
 
   const [showLoginButton, setShowLoginButton] = React.useState(true);
-  const [showLoading, setShowLoading] = React.useState(false);
+  // const [showLoading, setShowLoading] = React.useState(false);
 
-  const [borderError, setBorderError] = React.useState(false);
-  const [labelError, setLabelError] = React.useState(false);
+  // const [borderError, setBorderError] = React.useState(false);
+  // const [labelError, setLabelError] = React.useState(false);
 
   const [emailLabelError, setEmailLabelError] = React.useState(false);
   const [passwordLabelError, setPasswordLabelError] = React.useState(false);
@@ -71,14 +71,14 @@ const Login = () => {
 
     try {
       setShowLoginButton(false);
-      setShowLoading(true);
+      // setShowLoading(true);
 
 
       navigate("/Empty");
 
     
       setShowLoginButton(true);
-      setShowLoading(false);
+      // setShowLoading(false);
     } catch (error) {
       console.log("Error:", +error);
     }
