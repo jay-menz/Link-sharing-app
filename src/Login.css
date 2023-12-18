@@ -17,10 +17,9 @@
 
 .devLinkLogo {
   position: absolute;
-  top: 20%;
+  top: 10%;
   left: 50%;
   transform: translate(-50%, -50%);
-  margin-top: -40px;
 }
 
 .login-whiteBox {
@@ -69,7 +68,6 @@
   justify-content: space;
   margin-top: -10px;
   margin-left: 22px;
-  /* border: 2px solid green; */
 }
 
 .create-acc-email {
@@ -113,16 +111,14 @@ label {
 .createAccLink {
   text-align: center;
   color: #737373;
-  margin-top: 35px !important;
-  /* margin: 2px solid red; */
+  margin-top: 20px !important;
+  font-size: 14px;
 }
 
 .createAccLink a {
   text-decoration: none;
   color: #633cff;
 }
-
-
 
 .error-label {
   color: #ff3939;
@@ -133,7 +129,6 @@ label {
 .input-container.error-border {
   border: 1px solid #ff3939;
 }
-
 
 .error-message {
   color: #ff3939;
@@ -154,7 +149,6 @@ label {
 .input-container {
   display: flex;
   border: 1px solid #ccc;
-  /* border:1px solid red; */
   padding: 10px;
   border-radius: 8px;
   transition: border 0.3s, box-shadow 0.3s;
@@ -170,7 +164,6 @@ input[type="password"] {
   border: none;
   padding: 2px;
   border-radius: 5px;
-  /* width: 100%; */
   width: calc(100% - 90px);
   font-size: 13px;
   outline: none;
@@ -207,15 +200,19 @@ img {
   .devLinkLogo {
     position: absolute;
     margin-left: -50px;
-    /* margin-top: -100px; */
-    top: 20px;
   }
 
   .login-whiteBox {
+    width: 410px;
+    height: 402px;
+    background-color: #fff;
     justify-content: center;
+    position: absolute;
     align-items: center;
-    margin-left: -40px;
-    margin-top: -120px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
   }
 }
 

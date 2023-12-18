@@ -67,21 +67,15 @@ const Login = () => {
       chkSum++;
     }
 
-    // if (document.getElementById("confirmPasswordInput").value !== "") {
-    //   setConfirmPassword(false);
-    // }
-
     if (chkSum > 0) return;
 
     try {
       setShowLoginButton(false); 
-      //setShowLoading(true);
 
       navigate("/Empty");
 
     
       setShowLoginButton(true);
-     // setShowLoading(false);
     } catch (error) {
       console.log("Error:", +error);
     }

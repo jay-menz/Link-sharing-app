@@ -72,7 +72,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: -20px;
+  margin-top: -5px;
   margin-left: 22px;
   /* border: 2px solid green; */
 }
@@ -110,8 +110,7 @@
 label {
   color: #737373;
   font-size: 12px;
-  /* margin-top: -20px; */
-  /* border: 2px solid red; */
+  margin-top: 10px;
 }
 
 .create-btn {
@@ -240,13 +239,14 @@ img {
   }
 
   .devLinkLogo {
-    margin-top: -60px;
+    margin-top: -50px;
     height: 40px;
   }
 
   .whiteBox {
-    height: 490px;
+    height: 430px;
     width: 340px;
+    margin-top: -50px;
   }
 
   .create {
