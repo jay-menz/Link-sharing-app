@@ -297,11 +297,11 @@ img {
     display: block;
   }
 
-  .error-message {
+  #error-message-container {
     display: inline;
-    width: 500px;
     white-space: nowrap;
-    margin-left: -10px;
+    margin-right: 130px;
+    margin-bottom: 30px;
     border: 2px solid red;
   }
 
@@ -309,7 +309,7 @@ img {
     display: inline;
     width: 100px;
     white-space: nowrap;
-    margin-right: 68px;
+    margin-right: 65px;
   }
 }
 

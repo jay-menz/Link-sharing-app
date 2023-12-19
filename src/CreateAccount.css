@@ -177,22 +177,20 @@ label {
   border: 1px solid #ff3939;
 }
 
-#error-message-container {
+#create-account-error-message-container {
   position: absolute;
   display: flex;
   font-size: 10px;
   color: red;
   margin-left: 260px;
-  /* border: 2px solid blue; */
 }
 
-#password-error-message-container {
+#create-account-password-error-message-container {
   position: absolute;
-  display: flex;
+  display: inline;
   font-size: 10px;
   color: red;
-  margin-left: 260px;
-  /* border: 2px solid blue; */
+  margin-left: 240px;
 }
 
 input[type="email"],

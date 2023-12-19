@@ -114,7 +114,7 @@ const Login = () => {
                 className="custom-input"
               />
               {emailError && (
-                <div id="error-message-container">
+                <div id="create-account-error-message-container">
                   <span id="passwordError">{emailErrorMessage}</span>
                 </div>
               )}
@@ -142,7 +142,7 @@ const Login = () => {
                 onChange={handleOnChangePassword}
               />
               {passwordError && (
-                <div id="password-error-message-container">
+                <div id="create-account-password-error-message-container">
                   <span id="passwordError">{passwordErrorMessage}</span>
                 </div>
               )}
