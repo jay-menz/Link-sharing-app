@@ -297,12 +297,17 @@ img {
     display: block;
   }
 
-  #error-message-container {
+  /* #error-message-container {
     display: inline;
     white-space: nowrap;
-    margin-right: 130px;
-    margin-bottom: 30px;
     border: 2px solid red;
+  } */
+
+  #error-message-container {
+    display: inline;
+    /* width: 100px; */
+    white-space: nowrap;
+    margin-right: 25px;
   }
 
   #password-error-message-container {
